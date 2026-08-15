@@ -18,7 +18,7 @@ jobs:
           # Он сам скачает, профильтрует 10000 серверов и сохранит готовый файл live_free.yaml
           docker run --rm -v ${{ github.workspace }}:/workspace tindy2013/subconverter:latest \
           ./subconverter -g --url "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml" \
-          --target clash --max_nodes 70 --udp false --sort true
+          --target clash --max_nodes 70 --udp false --sort true --ua "clash"
           
           # Переносим созданный файл в нужное место
           mv sub.yaml live_free.yaml
