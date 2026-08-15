@@ -30,10 +30,23 @@ jobs:
           mv sub.yaml ../live_free.yaml
           cd ..
 
-      - name: Commit and Push Changes
+      - name: Install and Run Local Subconverter
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add live_free.yaml
+          # 1. Скачиваем официальный движок конвертера прямо на GitHub
+          wget https://github.com
+          tar -xvf subconverter_linux64.tar.gz
+          
+          # 2. Переносим все файлы движка в корень, чтобы он видел свои настройки
+          mv subconverter/* .
+          
+          # 3. Настраиваем конфигурацию для фильтрации
+          ORIGINAL_URL="https://githubusercontent.com"
+          
+          # Запускаем процесс конвертации прямо из корня
+          ./subconverter -g --url "${ORIGINAL_URL}" --target clash --max_nodes 70 --udp false --sort true
+          
+          # Переименовываем готовый файл в live_free.yaml
+          mv sub.yaml live_free.yaml
+
           git commit -m "Update clean proxy list" || exit 0
           git push
