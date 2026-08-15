@@ -1,4 +1,4 @@
-name: Filter and Clean Subscriptions
+name: Universal Smart Proxy Filter
 
 on:
   schedule:
@@ -17,61 +17,111 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Filter Proxies via Python Script
+      - name: Smart Auto-Detect and Filter
         run: |
-          # Создаем чистый изолированный файл скрипта, чтобы избежать ошибок синтаксиса Bash
-          cat << 'EOF' > script.py
+          cat << 'EOF' > smart_script.py
           import urllib.request
           import re
+          import json
+          import base64
+          from urllib.parse import urlparse, parse_qs, unquote
 
+          # Список ссылок ЛЮБОГО формата (YAML, vless://, ss://, vmess:// или Base64)
           urls = [
+              "https://sub.vlessfo.ru/vlessforu/working_configs.txt",
               "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
-              "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
+              "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
+              "https://githubusercontent.com"
           ]
-          
+
+          # Парсер сырых VLESS ссылок
+          def parse_vless(vless_url, idx):
+              try:
+                  parsed = urlparse(vless_url.strip())
+                  uuid = parsed.username
+                  server_port = parsed.netloc.split("@")[-1]
+                  server = server_port.split(":")[0]
+                  port = int(server_port.split(":")[1])
+                  name = unquote(parsed.fragment) if parsed.fragment else f"VLESS_{idx}"
+                  name = re.sub(r'[\s"\'#:\-\[\]\(\)]', '_', name)[:30]
+                  params = parse_qs(parsed.query)
+                  
+                  if "udp" in params and params["udp"][0] == "true": return None
+                  
+                  yaml_block = [
+                      f"  - name: \"{name}\"", f"    type: vless", f"    server: {server}",
+                      f"    port: {port}", f"    uuid: {uuid}", f"    cipher: auto",
+                      f"    tls: true", f"    udp: false"
+                  ]
+                  if "network" in params: yaml_block.append(f"    network: {params['network'][0]}")
+                  if "security" in params:
+                      yaml_block.append(f"    servername: {params['sni'][0] if 'sni' in params else server}")
+                      if params["security"][0] == "reality":
+                          yaml_block.append("    reality-opts:")
+                          yaml_block.append(f"      public-key: {params['pbk'][0] if 'pbk' in params else ''}")
+                          if "sid" in params: yaml_block.append(f"      short-id: {params['sid'][0]}")
+                  if "fp" in params: yaml_block.append(f"    client-fingerprint: {params['fp'][0]}")
+                  return yaml_block
+              except: return None
+
           output_lines = ["proxies:"]
           proxy_count = 0
           seen_names = set()
 
           for url in urls:
-              if proxy_count >= 300:
-                  break
+              if proxy_count >= 300: break
               try:
-                  req = urllib.request.Request(url, headers={"User-Agent": "clash"})
-                  with urllib.request.urlopen(req, timeout=10) as response:
-                      content = response.read().decode("utf-8")
+                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Clash"})
+                  with urllib.request.urlopen(req, timeout=12) as response:
+                      raw_data = response.read()
                   
-                  proxies_section = re.search(r"(proxies:.*)", content, re.DOTALL)
-                  if proxies_section:
-                      lines = proxies_section.group(1).split("\n")
-                      current_proxy = []
-                      
-                      for line in lines[1:]:
-                          if line.strip().startswith("- name:"):
-                              if current_proxy:
-                                  proxy_str = "".join(current_proxy)
-                                  if "udp: true" not in proxy_str:
-                                      name_match = re.search(r"name:\s*[\"\']?([^\"\'\s]+)", proxy_str)
-                                      p_name = name_match.group(1) if name_match else str(proxy_count)
-                                      if p_name not in seen_names:
-                                          seen_names.add(p_name)
-                                          output_lines.extend(current_proxy)
-                                          proxy_count += 1
-                                          if proxy_count >= 300:
-                                              break
-                              current_proxy = [line]
-                          elif current_proxy:
-                              current_proxy.append(line)
+                  # Пробуем декодировать (на случай если файл в Base64)
+                  try:
+                      content = base64.b64decode(raw_data).decode("utf-8")
+                  except:
+                      content = raw_data.decode("utf-8")
+
+                  # УМНОЕ ОПРЕДЕЛЕНИЕ ФОРМАТА
+                  if "proxies:" in content or "proxy-providers:" in content:
+                      # СЦЕНАРИЙ А: Это готовый Clash YAML файл
+                      proxies_section = re.search(r"(proxies:.*)", content, re.DOTALL)
+                      if proxies_section:
+                          lines = proxies_section.group(1).split("\n")
+                          current_proxy = []
+                          for line in lines[1:]:
+                              if line.strip().startswith("- name:"):
+                                  if current_proxy:
+                                      proxy_str = "".join(current_proxy)
+                                      if "udp: true" not in proxy_str:
+                                          n_match = re.search(r"name:\s*[\"\']?([^\"\'\s]+)", proxy_str)
+                                          p_name = n_match.group(1) if n_match else str(proxy_count)
+                                          if p_name not in seen_names:
+                                              seen_names.add(p_name)
+                                              output_lines.extend(current_proxy)
+                                              proxy_count += 1
+                                              if proxy_count >= 300: break
+                                  current_proxy = [line]
+                              elif current_proxy: current_proxy.append(line)
+                  else:
+                      # СЦЕНАРИЙ Б: Текстовые строки ссылок (vless, ss, vmess)
+                      lines = content.split("\n")
+                      for idx, line in enumerate(lines):
+                          if proxy_count >= 300: break
+                          if line.strip().startswith("vless://"):
+                              yaml_res = parse_vless(line, idx + proxy_count)
+                              if yaml_res:
+                                  output_lines.extend(yaml_res)
+                                  proxy_count += 1
+
               except Exception as e:
-                  print(f"Error loading {url}: {e}")
+                  print(f"Skip {url}: {e}")
                   continue
-              
+
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n".join(output_lines))
           EOF
 
-          # Спокойно запускаем созданный файл без конфликтов кавычек
-          python script.py
+          python smart_script.py
 
       - name: Commit and Push Changes
         run: |
