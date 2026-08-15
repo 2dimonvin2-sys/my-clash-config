@@ -17,16 +17,18 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Filter Proxies via Python
+      - name: Filter Proxies via Python Script
         run: |
-          python -c '
+          # Создаем чистый изолированный файл скрипта, чтобы избежать ошибок синтаксиса Bash
+          cat << 'EOF' > script.py
           import urllib.request
           import re
 
           urls = [
-          "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
-          "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
+              "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
+              "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
           ]
+          
           output_lines = ["proxies:"]
           proxy_count = 0
           seen_names = set()
@@ -66,7 +68,10 @@ jobs:
               
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n".join(output_lines))
-          '
+          EOF
+
+          # Спокойно запускаем созданный файл без конфликтов кавычек
+          python script.py
 
       - name: Commit and Push Changes
         run: |
