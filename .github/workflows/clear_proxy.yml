@@ -27,7 +27,7 @@ jobs:
               "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
           ]
           
-          output_lines = [] # ИСПРАВЛЕНО: Никаких заголовков proxies: в начале!
+                    output_lines = ["proxies:"] # ИСПРАВЛЕНО: Никаких заголовков proxies: в начале!
           proxy_count = 0
           seen_names = set()
 
