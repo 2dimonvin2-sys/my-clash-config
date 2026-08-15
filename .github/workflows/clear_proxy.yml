@@ -12,41 +12,21 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install and Run Local Subconverter
+      - name: Run Subconverter via Docker
         run: |
-          # 1. Скачиваем официальный движок конвертера прямо на GitHub
-          wget https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.tar.gz
-          tar -xvf subconverter_linux64.tar.gz
+          # Запускаем официальный Docker-контейнер subconverter
+          # Он сам скачает, профильтрует 10000 серверов и сохранит готовый файл live_free.yaml
+          docker run --rm -v ${{ github.workspace }}:/workspace tindy2013/subconverter:latest \
+          ./subconverter -g --url "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml" \
+          --target clash --max_nodes 70 --udp false --sort true
           
-          # 2. Настраиваем конфигурацию для фильтрации
-          # В кавычках ниже замените ССЫЛКА_НА_10000_СЕРВЕРОВ на вашу реальную огромную ссылку!
-          ORIGINAL_URL="https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
-          
-          # Запускаем локальный процесс конвертации
-          cd subconverter
-          ./subconverter -g --url "${ORIGINAL_URL}" --target clash --max_nodes 70 --udp false --sort true
-          
-          # Переносим готовый файл обратно в корень репозитория
-          mv sub.yaml ../live_free.yaml
-          cd ..
-
-      - name: Install and Run Local Subconverter
-        run: |
-          # 1. Скачиваем официальный движок конвертера прямо на GitHub
-          wget https://github.com
-          tar -xvf subconverter_linux64.tar.gz
-          
-          # 2. Переносим все файлы движка в корень, чтобы он видел свои настройки
-          mv subconverter/* .
-          
-          # 3. Настраиваем конфигурацию для фильтрации
-          ORIGINAL_URL="https://githubusercontent.com"
-          
-          # Запускаем процесс конвертации прямо из корня
-          ./subconverter -g --url "${ORIGINAL_URL}" --target clash --max_nodes 70 --udp false --sort true
-          
-          # Переименовываем готовый файл в live_free.yaml
+          # Переносим созданный файл в нужное место
           mv sub.yaml live_free.yaml
 
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add live_free.yaml
           git commit -m "Update clean proxy list" || exit 0
           git push
