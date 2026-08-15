@@ -49,25 +49,26 @@ jobs:
                                   if "udp: true" not in proxy_str:
                                       n_match = re.search(r"name:\s*[\"\']?([^\"\'\s]+)", proxy_str)
                                       p_name = n_match.group(1) if n_match else str(proxy_count)
-                                      
                                       p_name = p_name.replace('"', '').replace("'", "")
                                       proxy_str = proxy_str.replace("cipher: auto", "cipher: none")
-                                      
                                       if p_name not in seen_names:
                                           seen_names.add(p_name)
                                           output_lines.append(proxy_str)
                                           proxy_count += 1
+                                          if proxy_count >= 300: break
                               current_proxy = [line]
                           elif current_proxy: 
                               current_proxy.append(line)
               except Exception as e:
                   continue
+              if proxy_count >= 300: break
 
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n".join(output_lines))
           EOF
 
           python smart_script.py
+
 
       - name: Commit and Push Changes
         run: |
