@@ -12,16 +12,49 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Run Subconverter via Docker
-        run: |
-          # Запускаем официальный контейнер. Передавать команду запуска внутрь не нужно, только параметры!
-          docker run --rm -v $(pwd):/workspace tindy2013/subconverter:latest \
-          -g --url "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml" \
-          --target clash --max_nodes 70 --udp false --sort true --ua "clash"
-          
-          # Переносим созданный файл в корень с нужным именем
-          mv sub.yaml live_free.yaml
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
+      - name: Filter Proxies via Python
+        run: |
+          python -c '
+          import urllib.request
+          import re
+
+          url = "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
+          
+          # Скачиваем оригинальный тяжелый файл
+          req = urllib.request.Request(url, headers={"User-Agent": "clash"})
+          with urllib.request.urlopen(req) as response:
+              content = response.read().decode("utf-8")
+          
+          # Ищем секцию с прокси-серверами
+          proxies_section = re.search(r"(proxies:.*)", content, re.DOTALL)
+          if proxies_section:
+              lines = proxies_section.group(1).split("\n")
+              output_lines = [lines[0]] # Добавляем строчку proxies:
+              
+              current_proxy = []
+              proxy_count = 0
+              
+              # Отбираем первые 70 серверов, убирая UDP-запросы
+              for line in lines[1:]:
+                  if line.strip().startswith("- name:"):
+                      if current_proxy and "udp: true" not in "".join(current_proxy):
+                          output_lines.extend(current_proxy)
+                          proxy_count += 1
+                      current_proxy = [line]
+                      if proxy_count >= 70:
+                          break
+                  elif current_proxy:
+                      current_proxy.append(line)
+              
+              # Записываем готовый легкий файл
+              with open("live_free.yaml", "w", encoding="utf-8") as f:
+                  f.write("\n".join(output_lines))
+          '
 
       - name: Commit and Push Changes
         run: |
