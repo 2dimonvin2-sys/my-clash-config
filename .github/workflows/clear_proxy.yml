@@ -1,0 +1,32 @@
+name: Filter and Clean Subscriptions
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Робот будет запускаться сам каждые 6 часов
+  workflow_dispatch:      # Кнопка для ручного запуска в интерфейсе GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Download and Filter Subscriptions
+        run: |
+          # В кавычках ниже замените ССЫЛКА_НА_10000_СЕРВЕРОВ на вашу реальную огромную ссылку!
+          ORIGINAL_URL="https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
+          
+          # Настройки фильтрации (Берем топ-70 прокси, вырезаем мусор, оставляем рабочие протоколы)
+          FILTER_PARAMS="&target=clash&max_nodes=70&emoji=true&list=false&sort=true&udp=false&scv=true"
+          
+          # Отправляем запрос на публичный движок subconverter
+          curl -L "https://sub.v1.mk/sub?url=${ORIGINAL_URL}${FILTER_PARAMS}" -o live_free.yaml
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add live_free.yaml
+          git commit -m "Update clean proxy list" || exit 0
+          git push
