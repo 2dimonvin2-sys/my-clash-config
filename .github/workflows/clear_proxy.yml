@@ -21,7 +21,7 @@ jobs:
           FILTER_PARAMS="&target=clash&max_nodes=70&emoji=true&list=false&sort=true&udp=false&scv=true"
           
           # Отправляем запрос на публичный движок subconverter
-          curl -L "https://sub.v1.mk/sub?url=${ORIGINAL_URL}${FILTER_PARAMS}" -o live_free.yaml
+          curl -L "https://url.v1.mk/sub?url=${ORIGINAL_URL}${FILTER_PARAMS}" -o live_free.yaml
 
       - name: Commit and Push Changes
         run: |
