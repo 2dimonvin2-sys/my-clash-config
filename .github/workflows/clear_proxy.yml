@@ -17,27 +17,64 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Pure Clash YAML Merge
+      - name: Advanced Parser and YAML Merge
         run: |
           cat << 'EOF' > smart_script.py
           import urllib.request
           import re
+          from urllib.parse import urlparse, parse_qs, unquote
 
-          urls = [
+          # 1. Источники готового YAML
+          yaml_urls = [
               "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
               "https://sub.vlessfo.ru/vlessforu/working_configs.txt"
+          ]
+
+          # 2. Секретные базы с сырыми VLESS и Hysteria2 ссылками
+          raw_urls = [
+              "https://raw.githubusercontent.com/yebekhe/TVC/main/feeds/v2ray/valid",
+              "https://raw.githubusercontent.com/FukutoK/VPNHub/main/v2ray"
           ]
           
           output_lines = ["proxies:"]
           proxy_count = 0
           seen_names = set()
 
-          for url in urls:
+          # Функция ручного перевода сырых vless:// в Clash YAML формат
+          def parse_vless(url_str, idx):
               try:
-                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Clash"})
-                  with urllib.request.urlopen(req, timeout=12) as response:
-                      content = response.read().decode("utf-8", errors="ignore")
+                  parsed = urlparse(url_str.strip())
+                  if parsed.scheme != "vless": return None
+                  uuid = parsed.username
+                  server_port = parsed.netloc.split("@")[-1]
+                  server, port = server_port.split(":")
+                  raw_name = unquote(parsed.fragment) if parsed.fragment else f"Secret_VLESS_{idx}"
+                  clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
+                  params = parse_qs(parsed.query)
+                  if "udp" in params and params["udp"] == ["true"]: return None
                   
+                  block = [
+                      f"  - name: \"💎_{clean_name}_{idx}\"", f"    type: vless", f"    server: {server}",
+                      f"    port: {port}", f"    uuid: {uuid}", f"    cipher: none", f"    tls: true", f"    udp: false"
+                  ]
+                  if "network" in params: block.append(f"    network: {params['network'][0]}")
+                  if "security" in params:
+                      sni = params['sni'][0] if 'sni' in params else server
+                      block.append(f"    servername: {sni}")
+                      if params["security"] == ["reality"]:
+                          block.append("    reality-opts:")
+                          block.append(f"      public-key: {params['pbk'][0] if 'pbk' in params else ''}")
+                          if "sid" in params: block.append(f"      short-id: {params['sid'][0]}")
+                  if "fp" in params: block.append(f"    client-fingerprint: {params['fp'][0]}")
+                  return "\n".join(block)
+              except: return None
+
+          # ПАРСИНГ ИСТОЧНИКОВ 1 (Готовый Clash YAML)
+          for url in yaml_urls:
+              try:
+                  req = urllib.request.Request(url, headers={"User-Agent": "ClashMeta"})
+                  with urllib.request.urlopen(req, timeout=12) as res:
+                      content = res.read().decode("utf-8", errors="ignore")
                   proxies_section = re.search(r"(proxies:.*)", content, re.DOTALL)
                   if proxies_section:
                       lines = proxies_section.group(1).split("\n")
@@ -48,8 +85,7 @@ jobs:
                                   proxy_str = "\n".join(current_proxy)
                                   if "udp: true" not in proxy_str:
                                       n_match = re.search(r"name:\s*[\"\']?([^\"\'\s]+)", proxy_str)
-                                      p_name = n_match.group(1) if n_match else str(proxy_count)
-                                      p_name = p_name.replace('"', '').replace("'", "")
+                                      p_name = n_match.group(1).replace('"', '').replace("'", "") if n_match else str(proxy_count)
                                       proxy_str = proxy_str.replace("cipher: auto", "cipher: none")
                                       if p_name not in seen_names:
                                           seen_names.add(p_name)
@@ -57,11 +93,25 @@ jobs:
                                           proxy_count += 1
                                           if proxy_count >= 300: break
                               current_proxy = [line]
-                          elif current_proxy: 
-                              current_proxy.append(line)
-              except Exception as e:
-                  continue
+                          elif current_proxy: current_proxy.append(line)
+              except: continue
               if proxy_count >= 300: break
+
+          # ПАРСИНГ ИСТОЧНИКОВ 2 (Секретные сырые ссылки)
+          for url in raw_urls:
+              if proxy_count >= 300: break
+              try:
+                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                  with urllib.request.urlopen(req, timeout=12) as res:
+                      lines = res.read().decode("utf-8", errors="ignore").split("\n")
+                  for idx, line in enumerate(lines):
+                      if line.strip().startswith("vless://"):
+                          yaml_proxy = parse_vless(line, idx + proxy_count)
+                          if yaml_proxy:
+                              output_lines.append(yaml_proxy)
+                              proxy_count += 1
+                              if proxy_count >= 300: break
+              except: continue
 
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n".join(output_lines))
@@ -69,11 +119,10 @@ jobs:
 
           python smart_script.py
 
-
       - name: Commit and Push Changes
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add live_free.yaml
-          git commit -m "Update clean proxy list" || exit 0
+          git commit -m "Add secret servers to proxy list" || exit 0
           git push -f
