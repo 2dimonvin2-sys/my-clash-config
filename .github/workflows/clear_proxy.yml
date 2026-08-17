@@ -48,7 +48,7 @@ jobs:
                   uuid = parsed.username
                   server_port = parsed.netloc.split("@")[-1]
                   server, port = server_port.split(":")[0], int(server_port.split(":")[1])
-                                    raw_name = unquote(parsed.fragment) if parsed.fragment else f"VLESS"
+                  raw_name = unquote(parsed.fragment) if parsed.fragment else f"VLESS"
                   clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
                   if not clean_name or clean_name.startswith("VLESS"):
                       clean_name = f"Secret_{idx}"
