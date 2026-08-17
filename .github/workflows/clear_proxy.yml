@@ -32,14 +32,13 @@ jobs:
 
           # 2. Секретные базы с сырыми VLESS и Hysteria2 ссылками
           raw_urls = [
-              "https://raw.githubusercontent.com/yebekhe/TVC/main/feeds/v2ray/valid",
-              "https://raw.githubusercontent.com/FukutoK/VPNHub/main/v2ray"
+              "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
+              "https://raw.githubusercontent.com/as93297/Xray-base64-Collector/main/v2ray.txt"
           ]
           
           output_lines = ["proxies:"]
           proxy_count = 0
           seen_names = set()
-
           # Функция ручного перевода сырых vless:// в Clash YAML формат
           def parse_vless(url_str, idx):
               try:
