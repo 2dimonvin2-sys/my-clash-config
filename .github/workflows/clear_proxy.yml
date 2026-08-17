@@ -124,3 +124,10 @@ jobs:
                   print(f"❌ ОШИБКА ДЛЯ СЫРОЙ ССЫЛКИ {url} -> {e}")
                   continue
 
+          with open("live_free.yaml", "w", encoding="utf-8") as f:
+              f.write("\n".join(output_lines))
+          EOF
+
+          python smart_script.py
+
+
