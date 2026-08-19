@@ -57,18 +57,27 @@ jobs:
                   params = parse_qs(parsed.query)
                   if "udp" in params and params["udp"] == ["true"]: return None
                   
-                  return (
-                      f"  - name: \"💎_{clean_name}_{idx}\"\n"
-                      f"    type: vless\n"
-                      f"    server: {server}\n"
-                      f"    port: {port}\n"
-                      f"    uuid: {uuid}\n"
-                      f"    cipher: none\n"
-                      f"    tls: true\n"
-                      f"    udp: false\n"
-                      f"    network: tcp\n"
-
-                  )
+                  block = [
+                      f"  - name: \"💎_{clean_name}_{idx}\"",
+                      f"    type: vless",
+                      f"    server: {server}",
+                      f"    port: {port}",
+                      f"    uuid: {uuid}",
+                      f"    cipher: none",
+                      f"    tls: true",
+                      f"    udp: false",
+                      f"    network: tcp"
+                  ]
+                  if "network" in params: block.append(f"    network: {params['network']}")
+                  if "security" in params:
+                      sni = params['sni'] if 'sni' in params else server
+                      block.append(f"    servername: {sni}")
+                      if params["security"] == ["reality"]:
+                          block.append("    reality-opts:")
+                          block.append(f"      public-key: {params['pbk'] if 'pbk' in params else ''}")
+                          if "sid" in params: block.append(f"      short-id: {params['sid']}")
+                  if "fp" in params: block.append(f"    client-fingerprint: {params['fp']}")
+                  return "\n".join(block)
               except: return None
 
           # ЭТАП 1: ВЫУЖИВАЕМ СЕРВЕРА ИЗ СЫРЫХ БАЗ И HTML-ТАБЛИЦ
