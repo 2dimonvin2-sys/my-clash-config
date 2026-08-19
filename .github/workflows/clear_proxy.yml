@@ -76,6 +76,27 @@ jobs:
                   return "\n".join(block)
               except: return None
 
+          # ПАРСИНГ ИСТОЧНИКОВ 2 (Секретные сырые ссылки)
+          for url in raw_urls:
+              if proxy_count >= 300: break
+              try:
+                  print(f"Попытка скачать сырую базу: {url}")
+                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                  with urllib.request.urlopen(req, timeout=12) as res:
+                      lines = res.read().decode("utf-8", errors="ignore").split("\n")
+                  start_count = proxy_count
+                  for idx, line in enumerate(lines):
+                      if line.strip().startswith("vless://"):
+                          yaml_proxy = parse_vless(line, idx + proxy_count)
+                          if yaml_proxy:
+                              output_lines.append(yaml_proxy)
+                              proxy_count += 1
+                              if proxy_count >= 300: break
+                  print(f"✅ УСПЕХ СЫРЫХ ССЫЛОК! Выужено {proxy_count - start_count} серверов.")
+              except Exception as e:
+                  print(f"❌ ОШИБКА ДЛЯ СЫРОЙ ССЫЛКИ {url} -> {e}")
+                  continue 
+
           # ПАРСИНГ ИСТОЧНИКОВ 1 (Готовый Clash YAML)
           for url in yaml_urls:
               try:
@@ -108,27 +129,6 @@ jobs:
                   print(f"❌ ОШИБКА ДЛЯ YAML ССЫЛКИ {url} -> {e}")
                   continue
               if proxy_count >= 300: break
-
-          # ПАРСИНГ ИСТОЧНИКОВ 2 (Секретные сырые ссылки)
-          for url in raw_urls:
-              if proxy_count >= 300: break
-              try:
-                  print(f"Попытка скачать сырую базу: {url}")
-                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                  with urllib.request.urlopen(req, timeout=12) as res:
-                      lines = res.read().decode("utf-8", errors="ignore").split("\n")
-                  start_count = proxy_count
-                  for idx, line in enumerate(lines):
-                      if line.strip().startswith("vless://"):
-                          yaml_proxy = parse_vless(line, idx + proxy_count)
-                          if yaml_proxy:
-                              output_lines.append(yaml_proxy)
-                              proxy_count += 1
-                              if proxy_count >= 300: break
-                  print(f"✅ УСПЕХ СЫРЫХ ССЫЛОК! Выужено {proxy_count - start_count} серверов.")
-              except Exception as e:
-                  print(f"❌ ОШИБКА ДЛЯ СЫРОЙ ССЫЛКИ {url} -> {e}")
-                  continue
 
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n".join(output_lines))
