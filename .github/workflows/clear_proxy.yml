@@ -80,10 +80,12 @@ jobs:
                               block.append(f"      public-key: {params['pbk'][0]}")
                               if "sid" in params and params["sid"]:
                                   sid_val = params['sid'][0]
-                                  if len(sid_val) in [2, 4, 6, 8, 10, 12, 14, 16] and re.match(r'^[0-9a-fA-F]+$', sid_val):
+                                  is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_val)
+                                  if is_hex and len(sid_val) in:
                                       block.append(f"      short-id: {sid_val}")
                                   else:
                                       return None
+
                   
                   if "fp" in params and params["fp"]:
                       block.append(f"    client-fingerprint: {params['fp'][0]}")
