@@ -19,24 +19,15 @@ jobs:
 
       - name: Advanced Parser and YAML Merge
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          
-          # Силой вытягиваем ветку, чтобы Гитхаб не блокировал запись
-          git fetch origin main
-          git checkout main || git checkout -b main
-          
-          # Заменяем файл и делаем жесткий силовой пуш
-          git add live_free.yaml
-          git commit -m "Update proxy list with secret servers" --allow-empty
-          git push origin main --force
-
+          cat << 'EOF' > smart_script.py
+          import urllib.request
+          import re
+          from urllib.parse import urlparse, parse_qs, unquote
           # 1. Источники готового YAML
           yaml_urls = [
               "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
               "https://sub.vlessfo.ru/vlessforu/working_configs.txt"
           ]
-
           # 2. Секретные базы с сырыми VLESS и Hysteria2 ссылками
           raw_urls = [
               "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
@@ -48,14 +39,14 @@ jobs:
           output_lines = ["proxies:"]
           proxy_count = 0
           seen_names = set()
-          # Функция ручного перевода сырых vless:// в Clash YAML формат
+
           def parse_vless(url_str, idx):
               try:
                   parsed = urlparse(url_str.strip())
                   if parsed.scheme != "vless": return None
                   uuid = parsed.username
                   server_port = parsed.netloc.split("@")[-1]
-                  server, port = server_port.split(":")[0], int(server_port.split(":")[1])
+                  server, port = server_port.split(":"), int(server_port.split(":"))
                   raw_name = unquote(parsed.fragment) if parsed.fragment else f"VLESS"
                   clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
                   if not clean_name or clean_name.startswith("VLESS"):
@@ -65,7 +56,7 @@ jobs:
                   
                   block = [
                       f"  - name: \"💎_{clean_name}\"",
-                      f"    type: vless", 
+                      f"    type: vless",
                       f"    server: {server}",
                       f"    port: {port}",
                       f"    uuid: {uuid}",
@@ -73,15 +64,15 @@ jobs:
                       f"    tls: true",
                       f"    udp: false"
                   ]
-                  if "network" in params: block.append(f"    network: {params['network'][0]}")
+                  if "network" in params: block.append(f"    network: {params['network']}")
                   if "security" in params:
-                      sni = params['sni'][0] if 'sni' in params else server
+                      sni = params['sni'] if 'sni' in params else server
                       block.append(f"    servername: {sni}")
                       if params["security"] == ["reality"]:
                           block.append("    reality-opts:")
-                          block.append(f"      public-key: {params['pbk'][0] if 'pbk' in params else ''}")
-                          if "sid" in params: block.append(f"      short-id: {params['sid'][0]}")
-                  if "fp" in params: block.append(f"    client-fingerprint: {params['fp'][0]}")
+                          block.append(f"      public-key: {params['pbk'] if 'pbk' in params else ''}")
+                          if "sid" in params: block.append(f"      short-id: {params['sid']}")
+                  if "fp" in params: block.append(f"    client-fingerprint: {params['fp']}")
                   return "\n".join(block)
               except: return None
 
@@ -144,5 +135,17 @@ jobs:
           EOF
 
           python smart_script.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          
+          git fetch origin main
+          git checkout main || git checkout -b main
+          
+          git add live_free.yaml
+          git commit -m "Update proxy list with secret servers" --allow-empty
+          git push origin main --force
 
 
