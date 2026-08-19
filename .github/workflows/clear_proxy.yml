@@ -90,19 +90,6 @@ jobs:
                   return "\n".join(block)
               except:
                   return None
- 
-
-
-
-                  
-                  if "fp" in params and params["fp"]:
-                      block.append(f"    client-fingerprint: {params['fp'][0]}")
-                      
-                  return "\n".join(block)
-              except:
-                  return None
-
-
 
           for url in raw_urls:
               if proxy_count >= 300: break
