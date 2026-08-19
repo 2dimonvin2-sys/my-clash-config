@@ -68,29 +68,30 @@ jobs:
                       f"    network: tcp"
                   ]
                   
-                  if "network" in params:
-                      block.append(f"    network: {params['network']}")
+                                   if "network" in params and params["network"]:
+                      block.append(f"    network: {params['network'][0]}")
                   
-                  if "security" in params:
-                      sni = params['sni'] if 'sni' in params else server
+                  if "security" in params and params["security"]:
+                      sni = params['sni'][0] if 'sni' in params and params['sni'] else server
                       block.append(f"    servername: {sni}")
                       if params["security"] == ["reality"]:
-                          block.append("    reality-opts:")
-                          pbk = params['pbk'] if 'pbk' in params else ''
-                          block.append(f"      public-key: {pbk}")
-                          if "sid" in params and params["sid"]:
-                              sid_val = params['sid']
-                              if len(sid_val) in [2, 4, 6, 8, 10, 12, 14, 16] and re.match(r'^[0-9a-fA-F]+$', sid_val):
-                                  block.append(f"      short-id: {sid_val}")
-                              else:
-                                  return None
+                          if "pbk" in params and params["pbk"]:
+                              block.append("    reality-opts:")
+                              block.append(f"      public-key: {params['pbk'][0]}")
+                              if "sid" in params and params["sid"]:
+                                  sid_val = params['sid'][0]
+                                  if len(sid_val) in [2, 4, 6, 8, 10, 12, 14, 16] and re.match(r'^[0-9a-fA-F]+$', sid_val):
+                                      block.append(f"      short-id: {sid_val}")
+                                  else:
+                                      return None
                   
-                  if "fp" in params:
-                      block.append(f"    client-fingerprint: {params['fp']}")
+                  if "fp" in params and params["fp"]:
+                      block.append(f"    client-fingerprint: {params['fp'][0]}")
                       
                   return "\n".join(block)
               except:
                   return None
+
 
 
           for url in raw_urls:
