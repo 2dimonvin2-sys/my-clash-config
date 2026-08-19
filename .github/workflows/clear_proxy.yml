@@ -61,7 +61,7 @@ jobs:
                       f"    type: vless",
                       f"    server: {server}",
                       f"    port: {port}",
-                      f"    uuid: {uuid}",
+                      f"    uuid: \"{uuid}\"",
                       f"    cipher: none",
                       f"    tls: true",
                       f"    udp: false",
