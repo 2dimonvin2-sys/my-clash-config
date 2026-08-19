@@ -34,8 +34,8 @@ jobs:
           raw_urls = [
               #"https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
               #"https://raw.githubusercontent.com/vlessfu/vlessfu/main/working_configs.txt",
-              #"https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/vless_configs.txt",
-              "https://raw.githubusercontent.com/FreeFolksOn/abc-configs-free-vpn-proxy-list/main/README.md"
+              "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/vless_configs.txt",
+              #"https://raw.githubusercontent.com/FreeFolksOn/abc-configs-free-vpn-proxy-list/main/README.md"
           ]
           
           output_lines = ["proxies:"]
@@ -71,7 +71,7 @@ jobs:
                   if "network" in params and params["network"]:
                       block.append(f"    network: {params['network'][0]}")
                   
-                  if "security" in params and params["security"]:
+                  if "security" in params and params["security"] == ["reality"] and "pbk" in params:
                       sni = params['sni'][0] if 'sni' in params and params['sni'] else server
                       block.append(f"    servername: {sni}")
                       
