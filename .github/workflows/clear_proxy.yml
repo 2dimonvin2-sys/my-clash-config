@@ -70,27 +70,10 @@ jobs:
                       net_raw = params['network'][0] if isinstance(params['network'], list) else params['network']
                       block.append(f"    network: {net_raw}")
                   
-                  # ЖЕЛЕЗНЫЙ ФИЛЬТР REALITY: строим блок только при наличии нормального публичного ключа
-                  if "pbk" in params and params["pbk"]:
-                      pbk_raw = params['pbk'][0] if isinstance(params['pbk'], list) else params['pbk']
-                      if pbk_raw and pbk_raw.lower() not in ["none", "null"]:
-                          block.append("    reality-opts:")
-                          block.append(f"      public-key: {pbk_raw}")
-                          
-                          if "sid" in params and params["sid"]:
-                              sid_raw = params['sid'][0] if isinstance(params['sid'], list) else params['sid']
-                              if sid_raw and sid_raw.lower() not in ["none", "null"]:
-                                  is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_raw)
-                                  # Математическая проверка четности и длины без квадратных скобок в чате
-                                  if is_hex and len(sid_raw) % 2 == 0 and 2 <= len(sid_raw) <= 16:
-                                      block.append(f"      short-id: {sid_raw}")
-                                  else:
-                                      return None # Жёсткий бан мусора
-                  
                   if "sni" in params and params["sni"]:
                       sni_raw = params['sni'][0] if isinstance(params['sni'], list) else params['sni']
                       block.append(f"    servername: {sni_raw}")
-                  elif "pbk" in params and params["pbk"]:
+                  else:
                       block.append(f"    servername: {server}")
                       
                   if "fp" in params and params["fp"]:
@@ -100,6 +83,7 @@ jobs:
                   return "\n".join(block)
               except:
                   return None
+
 
 
           for url in raw_urls:
