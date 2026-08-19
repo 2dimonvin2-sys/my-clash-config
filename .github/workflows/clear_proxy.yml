@@ -19,10 +19,17 @@ jobs:
 
       - name: Advanced Parser and YAML Merge
         run: |
-          cat << 'EOF' > smart_script.py
-          import urllib.request
-          import re
-          from urllib.parse import urlparse, parse_qs, unquote
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          
+          # Силой вытягиваем ветку, чтобы Гитхаб не блокировал запись
+          git fetch origin main
+          git checkout main || git checkout -b main
+          
+          # Заменяем файл и делаем жесткий силовой пуш
+          git add live_free.yaml
+          git commit -m "Update proxy list with secret servers" --allow-empty
+          git push origin main --force
 
           # 1. Источники готового YAML
           yaml_urls = [
