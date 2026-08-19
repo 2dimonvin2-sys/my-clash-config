@@ -115,9 +115,6 @@ jobs:
                   req = urllib.request.Request(url, headers={"User-Agent": "ClashMeta"})
                   with urllib.request.urlopen(req, timeout=12) as res:
                       content = res.read().decode("utf-8", errors="ignore")
-                  proxies_section = re.search(r"(proxies:.*)", content, re.DOTALL)
-                  if proxies_section:
-                      lines = proxies_section.group(1).split("\n")
                       current_proxy = []
                       start_count = proxy_count
                       for line in lines[1:]:
