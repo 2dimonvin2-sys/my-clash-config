@@ -68,7 +68,7 @@ jobs:
                       f"    network: tcp"
                   ]
                   
-                                   if "network" in params and params["network"]:
+                  if "network" in params and params["network"]:
                       block.append(f"    network: {params['network'][0]}")
                   
                   if "security" in params and params["security"]:
