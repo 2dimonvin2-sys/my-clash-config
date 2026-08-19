@@ -80,7 +80,7 @@ jobs:
                           block.append(f"      public-key: {pbk}")
                           if "sid" in params and params["sid"]:
                               sid_val = params['sid']
-                              if len(sid_val) in and re.match(r'^[0-9a-fA-F]+$', sid_val):
+                              if len(sid_val) in [2, 4, 6, 8, 10, 12, 14, 16] and re.match(r'^[0-9a-fA-F]+$', sid_val):
                                   block.append(f"      short-id: {sid_val}")
                               else:
                                   return None
