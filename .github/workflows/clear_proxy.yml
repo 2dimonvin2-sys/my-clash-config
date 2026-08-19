@@ -72,16 +72,18 @@ jobs:
                   # БРОНЕБОЙНЫЙ ФИЛЬТР REALITY: ориентируемся строго по наличию публичного ключа!
                   if "pbk" in params and params["pbk"]:
                       block.append("    reality-opts:")
-                      block.append(f"      public-key: {params['pbk']}")
+                      # ИСПРАВЛЕНО: берем чистую строку ключа без скобок [0]
+                      block.append(f"      public-key: {params['pbk'][0]}")
                       
-                      # Если sid есть — проверяем его, если он ломаный — бракуем сервер
                       if "sid" in params and params["sid"]:
-                          sid_val = params['sid']
+                          # ИСПРАВЛЕНО: берем чистую строку Short ID без скобок [0]
+                          sid_val = params['sid'][0]
                           is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_val)
                           if is_hex and len(sid_val) % 2 == 0 and 2 <= len(sid_val) <= 16:
                               block.append(f"      short-id: {sid_val}")
                           else:
-                              return None # Жёсткий бан: выкидываем прокси 175 в корзину!
+                              return None  # Жесткий бан: выкидываем этот сервер в корзину!
+
 
                   
                   if "sni" in params and params["sni"]:
