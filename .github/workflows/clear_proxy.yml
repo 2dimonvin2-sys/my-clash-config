@@ -72,19 +72,25 @@ jobs:
                       block.append(f"    network: {params['network'][0]}")
                   
                   if "security" in params and params["security"]:
+                      # Берем чистую строку SNI без квадратных скобок
                       sni = params['sni'][0] if 'sni' in params and params['sni'] else server
                       block.append(f"    servername: {sni}")
+                      
+                      # Строгая проверка REALITY: параметры пишутся ТОЛЬКО здесь!
                       if params["security"] == ["reality"]:
                           if "pbk" in params and params["pbk"]:
                               block.append("    reality-opts:")
                               block.append(f"      public-key: {params['pbk'][0]}")
+                              
+                              # Переносим проверку Short ID СЮДА внутрь reality-opts
                               if "sid" in params and params["sid"]:
                                   sid_val = params['sid'][0]
                                   is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_val)
-                                  if is_hex and len(sid_val) in [2, 4, 6, 8, 10, 12, 14, 16]:
+                                  if is_hex and len(sid_val) in:
                                       block.append(f"      short-id: {sid_val}")
                                   else:
-                                      return None
+                                      return None # Бракуем, если ключ REALITY сломан
+
 
                   
                   if "fp" in params and params["fp"]:
