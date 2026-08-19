@@ -81,7 +81,7 @@ jobs:
                               if "sid" in params and params["sid"]:
                                   sid_val = params['sid'][0]
                                   is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_val)
-                                  if is_hex and len(sid_val) in:
+                                  if is_hex and len(sid_val) in [2, 4, 6, 8, 10, 12, 14, 16]:
                                       block.append(f"      short-id: {sid_val}")
                                   else:
                                       return None
