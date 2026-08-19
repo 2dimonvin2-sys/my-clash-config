@@ -157,9 +157,11 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           
+          # Силой заставляем Git переключиться на чистую ветку main
           git fetch origin main
           git checkout main || git checkout -b main
           
+          # Перезаписываем файл и делаем жесткий силовой пуш в облако
           git add live_free.yaml
-          git commit -m "Update proxy list with secret servers from tables" --allow-empty
+          git commit -m "Update clean proxy list with filters" --allow-empty
           git push origin main --force
