@@ -69,23 +69,22 @@ jobs:
                   if "network" in params and params["network"]:
                       block.append(f"    network: {params['network'][0]}")
                   
-                  # БРОНЕБОЙНЫЙ ФИЛЬТР REALITY: ориентируемся строго по наличию публичного ключа!
+                   # БРОНЕБОЙНЫЙ ФИЛЬТР REALITY: ориентируемся строго по наличию публичного ключа!
                   if "pbk" in params and params["pbk"]:
                       block.append("    reality-opts:")
-                      # ИСПРАВЛЕНО: берем чистую строку ключа без скобок [0]
-                      block.append(f"      public-key: {params['pbk'][0]}")
+                      # Вытаскиваем ключ из массива и очищаем от скобок
+                      pbk_raw = params['pbk'][0] if isinstance(params['pbk'], list) else params['pbk']
+                      block.append(f"      public-key: {pbk_raw}")
                       
                       if "sid" in params and params["sid"]:
-                          # ИСПРАВЛЕНО: берем чистую строку Short ID без скобок [0]
-                          sid_val = params['sid'][0]
-                          is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_val)
-                          if is_hex and len(sid_val) % 2 == 0 and 2 <= len(sid_val) <= 16:
-                              block.append(f"      short-id: {sid_val}")
+                          # Вытаскиваем Short ID из массива и очищаем от скобок
+                          sid_raw = params['sid'][0] if isinstance(params['sid'], list) else params['sid']
+                          is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_raw)
+                          if is_hex and len(sid_raw) % 2 == 0 and 2 <= len(sid_raw) <= 16:
+                              block.append(f"      short-id: {sid_raw}")
                           else:
                               return None  # Жесткий бан: выкидываем этот сервер в корзину!
 
-
-                  
                   if "sni" in params and params["sni"]:
                       block.append(f"    servername: {params['sni'][0]}")
                   elif "security" in params and params["security"] != ["reality"]:
