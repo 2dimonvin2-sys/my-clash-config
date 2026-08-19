@@ -1,30 +1,9 @@
-name: Universal Smart Proxy Filter
-
-on:
-  schedule:
-    - cron: '0 */6 * * *' # Автозапуск каждые 6 часов
-  workflow_dispatch:      # Кнопка ручного запуска
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Advanced Omnivorous Parser
-        run: |
           cat << 'EOF' > smart_script.py
           import urllib.request
           import re
           from urllib.parse import urlparse, parse_qs, unquote
 
-          # 1. Источники готового YAML
+         # 1. Источники готового YAML
           yaml_urls = [
               "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
               "https://sub.vlessfo.ru/vlessforu/working_configs.txt"
@@ -42,7 +21,7 @@ jobs:
           proxy_count = 0
           seen_names = set()
 
-          # Умная функция перевода сырых vless:// в идеальный вертикальный Clash YAML
+          # Идеальная функция перевода сырых vless:// в вертикальный Clash YAML
           def parse_vless(url_str, idx):
               try:
                   parsed = urlparse(url_str.strip())
@@ -68,20 +47,28 @@ jobs:
                       f"    udp: false",
                       f"    network: tcp"
                   ]
-                  if "network" in params: block.append(f"    network: {params['network']}")
+                  
+                  if "network" in params:
+                      block.append(f"    network: {params['network'][0]}")
+                  
                   if "security" in params:
-                      sni = params['sni'] if 'sni' in params else server
+                      sni = params['sni'][0] if 'sni' in params else server
                       block.append(f"    servername: {sni}")
                       if params["security"] == ["reality"]:
                           block.append("    reality-opts:")
-                          block.append(f"      public-key: {params['pbk'] if 'pbk' in params else ''}")
-                          if "sid" in params: block.append(f"      short-id: {params['sid']}")
-                  if "fp" in params: block.append(f"    client-fingerprint: {params['fp']}")
+                          pbk = params['pbk'][0] if 'pbk' in params else ''
+                          block.append(f"      public-key: {pbk}")
+                          if "sid" in params:
+                              block.append(f"      short-id: {params['sid'][0]}")
+                  
+                  if "fp" in params:
+                      block.append(f"    client-fingerprint: {params['fp'][0]}")
+                      
                   return "\n".join(block)
-              except: return None
+              except:
+                  return None
 
-
-          # ЭТАП 1: ВЫУЖИВАЕМ СЕРВЕРА ИЗ СЫРЫХ БАЗ И HTML-ТАБЛИЦ
+          # ЭТАП 1: ПАРСИМ СЫРЫЕ БАЗЫ
           for url in raw_urls:
               if proxy_count >= 300: break
               try:
@@ -90,7 +77,6 @@ jobs:
                   with urllib.request.urlopen(req, timeout=12) as res:
                       content = res.read().decode("utf-8", errors="ignore")
                   
-                  # УМНЫЙ ПОИСК: находим ВСЕ ссылки vless:// в любом месте текста и HTML
                   found_links = re.findall(r'(vless://[^\s"\'<>`]+)', content)
                   start_count = proxy_count
                   for idx, link in enumerate(found_links):
@@ -99,12 +85,12 @@ jobs:
                           output_lines.append(yaml_proxy)
                           proxy_count += 1
                           if proxy_count >= 300: break
-                  print(f"✅ УСПЕХ ТАБЛИЦЫ! Выужено {proxy_count - start_count} серверов.")
+                  print(f"✅ УСПЕХ СЫРЫХ! Выужено {proxy_count - start_count} серверов.")
               except Exception as e:
                   print(f"❌ ОШИБКА ДЛЯ СЫРОЙ ССЫЛКИ {url} -> {e}")
                   continue
 
-          # ЭТАП 2: ДОБИРАЕМ ОСТАТОК ИЗ ГОТОВЫХ YAML БАЗ ДО 300 ШТУК
+          # ЭТАП 2: ДОБИРАЕМ YAML
           for url in yaml_urls:
               if proxy_count >= 300: break
               try:
@@ -140,17 +126,3 @@ jobs:
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n".join(output_lines))
           EOF
-
-          python smart_script.py
-
-      - name: Commit and Push Changes
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          
-          git fetch origin main
-          git checkout main || git checkout -b main
-          
-          git add live_free.yaml
-          git commit -m "Update proxy list with secret servers from tables" --allow-empty
-          git push origin main --force
