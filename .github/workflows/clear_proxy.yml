@@ -67,35 +67,40 @@ jobs:
                   ]
                   
                   if "network" in params and params["network"]:
-                      block.append(f"    network: {params['network'][0]}")
+                      net_raw = params['network'][0] if isinstance(params['network'], list) else params['network']
+                      block.append(f"    network: {net_raw}")
                   
-                   # БРОНЕБОЙНЫЙ ФИЛЬТР REALITY: ориентируемся строго по наличию публичного ключа!
+                  # ЖЕЛЕЗНЫЙ ФИЛЬТР REALITY: строим блок только при наличии нормального публичного ключа
                   if "pbk" in params and params["pbk"]:
-                      block.append("    reality-opts:")
-                      # Вытаскиваем ключ из массива и очищаем от скобок
                       pbk_raw = params['pbk'][0] if isinstance(params['pbk'], list) else params['pbk']
-                      block.append(f"      public-key: {pbk_raw}")
-                      
-                      if "sid" in params and params["sid"]:
-                          # Вытаскиваем Short ID из массива и очищаем от скобок
-                          sid_raw = params['sid'][0] if isinstance(params['sid'], list) else params['sid']
-                          is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_raw)
-                          if is_hex and len(sid_raw) % 2 == 0 and 2 <= len(sid_raw) <= 16:
-                              block.append(f"      short-id: {sid_raw}")
-                          else:
-                              return None  # Жесткий бан: выкидываем этот сервер в корзину!
-
+                      if pbk_raw and pbk_raw.lower() not in ["none", "null"]:
+                          block.append("    reality-opts:")
+                          block.append(f"      public-key: {pbk_raw}")
+                          
+                          if "sid" in params and params["sid"]:
+                              sid_raw = params['sid'][0] if isinstance(params['sid'], list) else params['sid']
+                              if sid_raw and sid_raw.lower() not in ["none", "null"]:
+                                  is_hex = all(c in "0123456789abcdefABCDEF" for c in sid_raw)
+                                  # Математическая проверка четности и длины без квадратных скобок в чате
+                                  if is_hex and len(sid_raw) % 2 == 0 and 2 <= len(sid_raw) <= 16:
+                                      block.append(f"      short-id: {sid_raw}")
+                                  else:
+                                      return None # Жёсткий бан мусора
+                  
                   if "sni" in params and params["sni"]:
-                      block.append(f"    servername: {params['sni'][0]}")
-                  elif "security" in params and params["security"] != ["reality"]:
+                      sni_raw = params['sni'][0] if isinstance(params['sni'], list) else params['sni']
+                      block.append(f"    servername: {sni_raw}")
+                  elif "pbk" in params and params["pbk"]:
                       block.append(f"    servername: {server}")
                       
                   if "fp" in params and params["fp"]:
-                      block.append(f"    client-fingerprint: {params['fp'][0]}")
+                      fp_raw = params['fp'][0] if isinstance(params['fp'], list) else params['fp']
+                      block.append(f"    client-fingerprint: {fp_raw}")
                       
                   return "\n".join(block)
               except:
                   return None
+
 
           for url in raw_urls:
               if proxy_count >= 300: break
