@@ -17,17 +17,19 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Advanced Parser and YAML Merge
+      - name: Advanced Omnivorous Parser
         run: |
           cat << 'EOF' > smart_script.py
           import urllib.request
           import re
           from urllib.parse import urlparse, parse_qs, unquote
+
           # 1. Источники готового YAML
           yaml_urls = [
               "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
               "https://sub.vlessfo.ru/vlessforu/working_configs.txt"
           ]
+
           # 2. Секретные базы с сырыми VLESS и Hysteria2 ссылками
           raw_urls = [
               "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
@@ -40,13 +42,14 @@ jobs:
           proxy_count = 0
           seen_names = set()
 
+          # Умная функция перевода сырых vless:// в идеальный вертикальный Clash YAML
           def parse_vless(url_str, idx):
               try:
                   parsed = urlparse(url_str.strip())
                   if parsed.scheme != "vless": return None
                   uuid = parsed.username
                   server_port = parsed.netloc.split("@")[-1]
-                  server, port = server_port.split(":"), int(server_port.split(":"))
+                  server, port = server_port.split(":")
                   raw_name = unquote(parsed.fragment) if parsed.fragment else f"VLESS"
                   clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
                   if not clean_name or clean_name.startswith("VLESS"):
@@ -54,51 +57,44 @@ jobs:
                   params = parse_qs(parsed.query)
                   if "udp" in params and params["udp"] == ["true"]: return None
                   
-                  block = [
-                      f"  - name: \"💎_{clean_name}\"",
-                      f"    type: vless",
-                      f"    server: {server}",
-                      f"    port: {port}",
-                      f"    uuid: {uuid}",
-                      f"    cipher: none",
-                      f"    tls: true",
+                  return (
+                      f"  - name: \"💎_{clean_name}_{idx}\"\n"
+                      f"    type: vless\n"
+                      f"    server: {server}\n"
+                      f"    port: {port}\n"
+                      f"    uuid: {uuid}\n"
+                      f"    cipher: none\n"
+                      f"    tls: true\n"
                       f"    udp: false"
-                  ]
-                  if "network" in params: block.append(f"    network: {params['network']}")
-                  if "security" in params:
-                      sni = params['sni'] if 'sni' in params else server
-                      block.append(f"    servername: {sni}")
-                      if params["security"] == ["reality"]:
-                          block.append("    reality-opts:")
-                          block.append(f"      public-key: {params['pbk'] if 'pbk' in params else ''}")
-                          if "sid" in params: block.append(f"      short-id: {params['sid']}")
-                  if "fp" in params: block.append(f"    client-fingerprint: {params['fp']}")
-                  return "\n".join(block)
+                  )
               except: return None
 
-          # ПАРСИНГ ИСТОЧНИКОВ 2 (Секретные сырые ссылки)
+          # ЭТАП 1: ВЫУЖИВАЕМ СЕРВЕРА ИЗ СЫРЫХ БАЗ И HTML-ТАБЛИЦ
           for url in raw_urls:
               if proxy_count >= 300: break
               try:
-                  print(f"Попытка скачать сырую базу: {url}")
+                  print(f"Сканирование сырой базы/таблицы: {url}")
                   req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
                   with urllib.request.urlopen(req, timeout=12) as res:
-                      lines = res.read().decode("utf-8", errors="ignore").split("\n")
+                      content = res.read().decode("utf-8", errors="ignore")
+                  
+                  # УМНЫЙ ПОИСК: находим ВСЕ ссылки vless:// в любом месте текста и HTML
+                  found_links = re.findall(r'(vless://[^\s"\'<>`]+)', content)
                   start_count = proxy_count
-                  for idx, line in enumerate(lines):
-                      if line.strip().startswith("vless://"):
-                          yaml_proxy = parse_vless(line, idx + proxy_count)
-                          if yaml_proxy:
-                              output_lines.append(yaml_proxy)
-                              proxy_count += 1
-                              if proxy_count >= 300: break
-                  print(f"✅ УСПЕХ СЫРЫХ ССЫЛОК! Выужено {proxy_count - start_count} серверов.")
+                  for idx, link in enumerate(found_links):
+                      yaml_proxy = parse_vless(link, idx + proxy_count)
+                      if yaml_proxy:
+                          output_lines.append(yaml_proxy)
+                          proxy_count += 1
+                          if proxy_count >= 300: break
+                  print(f"✅ УСПЕХ ТАБЛИЦЫ! Выужено {proxy_count - start_count} серверов.")
               except Exception as e:
                   print(f"❌ ОШИБКА ДЛЯ СЫРОЙ ССЫЛКИ {url} -> {e}")
-                  continue 
+                  continue
 
-          # ПАРСИНГ ИСТОЧНИКОВ 1 (Готовый Clash YAML)
+          # ЭТАП 2: ДОБИРАЕМ ОСТАТОК ИЗ ГОТОВЫХ YAML БАЗ ДО 300 ШТУК
           for url in yaml_urls:
+              if proxy_count >= 300: break
               try:
                   print(f"Попытка скачать YAML-базу: {url}")
                   req = urllib.request.Request(url, headers={"User-Agent": "ClashMeta"})
@@ -128,7 +124,6 @@ jobs:
               except Exception as e:
                   print(f"❌ ОШИБКА ДЛЯ YAML ССЫЛКИ {url} -> {e}")
                   continue
-              if proxy_count >= 300: break
 
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n".join(output_lines))
@@ -145,7 +140,5 @@ jobs:
           git checkout main || git checkout -b main
           
           git add live_free.yaml
-          git commit -m "Update proxy list with secret servers" --allow-empty
+          git commit -m "Update proxy list with secret servers from tables" --allow-empty
           git push origin main --force
-
-
