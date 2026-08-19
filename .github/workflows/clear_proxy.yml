@@ -57,8 +57,14 @@ jobs:
                   if "udp" in params and params["udp"] == ["true"]: return None
                   
                   block = [
-                      f"  - name: \"💎_{clean_name}\"", f"    type: vless", f"    server: {server}",
-                      f"    port: {port}", f"    uuid: {uuid}", f"    cipher: none", f"    tls: true", f"    udp: false"
+                      f"  - name: \"💎_{clean_name}\"",
+                      f"    type: vless", 
+                      f"    server: {server}",
+                      f"    port: {port}",
+                      f"    uuid: {uuid}",
+                      f"    cipher: none",
+                      f"    tls: true",
+                      f"    udp: false"
                   ]
                   if "network" in params: block.append(f"    network: {params['network'][0]}")
                   if "security" in params:
