@@ -78,8 +78,15 @@ jobs:
                           block.append("    reality-opts:")
                           pbk = params['pbk'][0] if 'pbk' in params else ''
                           block.append(f"      public-key: {pbk}")
-                          if "sid" in params:
-                              block.append(f"      short-id: {params['sid'][0]}")
+                        if "sid" in params and params["sid"]:
+                            sid_val = params['sid'][0]
+                        
+                            # Жесткая проверка: Short ID должен быть только четной длины от 2 до 16 символов
+                            if len(sid_val) in [2, 4, 6, 8, 10, 12, 14, 16] and re.match(r'^[0-9a-fA-F]+$', sid_val):
+                                block.append(f"    short-id: {sid_val}")
+                            else:
+                                return None  # Сразу бракуем этот кривой сервер №200 в корзину!
+
                   
                   if "fp" in params:
                       block.append(f"    client-fingerprint: {params['fp'][0]}")
