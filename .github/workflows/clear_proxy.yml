@@ -88,7 +88,7 @@ jobs:
                       raw_name = unquote(parsed.fragment) if parsed.fragment else "VLESS"
                       clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
                       
-                                            params = parse_qs(parsed.query)
+                      params = parse_qs(parsed.query)
                       sni_val = params.get("sni", [server])[0]
                       fp_val = params.get("fp", ["chrome"])[0]
                       net_val = params.get("network", ["tcp"])[0]
