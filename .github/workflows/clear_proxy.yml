@@ -212,11 +212,15 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git fetch origin main
-          git checkout main || git checkout -b main
-          git add live_free.yaml
-          git commit -m "Update proxy list with detailed Russian logs" --allow-empty
-          git push origin main --force
+          # Скачиваем чистую базу Hysteria2
+          curl -sL "https://githubusercontent.com" -o live_free.yaml
+          
+          # Защита: принудительно оборачиваем все пароли в двойные кавычки, чтобы знаки == не ломали роутер
+          sed -i 's/password: \(.*\)/password: "\1"/g' live_free.yaml
+          # Убираем двойные кавычки, если они случайно продублировались
+          sed -i 's/""/"/g' live_free.yaml
+          
+          if [ ! -s live_free.yaml ] || ! grep -q "proxies:" live_free.yaml; then
+            echo "proxies:" > live_free.yaml
+          fi
 
