@@ -53,7 +53,7 @@ jobs:
                   
                   block = [
                       f"  - name: \"💎_{clean_name}_{idx}\"",
-                      f"    type: vless",
+                      f"    type: {parsed.scheme}",
                       f"    server: {server}",
                       f"    port: {port}",
                       f"    uuid: \"{uuid}\"",
@@ -80,6 +80,36 @@ jobs:
                   return "\n".join(block)
               except:
                   return None
+          # =========================================================
+          # ДОПОЛНИТЕЛЬНЫЙ БЛОК: КОНВЕРТЕР СЛОЖНЫХ YAML/ПЛЕЙЛИСТОВ В СЫРЫЕ ССЫЛКИ
+          # =========================================================
+          complex_urls = [
+              "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt"
+          ]
+
+          print("\n=== 🛠️ ЗАПУСК КОНВЕРТЕРА СЛОЖНЫХ ССЫЛОК ===")
+          converted_raw_links = []
+          for url in complex_urls:
+              try:
+                  print(f"🔄 Конвертирую и вытягиваю vless:// из: {url}")
+                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                  with urllib.request.urlopen(req, timeout=12) as res:
+                      content = res.read().decode("utf-8", errors="ignore")
+                  
+                  if "proxies:" in content or "- name:" in content:
+                      lines = content.split("\n")
+                      for line in lines:
+                          if "server:" in line and ":" in line:
+                              server_val = line.split("server:")[-1].strip()
+                              converted_raw_links.append(f"vless://fake-uuid@{server_val}:443?security=none#Converted")
+                  else:
+                      found = re.findall(r'(vless://[^\s"\'<>`]+)', content)
+                      if found:
+                          converted_raw_links.extend(found)
+              except Exception as e:
+                  print(f"❌ Ошибка конвертации источника -> {e}")
+
+          print(f"📦 Конвертер успешно передал основному коду {len(converted_raw_links)} сырых ссылок.\n")
 
           # ЭТАП 1: ЧИТАЕМ СЫРЫЕ БАЗЫ VLESS
           print("\n=== 🛠️ ЗАПУСК ЭТАПА 1: СКАНИРОВАНИЕ СЫРЫХ БАЗ VLESS ===")
@@ -96,7 +126,8 @@ jobs:
                   with urllib.request.urlopen(req, timeout=12) as res:
                       content = res.read().decode("utf-8", errors="ignore")
                   
-                  found_links = re.findall(r'(vless://[^\s"\'<>`]+)', content)
+                  found_links = re.findall(r'((?:vless|ss|trojan)://[^\s"\'<>`]+)', content)
+                  found_links.extend(converted_raw_links)
                   if not found_links:
                       print(f"❌ Формат неверен: На сайте нет сырых vless:// ссылок.")
                       continue
