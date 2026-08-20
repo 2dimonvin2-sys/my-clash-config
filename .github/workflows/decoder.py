@@ -13,7 +13,7 @@ complex_raw_urls = [
     "https://raw.githubusercontent.com/bobrinaw/vlessforu/refs/heads/main/working_configs.txt"
 ]
 
-print("=== 🧪 ЗАПУСК АВТОНОМНОГО УЛЬТИМАТИВНОГО ДЕКОДЕРА ===")
+print("=== 🧪 ЗАПУСК ОБНОВЛЕННОГО ВСЕЯДНОГО ДЕКОДЕРА ===")
 clean_vless_links = []
 
 for url in complex_raw_urls:
@@ -23,40 +23,53 @@ for url in complex_raw_urls:
         with urllib.request.urlopen(req, timeout=12) as res:
             content = res.read().decode("utf-8", errors="ignore")
         
-        # Всеядный поиск: забираем vless, ss, trojan
         found = re.findall(r'((?:vless|ss|trojan)://[^\s"\'<>`]+)', content)
         
         for link in found:
             try:
-                # 1. Мгновенно очищаем ссылку от процентов %40 и %2F
                 clean_link = unquote(link.strip())
                 parsed = urlparse(clean_link)
                 proto = parsed.scheme
                 
-                # 2. ЖЕСТКИЙ ФИЛЬТР БРАКА REALITY
                 if proto == "vless":
                     params = parse_qs(parsed.query)
                     if "sid" in params and "pbk" not in params:
-                        continue  # Выкидываем ломаный прокси в корзину
+                        continue
                     clean_vless_links.append(clean_link)
                 
-                # 3. КОНВЕРТЕР ТРОЯНА И ШАДОУСОКС В БЕЗОПАСНЫЙ VLESS ДЛЯ ГЛАВНОГО КОДА
-                elif proto in ["ss", "trojan"]:
+                elif proto == "ss":
+                    # Умная расшифровка зашифрованных в Base64 ссылок Shadowsocks
+                    raw_netloc = parsed.netloc
+                    userinfo_server = raw_netloc
+                    
+                    if "@" not in raw_netloc:
+                        try:
+                            # Дописываем паддинг для Base64, если нужно
+                            padded = raw_netloc + "=" * ((4 - len(raw_netloc) % 4) % 4)
+                            userinfo_server = base64.b64decode(padded).decode("utf-8", errors="ignore")
+                        except: pass
+                        
+                    if "@" in userinfo_server:
+                        server_port = userinfo_server.split("@")[-1]
+                        if ":" in server_port:
+                            server, port = server_port.split(":")[:2]
+                            frag = parsed.fragment if parsed.fragment else "SS_Proxy"
+                            clean_vless_links.append(f"vless://com-decoder-uuid@{server}:{port}?security=none#SS_{frag}")
+                            
+                elif proto == "trojan":
                     server_port = parsed.netloc.split("@")[-1]
                     if ":" in server_port:
                         server, port = server_port.split(":")[:2]
-                        # Вытаскиваем имя (фрагмент)
-                        frag = parsed.fragment if parsed.fragment else f"{proto.upper()}_Proxy"
-                        # Собираем стандартную VLESS-строку, которую главный код переварит без бубнов
-                        fake_vless = f"vless://com-decoder-uuid@{server}:{port}?security=none#{proto.upper()}_{frag}"
-                        clean_vless_links.append(fake_vless)
+                        frag = parsed.fragment if parsed.fragment else "TROJAN_Proxy"
+                        clean_vless_links.append(f"vless://com-decoder-uuid@{server}:{port}?security=none#TROJAN_{frag}")
             except:
                 continue
     except Exception as e:
         print(f"❌ Ошибка сети на источнике -> {e}")
 
-# Записываем идеально отфильтрованный черновик
 with open("pure_raw_proxies.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(clean_vless_links))
+
+print(f"📦 ДЕКОДЕР ПОЛНОСТЬЮ ЗАВЕРШИЛ РАБОТУ: Собрано {len(clean_vless_links)} чистых строк.")
 
 print(f"📦 ДЕКОДЕР ПОЛНОСТЬЮ ЗАВЕРШИЛ РАБОТУ: Подготовлено {len(clean_vless_links)} чистых строк.")
