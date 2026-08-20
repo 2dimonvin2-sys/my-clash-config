@@ -88,6 +88,11 @@ jobs:
                       raw_name = unquote(parsed.fragment) if parsed.fragment else "VLESS"
                       clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
                       
+                                            params = parse_qs(parsed.query)
+                      sni_val = params.get("sni", [server])[0]
+                      fp_val = params.get("fp", ["chrome"])[0]
+                      net_val = params.get("network", ["tcp"])[0]
+                      
                       vless_block = {
                           "name": f"💎_{clean_name}_{idx + proxy_count}",
                           "type": "vless",
@@ -96,8 +101,10 @@ jobs:
                           "uuid": uuid,
                           "cipher": "none",
                           "tls": True,
-                          "udp": False,
-                          "network": "tcp"
+                          "udp": True,
+                          "network": net_val,
+                          "servername": sni_val,
+                          "client-fingerprint": fp_val
                       }
                       
                       if vless_block["name"] not in seen_names:
