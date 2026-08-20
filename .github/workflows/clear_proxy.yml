@@ -196,7 +196,7 @@ jobs:
                                       proxy_count += 1
                                       if proxy_count >= 300: break
                           current_proxy = [line]
-                              elif current_proxy: 
+                      elif current_proxy: 
                           # Если строка содержит пароль, принудительно оборачиваем его в двойные кавычки
                           if line.strip().startswith("password:"):
                               pass_val = line.split("password:")[-1].strip().strip('"').strip("'")
