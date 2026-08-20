@@ -20,7 +20,7 @@ jobs:
       - name: Advanced Omnivorous Parser
         run: |
           # 1. ЗАПУСКАЕМ ДЕКОДЕР ДЛЯ СОЗДАНИЯ ЧИСТОГО СПИСКА
-          python decoder.py
+          python .github/workflows/decoder.py
           
           # 2. ДАЕМ ДЕКОДЕРУ ОТДОХНУТЬ 5 СЕКУНД
           echo "⏱️ Ожидание синхронизации базы данных..."
