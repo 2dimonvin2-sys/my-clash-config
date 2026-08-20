@@ -17,6 +17,9 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Install Dependencies
+        run: pip install PyYAML
+
       - name: Advanced Omnivorous Parser
         run: |
           python .github/workflows/decoder.py
@@ -25,6 +28,7 @@ jobs:
           cat << "EOF" > smart_script.py
           import urllib.request
           import re
+          import yaml
           from urllib.parse import urlparse, parse_qs, unquote
 
           yaml_urls = [
@@ -32,11 +36,11 @@ jobs:
               #"https://githubusercontent.com"
           ]
           
-          output_lines = ["proxies:"]
+          final_structure = {"proxies": []}
           proxy_count = 0
           seen_names = set()
 
-          # ПЕРВЫЙ ПРИОРИТЕТНЫЙ ЭТАП: СНАЧАЛА ЗАБИРАЕМ ГОТОВЫЕ СТАБИЛЬНЫЕ YAML БАЗЫ (Hysteria2)
+          # ЭТАП 1: ИДЕАЛЬНОЕ СЛИЯНИЕ ГОТОВЫХ YAML БАЗ (Hysteria2 / Shadowsocks)
           for url in yaml_urls:
               if proxy_count >= 300: break
               try:
@@ -44,41 +48,31 @@ jobs:
                   with urllib.request.urlopen(req, timeout=12) as res:
                       content = res.read().decode("utf-8", errors="ignore")
                   
-                  lines = content.split("\n")
-                  current_proxy = []
-                  for line in lines:
-                      if line.strip().startswith("- name:"):
-                          if current_proxy:
-                              formatted_block = []
-                              for item in current_proxy:
-                                  stripped = item.strip()
-                                  if stripped.startswith("- name:"):
-                                      formatted_block.append(f"  {stripped}")
-                                  elif ":" in stripped:
-                                      key, val = stripped.split(":", 1)
-                                      val = val.strip()
-                                      if key.strip() == "password":
-                                          val = f'"{val.strip(chr(34)).strip(chr(39))}"'
-                                      formatted_block.append(f"    {key.strip()}: {val}")
-                              
-                              proxy_str = "\n".join(formatted_block)
-                              # Отсекаем только проблемный VLESS, пропуская Hysteria2 и Shadowsocks со всеми UDP-настройками
-                              if "type: vless" not in proxy_str and "type: trojan" not in proxy_str:
-                                  n_match = re.search(r"name:\s*[\"\']?([^\"\'\s\n]+)", proxy_str)
-                                  p_name = n_match.group(1).replace('"', '').replace("'", "") if n_match else str(proxy_count)
-                                  if p_name not in seen_names:
-                                      seen_names.add(p_name)
-                                      output_lines.append(proxy_str)
-                                      proxy_count += 1
-                                      if proxy_count >= 300: break
-                          current_proxy = [line]
-                      elif current_proxy and line.strip():
-                          current_proxy.append(line)
-              except: continue
+                  # Парсим файл профессиональной библиотекой PyYAML
+                  parsed_yaml = yaml.safe_load(content)
+                  if parsed_yaml and "proxies" in parsed_yaml:
+                      for proxy in parsed_yaml["proxies"]:
+                          p_type = str(proxy.get("type", "")).lower()
+                          # Собираем только стабильные протоколы, работающие без REALITY-ключей
+                          if p_type in ["hysteria2", "ss", "shadowsocks", "tuic"]:
+                              p_name = proxy.get("name", f"Proxy_{proxy_count}")
+                              if p_name not in seen_names:
+                                  seen_names.add(p_name)
+                                  
+                                  # Принудительно оборачиваем пароль в кавычки для безопасности роутера
+                                  if "password" in proxy:
+                                      proxy["password"] = str(proxy["password"]).strip('"').strip("'")
+                                      
+                                  final_structure["proxies"].append(proxy)
+                                  proxy_count += 1
+                                  if proxy_count >= 300: break
+              except Exception as e:
+                  print(f"⚠️ Ошибка чтения YAML базы {url}: {e}")
+                  continue
 
-          print(f"📦 Приоритетный этап завершен. Загружено {proxy_count} стабильных YAML прокси.")
+          print(f"📦 Профессиональный этап завершен. Загружено {proxy_count} стабильных YAML прокси.")
 
-          # ВТОРОЙ ЭТАП: ДОБИРАЕМ ОСТАТКИ ИЗ НАШЕГО ДЕКОДЕРА СЫРЫХ БАЗ
+          # ЭТАП 2: ДОБИРАЕМ ОСТАТКИ ИЗ НАШЕГО ДЕКОДЕРА СЫРЫХ БАЗ
           try:
               with open("pure_raw_proxies.txt", "r", encoding="utf-8") as f:
                   found_links = f.read().splitlines()
@@ -94,26 +88,27 @@ jobs:
                       raw_name = unquote(parsed.fragment) if parsed.fragment else "VLESS"
                       clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
                       
-                      block = (
-                          f"  - name: \"💎_{clean_name}_{idx + proxy_count}\"\n"
-                          f"    type: vless\n"
-                          f"    server: {server}\n"
-                          f"    port: {port}\n"
-                          f"    uuid: \"{uuid}\"\n"
-                          f"    cipher: none\n"
-                          f"    tls: true\n"
-                          f"    udp: false\n"
-                          f"    network: tcp"
-                      )
-                      # Быстрая проверка имени на дубликаты
-                      if f"💎_{clean_name}_{idx + proxy_count}" not in seen_names:
-                          output_lines.append(block)
+                      vless_block = {
+                          "name": f"💎_{clean_name}_{idx + proxy_count}",
+                          "type": "vless",
+                          "server": server,
+                          "port": int(port),
+                          "uuid": uuid,
+                          "cipher": "none",
+                          "tls": True,
+                          "udp": False,
+                          "network": "tcp"
+                      }
+                      
+                      if vless_block["name"] not in seen_names:
+                          final_structure["proxies"].append(vless_block)
                           proxy_count += 1
                   except: continue
           except: pass
 
+          # Записываем итоговый файл с идеальными отступами в 2 пробела
           with open("live_free.yaml", "w", encoding="utf-8") as f:
-              f.write("\n\n".join(output_lines))
+              yaml.dump(final_structure, f, allow_unicode=True, default_flow_style=False, indent=2)
           EOF
 
           python smart_script.py
@@ -125,5 +120,5 @@ jobs:
           git fetch origin main
           git checkout main || git checkout -b main
           git add pure_raw_proxies.txt live_free.yaml
-          git commit -m "Prioritize stable Hysteria2 over raw VLESS links" --allow-empty
+          git commit -m "Ultimate PyYAML engine conversion" --allow-empty
           git push origin main --force
