@@ -27,17 +27,20 @@ for url in complex_raw_urls:
         
         for link in found:
             try:
-                parsed = urlparse(link.strip())
+                # ИСПРАВЛЕНО: Принудительно декодируем %40 в @, %2F в / прямо на лету!
+                clean_link = unquote(link.strip())
+                
+                parsed = urlparse(clean_link)
                 if parsed.scheme == "vless":
                     params = parse_qs(parsed.query)
                     # Железный щит: выкидываем кривой REALITY мусор без ключа pbk
                     if "sid" in params and "pbk" not in params:
                         continue
-                clean_vless_links.append(link.strip())
+                        
+                clean_vless_links.append(clean_link)
             except:
                 continue
-    except Exception as e:
-        print(f"❌ Ошибка сети на источнике -> {e}")
+
 
 # Сохраняем чистый список локально
 with open("pure_raw_proxies.txt", "w", encoding="utf-8") as f:
