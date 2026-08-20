@@ -97,7 +97,7 @@ jobs:
                                       formatted_block.append(f"    {key.strip()}: {val}")
                               
                               proxy_str = "\n".join(formatted_block)
-                              if "udp: true" not in proxy_str and "type: vless" not in proxy_str:
+                              if "type: vless" not in proxy_str:
                                   output_lines.append(proxy_str)
                                   proxy_count += 1
                                   if proxy_count >= 300: break
