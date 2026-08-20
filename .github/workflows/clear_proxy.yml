@@ -19,6 +19,14 @@ jobs:
 
       - name: Advanced Omnivorous Parser
         run: |
+          # 1. ЗАПУСКАЕМ ДЕКОДЕР ДЛЯ СОЗДАНИЯ ЧИСТОГО СПИСКА
+          python decoder.py
+          
+          # 2. ДАЕМ ДЕКОДЕРУ ОТДОХНУТЬ 5 СЕКУНД
+          echo "⏱️ Ожидание синхронизации базы данных..."
+          sleep 5
+
+          # 3. ГЛАВНЫЙ НЕУБИВАЕМЫЙ КОД УПАКОВКИ В YAML
           cat << "EOF" > smart_script.py
           import urllib.request
           import re
@@ -26,10 +34,6 @@ jobs:
 
           yaml_urls = [
               "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
-          ]
-
-          raw_urls = [
-              #"https://githubusercontent.com"
           ]
           
           output_lines = ["proxies:"]
@@ -45,10 +49,8 @@ jobs:
                   server, port = server_port.split(":")
                   raw_name = unquote(parsed.fragment) if parsed.fragment else "VLESS"
                   clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
-                  params = parse_qs(parsed.query)
                   
-                  # Эталонный вертикальный VLESS блок с отступом в 2 пробела
-                  block = [
+                  return "\n".join([
                       f"  - name: \"💎_{clean_name}_{idx}\"",
                       f"    type: vless",
                       f"    server: {server}",
@@ -58,28 +60,26 @@ jobs:
                       f"    tls: true",
                       f"    udp: false",
                       f"    network: tcp"
-                  ]
-                  return "\n".join(block)
+                  ])
               except:
                   return None
 
-          # ЭТАП 1: ЧИТАЕМ СЫРЫЕ БАЗЫ
-          for url in raw_urls:
-              if proxy_count >= 300: break
-              try:
-                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                  with urllib.request.urlopen(req, timeout=12) as res:
-                      content = res.read().decode("utf-8", errors="ignore")
-                  found_links = re.findall(r'(vless://[^\s"\'<>`]+)', content)
-                  for idx, link in enumerate(found_links):
-                      yaml_proxy = parse_vless(link, idx + proxy_count)
-                      if yaml_proxy:
-                          output_lines.append(yaml_proxy)
-                          proxy_count += 1
-                          if proxy_count >= 300: break
-              except: continue
+          # ЧИТАЕМ ССЫЛКИ ИЗ НАШЕГО ИДЕАЛЬНО ОЧИЩЕННОГО ЛОКАЛЬНОГО ФАЙЛА
+          try:
+              with open("pure_raw_proxies.txt", "r", encoding="utf-8") as f:
+                  found_links = f.read().splitlines()
+              
+              print(f"📋 Главный код принял от декодера {len(found_links)} безопасных ссылок.")
+              for idx, link in enumerate(found_links):
+                  if proxy_count >= 300: break
+                  yaml_proxy = parse_vless(link, idx + proxy_count)
+                  if yaml_proxy:
+                      output_lines.append(yaml_proxy)
+                      proxy_count += 1
+          except Exception as e:
+              print(f"⚠️ Ошибка чтения чистой базы -> {e}")
 
-          # ЭТАП 2: ДОБИРАЕМ YAML БАЗУ БЕЗ ИЗМЕНЕНИЙ ПАРОЛЕЙ
+          # ДОБИРАЕМ YAML БАЗУ БЕЗ ИЗМЕНЕНИЙ ПАРОЛЕЙ
           for url in yaml_urls:
               if proxy_count >= 300: break
               try:
@@ -102,7 +102,6 @@ jobs:
                           current_proxy.append(line)
               except: continue
 
-          # Запись с физическими переносами строк между серверами (\n\n)
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n\n".join(output_lines))
           EOF
@@ -115,6 +114,8 @@ jobs:
           git config --local user.name "GitHub Actions"
           git fetch origin main
           git checkout main || git checkout -b main
-          git add live_free.yaml
-          git commit -m "Restore clean yaml formatting" --allow-empty
+          
+          # Закидываем в облако и чистый список ссылок, и готовый YAML для роутера!
+          git add pure_raw_proxies.txt live_free.yaml
+          git commit -m "Pipeline: Decoder + Smart Parser with 5s sync" --allow-empty
           git push origin main --force
