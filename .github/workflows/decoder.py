@@ -10,7 +10,6 @@ complex_raw_urls = [
     "https://raw.githubusercontent.com/FreeFolksOn/abc-configs-free-vpn-proxy-list/main/README.md",
     "https://raw.githubusercontent.com/flaafix/AetrisVPN/refs/heads/main/AetrisVPN.txt",
     "https://raw.githubusercontent.com/bobrinaw/vlessforu/refs/heads/main/working_configs.txt"
-          ]
 ]
 
 print("=== 🧪 ЗАПУСК АВТОНОМНОГО ДЕКОДЕРА БАЗ ===")
