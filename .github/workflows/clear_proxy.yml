@@ -42,26 +42,33 @@ jobs:
           def parse_vless(url_str, idx):
               try:
                   parsed = urlparse(url_str.strip())
-                  if parsed.scheme != "vless": return None
-                  uuid = parsed.username
+                  # Поддерживаем все три протокола всеядно
+                  if parsed.scheme not in ["vless", "ss", "trojan"]: return None
+                  
+                  # Защита 1: Декодируем проценты из UUID, если они там есть
+                  uuid = unquote(parsed.username) if parsed.username else "fake-uuid"
+                  
                   server_port = parsed.netloc.split("@")[-1]
-                  server, port = server_port.split(":")
-                  raw_name = unquote(parsed.fragment) if parsed.fragment else "VLESS"
+                  if ":" not in server_port: return None # Защита 2: Выкидываем прокси, если нет порта!
+                  
+                  server, port = server_port.split(":")[:2]
+                  raw_name = unquote(parsed.fragment) if parsed.fragment else "Proxy"
                   clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
                   params = parse_qs(parsed.query)
                   if "udp" in params and params["udp"] == ["true"]: return None
                   
                   block = [
                       f"  - name: \"💎_{clean_name}_{idx}\"",
-                      f"    type: {parsed.scheme}",
+                      f"    type: {parsed.scheme}", # Динамически подставляем vless/ss/trojan
                       f"    server: {server}",
                       f"    port: {port}",
-                      f"    uuid: \"{uuid}\"",
+                      f"    uuid: \"{uuid}\"", # Жесткие кавычки спасут роутер от знаков %
                       f"    cipher: none",
                       f"    tls: true",
                       f"    udp: false",
                       f"    network: tcp"
                   ]
+
                   
                   if "network" in params and params["network"]:
                       net_raw = params['network'][0] if isinstance(params['network'], list) else params['network']
