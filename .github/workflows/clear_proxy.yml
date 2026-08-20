@@ -42,51 +42,61 @@ jobs:
           def parse_vless(url_str, idx):
               try:
                   parsed = urlparse(url_str.strip())
-                  # Поддерживаем все три протокола всеядно
-                  if parsed.scheme not in ["vless", "ss", "trojan"]: return None
-                  
-                  # Защита 1: Декодируем проценты из UUID, если они там есть
-                  uuid = unquote(parsed.username) if parsed.username else "fake-uuid"
+                  proto = parsed.scheme
+                  if proto not in ["vless", "ss", "trojan"]: return None
                   
                   server_port = parsed.netloc.split("@")[-1]
-                  if ":" not in server_port: return None # Защита 2: Выкидываем прокси, если нет порта!
-                  
+                  if ":" not in server_port: return None
                   server, port = server_port.split(":")[:2]
-                  raw_name = unquote(parsed.fragment) if parsed.fragment else "Proxy"
+                  
+                  raw_name = unquote(parsed.fragment) if parsed.fragment else f"{proto.upper()}_{idx}"
                   clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
                   params = parse_qs(parsed.query)
                   if "udp" in params and params["udp"] == ["true"]: return None
                   
+                  # Базовый каркас, общий для всех
                   block = [
                       f"  - name: \"💎_{clean_name}_{idx}\"",
-                      f"    type: {parsed.scheme}", # Динамически подставляем vless/ss/trojan
+                      f"    type: {proto}",
                       f"    server: {server}",
                       f"    port: {port}",
-                      f"    uuid: \"{uuid}\"", # Жесткие кавычки спасут роутер от знаков %
-                      f"    cipher: none",
-                      f"    tls: true",
-                      f"    udp: false",
-                      f"    network: tcp"
+                      f"    udp: false"
                   ]
-
                   
-                  if "network" in params and params["network"]:
-                      net_raw = params['network'][0] if isinstance(params['network'], list) else params['network']
-                      block.append(f"    network: {net_raw}")
-                  
-                  if "sni" in params and params["sni"]:
-                      sni_raw = params['sni'][0] if isinstance(params['sni'], list) else params['sni']
-                      block.append(f"    servername: {sni_raw}")
+                  # 1. Специфические настройки для SHADOWSOCKS
+                  if proto == "ss":
+                      if "@" in parsed.netloc:
+                          userinfo = unquote(parsed.netloc.split("@")[0])
+                          if ":" in userinfo:
+                              cipher, password = userinfo.split(":", 1)
+                              block.append(f"    cipher: {cipher}")
+                              block.append(f"    password: \"{password}\"")
+                          else:
+                              return None
+                      else: return None
+                      
+                  # 2. Специфические настройки для VLESS и TROJAN
                   else:
-                      block.append(f"    servername: {server}")
+                      uuid = unquote(parsed.username) if parsed.username else "fake-uuid"
+                      block.append(f"    uuid: \"{uuid}\"")
+                      if proto == "vless":
+                          block.append("    cipher: none")
+                      block.append("    tls: true")
+                      block.append("    network: tcp")
                       
-                  if "fp" in params and params["fp"]:
-                      fp_raw = params['fp'][0] if isinstance(params['fp'], list) else params['fp']
-                      block.append(f"    client-fingerprint: {fp_raw}")
-                      
+                      if "network" in params and params["network"]:
+                          block.append(f"    network: {params['network'][0]}")
+                      if "sni" in params and params["sni"]:
+                          block.append(f"    servername: {params['sni'][0]}")
+                      else:
+                          block.append(f"    servername: {server}")
+                      if "fp" in params and params["fp"]:
+                          block.append(f"    client-fingerprint: {params['fp'][0]}")
+                          
                   return "\n".join(block)
               except:
                   return None
+
           # =========================================================
           # ДОПОЛНИТЕЛЬНЫЙ БЛОК: КОНВЕРТЕР СЛОЖНЫХ YAML/ПЛЕЙЛИСТОВ В СЫРЫЕ ССЫЛКИ
           # =========================================================
