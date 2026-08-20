@@ -196,14 +196,15 @@ jobs:
                                       proxy_count += 1
                                       if proxy_count >= 300: break
                           current_proxy = [line]
-                      elif current_proxy:
-                          current_proxy.append(line)
-                  print(f"✅ УСПЕХ! База добавлена. Взято серверов: {proxy_count - start_count}")
-              except Exception as e:
-                  print(f"💥 Ошибка сети: Не удалось скачать YAML базу -> {e}")
-                  continue
+                              elif current_proxy: 
+                          # Если строка содержит пароль, принудительно оборачиваем его в двойные кавычки
+                          if line.strip().startswith("password:"):
+                              pass_val = line.split("password:")[-1].strip().strip('"').strip("'")
+                              current_proxy.append(f"    password: \"{pass_val}\"")
+                          else:
+                              current_proxy.append(line)
+              except: continue
 
-          print(f"\n📊 ФИНАЛЬНЫЙ ОТЧЕТ: Всего собрано и упаковано серверов: {proxy_count}")
           with open("live_free.yaml", "w", encoding="utf-8") as f:
               f.write("\n".join(output_lines))
           EOF
@@ -212,15 +213,12 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          # Скачиваем чистую базу Hysteria2
-          curl -sL "https://githubusercontent.com" -o live_free.yaml
-          
-          # Защита: принудительно оборачиваем все пароли в двойные кавычки, чтобы знаки == не ломали роутер
-          sed -i 's/password: \(.*\)/password: "\1"/g' live_free.yaml
-          # Убираем двойные кавычки, если они случайно продублировались
-          sed -i 's/""/"/g' live_free.yaml
-          
-          if [ ! -s live_free.yaml ] || ! grep -q "proxies:" live_free.yaml; then
-            echo "proxies:" > live_free.yaml
-          fi
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git fetch origin main
+          git checkout main || git checkout -b main
+          git add live_free.yaml
+          git commit -m "Fix Hysteria2 passwords with quotes" --allow-empty
+          git push origin main --force
+
 
