@@ -42,7 +42,7 @@ jobs:
 
           # ЭТАП 1: ИДЕАЛЬНОЕ СЛИЯНИЕ ГОТОВЫХ YAML БАЗ (Hysteria2 / Shadowsocks)
           for url in yaml_urls:
-              if proxy_count >= 300: break
+              if proxy_count >= 100: break
               try:
                   req = urllib.request.Request(url, headers={"User-Agent": "ClashMeta"})
                   with urllib.request.urlopen(req, timeout=12) as res:
