@@ -1,11 +1,4 @@
 proxies:
-- name: hysteria2-13527647
-  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  port: 52454
-  server: 45.88.43.116
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
 - name: hysteria2-721489367
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -20,13 +13,6 @@ proxies:
   skip-cert-verify: true
   sni: t.me
   type: hysteria2
-- name: hysteria2-692912199
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  type: hysteria2
 - name: hysteria2-768414459
   password: 9q3Mb0IzSVbnwaqK
   port: 16001
@@ -34,11 +20,32 @@ proxies:
   skip-cert-verify: true
   sni: hk-ls-r-1.czzhkractqqakfzdmrgd.cc
   type: hysteria2
-- cipher: aes-256-gcm
-  name: shadowsocks-717969031
-  password: jSU7bGKupQ96YFvf
+- name: hysteria2-705682024
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 139.180.133.90
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2рҹү
+  type: hysteria2
+- name: hysteria2-795700290
+  password: 4hkCvE2nz6svLLqv
+  port: 36001
+  server: 52.221.223.227
+  skip-cert-verify: true
+  sni: sg-ls-z-5.lihmxssuqleitqcxpssa.uk
+  type: hysteria2
+- cipher: 2022-blake3-aes-128-gcm
+  name: shadowsocks-817361596
+  password: Y2FkNzhhZWQ0MzA1NzlhZA==:ODNiMjQ4NDMtYTY2Mi00Mg==
+  port: 31202
+  server: e1acw359hdvf.cdn000.com
+  type: ss
+  udp: true
+- cipher: 2022-blake3-aes-256-gcm
+  name: shadowsocks-817361615
+  password: OLII2zRkBbVCfoWY9vuMpe5dWfhq6BlfN9r12fparDw=:XIoUs91l+3EgTnmaCrNNChFBggx74qHudT9sZNyxW/Q=
+  port: 1011
+  server: hk.kexueyun.top
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
@@ -48,88 +55,11 @@ proxies:
   server: 176.97.64.144
   type: ss
   udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-218
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-213
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
-  udp: true
 - cipher: aes-256-gcm
   name: shadowsocks-723348702
   password: 5QCeIKUZUEp4mR9Z
   port: 443
   server: 194.233.94.119
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-468218514
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.197
-  type: ss
-  udp: true
-- name: hysteria2-705682024
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2рҹү
-  type: hysteria2
-- name: hysteria2-720834128
-  password: fJT5wNXNkYDvYKKGWUc9f2vd0LvHKSwc
-  port: 443
-  server: 43.167.198.167
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-721489375
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
-- name: hysteria2-795700290
-  password: 4hkCvE2nz6svLLqv
-  port: 36001
-  server: 52.221.223.227
-  skip-cert-verify: true
-  sni: sg-ls-z-5.lihmxssuqleitqcxpssa.uk
-  type: hysteria2
-- name: hysteria2-766437503
-  password: P6qkAwznuC076mbIR2cGPg==
-  port: 34567
-  server: 43.156.90.144
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria2
-- name: hysteria2-743190439
-  password: l25nJa8z0D5pT6jl
-  port: 26001
-  server: 16.79.28.237
-  skip-cert-verify: true
-  sni: id-ls-c-4.nebulacloud.win
-  type: hysteria2
-- cipher: aes-256-cfb
-  name: shadowsocks-287
-  password: qwerREWQ@@
-  port: 6123
-  server: 211.178.105.134
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-211
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -139,11 +69,81 @@ proxies:
   server: 167.99.103.190
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-795694285
-  password: qfJZnq91w6aX8K1Y
-  port: 80
-  server: 209.38.142.23
+- name: hysteria2-13527647
+  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
+  port: 52454
+  server: 45.88.43.116
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+- name: hysteria2-667703181
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2
+  type: hysteria2
+- name: hysteria2-721489375
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: t.me
+  type: hysteria2
+- name: hysteria2-820876944
+  password: ZYTopBPE6fGijECIcT3KxqFEpjQJ44ND
+  port: 55793
+  server: vip-sg-2.hkd4fwmg.vip
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-705682202
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: "https://t.me/wangcai2ð\x9F\x87"
+  type: hysteria2
+- name: hysteria2-743190439
+  password: l25nJa8z0D5pT6jl
+  port: 26001
+  server: 16.79.28.237
+  skip-cert-verify: true
+  sni: id-ls-c-4.nebulacloud.win
+  type: hysteria2
+- name: hysteria2-296929603
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: 202.146.222.29
+  type: hysteria2
+- name: hysteria2-795700322
+  password: 9K2KPaEcizYz6epz
+  port: 16001
+  server: 56.69.35.177
+  skip-cert-verify: true
+  sni: my-ls-c-6.nebulacloud.win
+  type: hysteria2
+- name: hysteria2-817954118
+  password: 1427eb10-7529-4d38-a6a2-01b337868b37
+  port: 1935
+  server: 194.87.10.29
+  skip-cert-verify: true
+  sni: sg2.xiaoliyu.cyou
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-817361612
+  password: ljqdalu13..
+  port: 8319
+  server: 95.40.120.162
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: shadowsocks-817206649
+  password: 1234!@#$
+  port: 1774
+  server: 49.254.204.133
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
@@ -153,27 +153,6 @@ proxies:
   server: 104.156.233.234
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-768399352
-  password: YmrYLpErhi5oTrrv
-  port: 443
-  server: 206.189.223.234
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-717968975
-  password: sFS341eceaIiSm2d
-  port: 443
-  server: 154.53.63.33
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-256-gcm
-  name: shadowsocks-126340
-  password: fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0=
-  port: 27755
-  server: 167.150.100.115
-  type: ss
-  udp: true
 - cipher: aes-128-gcm
   name: shadowsocks-156
   password: shadowsocks
@@ -181,11 +160,11 @@ proxies:
   server: 173.244.56.9
   type: ss
   udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-194
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.169
+- cipher: rc4-md5
+  name: shadowsocks-468218514
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.197
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -202,312 +181,11 @@ proxies:
   server: 138.199.43.159
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-537388328
-  password: faBAoD54k87UJG7
-  port: 2375
-  server: 15.204.247.124
-  type: ss
-  udp: true
-- name: hysteria2-667703181
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2
-  type: hysteria2
-- name: hysteria2-296929603
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: 202.146.222.29
-  type: hysteria2
-- name: hysteria2-705682240
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-- name: hysteria2-705682202
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: "https://t.me/wangcai2ð\x9F\x87"
-  type: hysteria2
-- name: hysteria2-721489358
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 54.179.153.191
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
-- name: hysteria2-795700322
-  password: 9K2KPaEcizYz6epz
-  port: 16001
-  server: 56.69.35.177
-  skip-cert-verify: true
-  sni: my-ls-c-6.nebulacloud.win
-  type: hysteria2
-- name: hysteria2-650429104
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-723819907
-  password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  port: 4433
-  server: hk2.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: hk2.xiaoliyu.cyou
-  type: hysteria2
-- name: hysteria2-778660077
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  port: 8443
-  server: 46.229.243.137
-  skip-cert-verify: false
-  sni: grape-turbo-fr.roxa.org
-  type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-154
-  password: G5p6ww4o67HB
-  port: 8388
-  server: 108.181.118.10
-  type: ss
-  udp: true
 - cipher: aes-128-gcm
-  name: shadowsocks-155
+  name: shadowsocks-194
   password: shadowsocks
   port: 443
-  server: 173.244.56.6
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-159
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.170
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-415243975
-  password: qB2Cv9VIlujj
-  port: 8388
-  server: 23.150.248.20
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-723348714
-  password: sZSZi7tGs9wodT7k
-  port: 80
-  server: 155.138.136.240
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-768399345
-  password: 0A1XMqChmURuRChe
-  port: 80
-  server: 154.12.240.141
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-196
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.244
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-415243972
-  password: YHtesZ0qvgtg
-  port: 8388
-  server: 38.180.135.156
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-768399409
-  password: cj5Znxe2XuodJQB0
-  port: 80
-  server: 142.93.149.39
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-487917493
-  password: ytw2awn
-  port: 443
-  server: 142.4.216.225
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-192
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.236
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-768399343
-  password: p7KawP5pzJRHWI9q
-  port: 443
-  server: 107.170.34.46
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-779606911
-  password: 1BuVr1kYF7v435mF
-  port: 80
-  server: 162.243.36.19
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-717969065
-  password: goRz8CTFE6zPZXIA
-  port: 80
-  server: 94.72.127.58
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-193
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.160
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-10989
-  password: RSo52SbxW40r
-  port: 8388
-  server: 108.181.57.93
-  type: ss
-  udp: true
-- name: hysteria2-207301017
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world
-  type: hysteria2
-- name: hysteria2-787700984
-  password: 1e3a5c5fde1da9dd1358b4adeb0c4ca1
-  port: 443
-  server: 45.32.252.144
-  skip-cert-verify: true
-  sni: vps.vpsv.cc
-  type: hysteria2
-- name: hysteria2-658428936
-  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
-  port: 443
-  server: vpn-sg-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-sg-002.fastervpn.world
-  type: hysteria2
-- name: hysteria2-137781265
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world
-  type: hysteria2
-- name: hysteria2-328918461
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  sni: 127.0.0.1
-  type: hysteria2
-- name: hysteria2-459503008
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.74
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  type: hysteria2
-- name: hysteria2-143263693
-  password: dongtaiwang.com
-  port: 44356
-  server: hy2.561891.xyz
-  skip-cert-verify: true
-  sni: hy2.561891.xyz
-  type: hysteria2
-- name: hysteria2-370755716
-  password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  port: 4433
-  server: us4.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: us4.xiaoliyu.cyou
-  type: hysteria2
-- name: hysteria2-561634420
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.96.245
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
-- name: hysteria2-818063930
-  password: ef18d810-719c-4bf1-83c6-615d01f217eb
-  port: 443
-  server: jp.cryptoofarm.com
-  skip-cert-verify: false
-  sni: ''
-  type: hysteria2
-- name: hysteria2-730134254
-  password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
-  port: 8443
-  server: 82.39.213.226
-  skip-cert-verify: false
-  sni: hopp-us.yyuyy.com
-  type: hysteria2
-- name: hysteria2-744910373
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  port: 8443
-  server: 46.229.243.136
-  skip-cert-verify: false
-  sni: grape-turbo-fr.roxa.org
-  type: hysteria2
-- name: hysteria2-768950027
-  password: 2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o
-  port: 443
-  server: pixelcast.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: pixelcast.wwwinternetvideo.click
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: shadowsocks-795694332
-  password: fc0heeXAqzNX86aP
-  port: 443
-  server: 159.89.112.218
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-10992
-  password: TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH
-  port: 15675
-  server: 45.77.232.213
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-795694278
-  password: nLqpwVxdbMUL6M4F
-  port: 80
-  server: 159.203.170.52
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-717968979
-  password: kRKZE3ZhECwawy1N
-  port: 80
-  server: 94.72.127.55
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-768399391
-  password: 9325a345-c72f-4637-a8f4-34f9effb7ba6
-  port: 21110
-  server: 211.91.158.44
+  server: 156.146.38.169
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -517,20 +195,6 @@ proxies:
   server: 149.22.95.183
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-768399465
-  password: 9325a345-c72f-4637-a8f4-34f9effb7ba6
-  port: 21109
-  server: 211.91.158.26
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-768399492
-  password: 9325a345-c72f-4637-a8f4-34f9effb7ba6
-  port: 21119
-  server: 211.91.158.44
-  type: ss
-  udp: true
 - cipher: aes-128-gcm
   name: shadowsocks-158
   password: shadowsocks
@@ -538,425 +202,54 @@ proxies:
   server: 156.146.38.167
   type: ss
   udp: true
-- name: hysteria2-286217967
-  password: STYyftThFn
-  port: 12765
-  server: freedom.chenlan.top
+- name: hysteria2-721489358
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 54.179.153.191
   skip-cert-verify: true
-  sni: freedom.chenlan.top
+  sni: t.me
   type: hysteria2
-- name: hysteria2-812152989
-  password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
-  port: 32135
-  server: vip-jp-4.hkd4fwmg.vip
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-810668757
-  password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
-  port: 32135
-  server: 142.91.104.120
-  skip-cert-verify: false
-  sni: vip-jp-4.hkd4fwmg.vip
-  type: hysteria2
-- name: hysteria2-813698900
-  password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
-  port: 32135
-  server: vip-jp-4.hkd4fwmg.vip
-  skip-cert-verify: false
-  sni: vip-jp-4.hkd4fwmg.vip
-  type: hysteria2
-- name: hysteria2-720765049
-  password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  port: 1935
-  server: sg2.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: sg2.xiaoliyu.cyou
-  type: hysteria2
-- name: hysteria2-16610
+- name: hysteria2-650429104
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
   skip-cert-verify: true
-  sni: https://t.me/oneclickvpnkeys
+  sni: ''
   type: hysteria2
-- name: hysteria2-430004856
+- name: hysteria2-705682240
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 3.36.93.159
+  server: 202.146.222.29
   skip-cert-verify: true
-  sni: whatsapp.com
+  sni: www.bing.com
   type: hysteria2
-- name: hysteria2-817954102
+- name: hysteria2-370755716
   password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  port: 1935
-  server: 194.87.10.29
+  port: 4433
+  server: us4.xiaoliyu.cyou
   skip-cert-verify: true
-  sni: 194.87.10.29
+  sni: us4.xiaoliyu.cyou
   type: hysteria2
-- name: hysteria2-591454512
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.159
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-591454513
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.74
+- name: hysteria2-387719591
+  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
+  port: 4433
+  server: us4.xiaoliyu.cyou
   skip-cert-verify: true
   sni: ''
   type: hysteria2
-- name: hysteria2-266962492
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.74
-  skip-cert-verify: true
-  sni: vpn-kr-003.fastervpn.world
-  type: hysteria2
-- name: hysteria2-561697888
+- name: hysteria2-143263693
   password: dongtaiwang.com
   port: 44356
   server: hy2.561891.xyz
   skip-cert-verify: true
-  sni: ''
+  sni: hy2.561891.xyz
   type: hysteria2
-- name: hysteria2-4524389
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
+- name: hysteria2-490133896
+  password: Krab9Hyst2_Rk7pQ2xL
+  port: 36723
+  server: fr.vpn.legendaah.xyz
   skip-cert-verify: true
-  sni: https://t.me/wangcai2🇨🇳
-  type: hysteria2
-- name: hysteria2-153592298
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  port: 33333
-  server: hy2.123266.xyz
-  skip-cert-verify: false
-  sni: hy2.123266.xyz
-  type: hysteria2
-- name: hysteria2-483633861
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: google.com
-  type: hysteria2
-- name: hysteria2-483633863
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: vk.com
-  type: hysteria2
-- name: hysteria2-811937156
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.149.228.246
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-818203504
-  password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
-  port: 32135
-  server: 142.91.104.120
-  skip-cert-verify: true
-  sni: vip-jp-4.hkd4fwmg.vip
-  type: hysteria2
-- name: hysteria2-738935847
-  password: wrSuBorIlf
-  port: 443
-  server: hys9.wba-pn.ru
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-730511438
-  password: 2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o
-  port: 443
-  server: pixelcast.wwwinternetvideo.click
-  skip-cert-verify: false
-  sni: pixelcast.wwwinternetvideo.click
-  type: hysteria2
-- name: hysteria2-730512436
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
-  port: 443
-  server: streambox.wwwinternetvideo.click
-  skip-cert-verify: false
-  sni: streambox.wwwinternetvideo.click
-  type: hysteria2
-- name: hysteria2-818063873
-  password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
-  port: 32135
-  server: vip-jp-4.hkd4fwmg.vip
-  skip-cert-verify: false
-  sni: ''
-  type: hysteria2
-- name: hysteria2-732659804
-  password: wrSuBorIlf
-  port: 443
-  server: hys9.wba-pn.ru
-  skip-cert-verify: true
-  sni: hys9.wba-pn.ru
-  type: hysteria2
-- name: hysteria2-813371778
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  port: 443
-  server: usa0003rlbhy01.tcp-reset-club.net
-  skip-cert-verify: true
-  sni: usa0003rlbhy01.tcp-reset-club.net
-  type: hysteria2
-- name: hysteria2-817806545
-  password: 8e85752d-c04f-427d-9d70-b10d144c8492
-  port: 443
-  server: 185.155.222.61
-  skip-cert-verify: false
-  sni: ee.convert-cloud.guru
-  type: hysteria2
-- cipher: 2022-blake3-aes-128-gcm
-  name: shadowsocks-817361596
-  password: Y2FkNzhhZWQ0MzA1NzlhZA==:ODNiMjQ4NDMtYTY2Mi00Mg==
-  port: 31202
-  server: e1acw359hdvf.cdn000.com
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-817361612
-  password: ljqdalu13..
-  port: 8319
-  server: 95.40.120.162
-  type: ss
-  udp: true
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-822765426
-  password: Y9jRhGRJX5snpyhEGATgmRdSNeY4AcPXFruR7xCow6w=
-  port: 50356
-  server: 129.146.37.14
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-822689258
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: 114.25.9.245
-  type: ss
-  udp: true
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-812129143
-  password: mK3U4CcxreExT+4ZbQ+ixTCRA0PpbwB2qEYHsgySaLU=
-  port: 56927
-  server: 161.118.236.226
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-468218613
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 138.197.141.58
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-768399453
-  password: 9325a345-c72f-4637-a8f4-34f9effb7ba6
-  port: 21125
-  server: 211.91.158.26
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-513893045
-  password: zRZNBszYyWo5
-  port: 8388
-  server: fr4.levikogjgfdd.ir
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-236
-  password: aduB9HGxQHjA2SBMRjkHX6
-  port: 443
-  server: 102.37.156.224
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-482887636
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 193.29.139.225
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-11029
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.211
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-49012021
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.46
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-173
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.15
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-10899
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.204
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-11023
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.193
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-331336152
-  password: QCXDxuDlTTMD7jtgHUjIoj
-  port: 8080
-  server: 193.29.139.212
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-176
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.57
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-129825
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.182
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-277388490
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.225
-  type: ss
-  udp: true
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-813375473
-  password: mDsM65dOyAqaZuwAJ++7fFkCDySTjGawklIfkIq6sV4=
-  port: 45819
-  server: 193.123.32.18
-  type: ss
-  udp: true
-- name: hysteria2-305203719
-  password: STYyftThFn
-  port: 12765
-  server: 85.121.122.25
-  skip-cert-verify: false
-  sni: freedom.chenlan.top
-  type: hysteria2
-- name: hysteria2-419356360
-  password: STYyftThFn
-  port: 12765
-  server: freedom.chenlan.top
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  type: hysteria2
-- name: hysteria2-812152986
-  password: ef18d810-719c-4bf1-83c6-615d01f217eb
-  port: 443
-  server: jp.cryptoofarm.com
-  skip-cert-verify: false
-  sni: jp.cryptoofarm.com
-  type: hysteria2
-- name: hysteria2-107825281
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-658428922
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-au-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-au-002.fastervpn.world
-  type: hysteria2
-- name: hysteria2-817954118
-  password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  port: 1935
-  server: 194.87.10.29
-  skip-cert-verify: true
-  sni: sg2.xiaoliyu.cyou
-  type: hysteria2
-- name: hysteria2-294254604
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.159
-  skip-cert-verify: true
-  sni: vpn-kr-003.fastervpn.world
-  type: hysteria2
-- name: hysteria2-272763976
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.96.245
-  skip-cert-verify: true
-  sni: vpn-kr-003.fastervpn.world
-  type: hysteria2
-- name: hysteria2-412872197
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 18.118.193.169
-  skip-cert-verify: true
-  sni: vpn-us-003.fastervpn.world
-  type: hysteria2
-- name: hysteria2-483633864
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2рҹүёрҹүі
-  type: hysteria2
-- name: hysteria2-483633865
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: "https://t.me/wangcai2ð\x9F\x87¨ð\x9F\x87³"
-  type: hysteria2
-- name: hysteria2-483633862
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: speedtest.tinkoff.ru
-  type: hysteria2
-- name: hysteria2-818203386
-  password: P6qkAwznuC076mbIR2cGPg==
-  port: 34567
-  server: 43.156.90.144
-  skip-cert-verify: true
-  sni: bing.com\u0026amp;insecure=1
-  type: hysteria2
-- name: hysteria2-766437504
-  password: d9a3a0a2-3bbf-4c04-9ca6-95c7c8390ae7
-  port: 443
-  server: dereserv.just-cloud.org
-  skip-cert-verify: false
-  sni: dereserv.just-cloud.org
-  type: hysteria2
-- name: hysteria2-756343303
-  password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  port: 443
-  server: dk86.mechvpn.online
-  skip-cert-verify: false
-  sni: ''
+  sni: www.cloudflare.com
   type: hysteria2
 - name: hysteria2-818063834
   password: 9gWt2z3KdC9VI8kAQYVvvSvhT9e05CfI
@@ -965,48 +258,34 @@ proxies:
   skip-cert-verify: false
   sni: ''
   type: hysteria2
-- name: hysteria2-731857833
-  password: 95e8532b-cc69-42d4-9553-e3c23292b15b
+- name: hysteria2-796133334
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
   port: 8443
-  server: 143.246.208.86
+  server: 46.229.243.137
   skip-cert-verify: true
-  sni: iq5ny.pleiades.codes
+  sni: grape-turbo-fr.roxa.org
   type: hysteria2
-- name: hysteria2-818203573
-  password: 9gWt2z3KdC9VI8kAQYVvvSvhT9e05CfI
-  port: 12645
-  server: 64.235.45.208
-  skip-cert-verify: true
-  sni: vip-sg-1.hkd4fwmg.vip
-  type: hysteria2
-- name: hysteria2-813371804
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  port: 443
-  server: deu0003ntrhy01.tcp-reset-club.net
-  skip-cert-verify: true
-  sni: deu0003ntrhy01.tcp-reset-club.net
-  type: hysteria2
-- name: hysteria2-818063899
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  port: 443
-  server: nl01ntrhy01.tcp-reset-club.net
+- name: hysteria2-798045479
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  port: 8443
+  server: 46.229.243.138
   skip-cert-verify: false
-  sni: ''
+  sni: grape-turbo-fr.roxa.org
   type: hysteria2
-- cipher: 2022-blake3-aes-256-gcm
-  name: shadowsocks-817361615
-  password: OLII2zRkBbVCfoWY9vuMpe5dWfhq6BlfN9r12fparDw=:XIoUs91l+3EgTnmaCrNNChFBggx74qHudT9sZNyxW/Q=
-  port: 1011
-  server: hk.kexueyun.top
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-817206649
-  password: 1234!@#$
-  port: 1774
-  server: 49.254.204.133
-  type: ss
-  udp: true
+- name: hysteria2-817954102
+  password: 1427eb10-7529-4d38-a6a2-01b337868b37
+  port: 1935
+  server: 194.87.10.29
+  skip-cert-verify: true
+  sni: 194.87.10.29
+  type: hysteria2
+- name: hysteria2-645328506
+  password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+  port: 443
+  server: fr194.mechvpn.online
+  skip-cert-verify: false
+  sni: fr194.mechvpn.online
+  type: hysteria2
 - cipher: 2022-blake3-aes-128-gcm
   name: shadowsocks-817361610
   password: Y2FkNzhhZWQ0MzA1NzlhZA==:ODNiMjQ4NDMtYTY2Mi00Mg==
@@ -1014,95 +293,179 @@ proxies:
   server: evjd8xfji5of.cdn000.com
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-822692171
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: 114.25.9.70
+- cipher: aes-256-gcm
+  name: shadowsocks-795694285
+  password: qfJZnq91w6aX8K1Y
+  port: 80
+  server: 209.38.142.23
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: shadowsocks-779606875
+  password: jCacZrWkhonLqnvd
+  port: 443
+  server: 159.89.114.254
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-196
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.244
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-192
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.236
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: shadowsocks-465806702
+  name: shadowsocks-415243972
+  password: YHtesZ0qvgtg
+  port: 8388
+  server: 38.180.135.156
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-10989
+  password: RSo52SbxW40r
+  port: 8388
+  server: 108.181.57.93
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: shadowsocks-723348714
+  password: sZSZi7tGs9wodT7k
+  port: 80
+  server: 155.138.136.240
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-487917493
   password: ytw2awn
   port: 443
-  server: ca225.vpnbook.com
+  server: 142.4.216.225
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-795699254
-  password: amazonskr05
+- cipher: rc4-md5
+  name: shadowsocks-165
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.61.37
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-193
+  password: shadowsocks
   port: 443
-  server: 13.38.30.165
+  server: 37.19.198.160
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: shadowsocks-723348699
+  password: XrpA8hNjQ67ODdau
+  port: 443
+  server: 149.102.152.25
+  type: ss
+  udp: true
+- name: hysteria2-483633863
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: vk.com
+  type: hysteria2
+- name: hysteria2-591454513
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.74
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-412872197
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 18.118.193.169
+  skip-cert-verify: true
+  sni: vpn-us-003.fastervpn.world
+  type: hysteria2
+- name: hysteria2-819480150
+  password: adcQi8ueFDIPjA58
+  port: 56001
+  server: 3.39.246.101
+  skip-cert-verify: true
+  sni: kor-ls-d-3.nebulacloud.win
+  type: hysteria2
+- name: hysteria2-819480209
+  password: y4bPiMewyTKxAAfV
+  port: 16001
+  server: 35.72.182.75
+  skip-cert-verify: true
+  sni: jp-ls-g-4.nebulacloud.win
+  type: hysteria2
+- name: hysteria2-760319454
+  password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+  port: 443
+  server: 194.24.161.194
+  skip-cert-verify: false
+  sni: fr194.mechvpn.online
+  type: hysteria2
+- name: hysteria2-744910373
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  port: 8443
+  server: 46.229.243.136
+  skip-cert-verify: false
+  sni: grape-turbo-fr.roxa.org
+  type: hysteria2
+- name: hysteria2-798043462
+  password: dsfa_k0123WFzerrf_kZ3490VNb03J_m30_s
+  port: 8443
+  server: 194.180.188.104
+  skip-cert-verify: false
+  sni: keyhop-offshore.roxa.org
+  type: hysteria2
+- name: hysteria2-744910431
+  password: dsfa_k0123WFzerrf_kZ3490VNb03J_m30_s
+  port: 8443
+  server: 194.180.188.97
+  skip-cert-verify: false
+  sni: keyhop-offshore.roxa.org
+  type: hysteria2
+- name: hysteria2-732659804
+  password: wrSuBorIlf
+  port: 443
+  server: hys9.wba-pn.ru
+  skip-cert-verify: true
+  sni: hys9.wba-pn.ru
+  type: hysteria2
+- name: hysteria2-838641382
+  password: DIsE2A7Uq7vgVEOiK/J7TPPBI6bNidpz
+  port: 26486
+  server: vip-nl-1.hkd4fwmg.vip
+  skip-cert-verify: true
+  sni: vip-nl-1.hkd4fwmg.vip
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-154
+  password: G5p6ww4o67HB
+  port: 8388
+  server: 108.181.118.10
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: shadowsocks-795694332
+  password: fc0heeXAqzNX86aP
+  port: 443
+  server: 159.89.112.218
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: shadowsocks-768399408
-  password: 9325a345-c72f-4637-a8f4-34f9effb7ba6
-  port: 21114
-  server: 211.91.158.44
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-246
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
-  port: 16233
-  server: 102.133.165.160
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-11048
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.3
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-188
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.149
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-185
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.189
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-11044
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.164
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-11042
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.11
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-175
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.208
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-60057373
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.48
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-56693562
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.26
+  name: shadowsocks-209
+  password: 1hhrqrokj3ag
+  port: 8388
+  server: 209.46.102.22
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
@@ -1113,136 +476,1069 @@ proxies:
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: shadowsocks-482887638
+  name: shadowsocks-258605573
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.42
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-168341641
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 193.29.139.223
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-83630747
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.174
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-522222549
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 443
-  server: 82.38.31.149
+  server: 82.38.31.48
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11033
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.215
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-258605572
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.201
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-166303196
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 193.29.139.198
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-846829577
+  password: f2FivziSooWMDzE6p2kBx7ri7owdLZyPnuQLPeDhnY8qXKm6zZ4M39pov4w7MfxRN5FjWqC1cCA8gGoLpZQVouPt9cCA9idN
+  port: 42607
+  server: 166.1.129.245
+  type: ss
+  udp: true
+- name: hysteria2-838411719
+  password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
+  port: 32135
+  server: vip-jp-4.hkd4fwmg.vip
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
+- name: hysteria2-207301017
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 160.187.100.109
+  skip-cert-verify: true
+  sni: vpn-tw-002.fastervpn.world
+  type: hysteria2
+- name: hysteria2-328918461
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 160.187.100.109
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
+- name: hysteria2-652726871
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  port: 33333
+  server: hy2.123266.xyz
+  skip-cert-verify: false
+  sni: ''
+  type: hysteria2
+- name: hysteria2-713712621
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.149.228.246
+  skip-cert-verify: true
+  sni: vpn-us-003.fastervpn.world
+  type: hysteria2
+- name: hysteria2-483633862
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: speedtest.tinkoff.ru
+  type: hysteria2
+- name: hysteria2-835911066
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.149.228.246
+  skip-cert-verify: true
+  sni: 3.149.228.246
+  type: hysteria2
+- name: hysteria2-819480119
+  password: HT3i8qGN8tailT5s
+  port: 26001
+  server: 35.77.111.209
+  skip-cert-verify: true
+  sni: jp-ls-b3.nebulacloud.win
+  type: hysteria2
+- name: hysteria2-819480082
+  password: z6XA45P1IunBTYi8
+  port: 26001
+  server: 13.228.25.94
+  skip-cert-verify: true
+  sni: sg-ls-y-9.czzhkractqqakfzdmrgd.cc
+  type: hysteria2
+- name: hysteria2-652726854
+  password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+  port: 443
+  server: fr194.mechvpn.online
+  skip-cert-verify: false
+  sni: ''
+  type: hysteria2
+- name: hysteria2-826933171
+  password: 8f7eeebd-3378-4bf1-b80a-cb2a393a031d
+  port: 8443
+  server: iq5ny.pleiades.codes
+  skip-cert-verify: true
+  sni: iq5ny.pleiades.codes
+  type: hysteria2
+- name: hysteria2-781395534
+  password: dsfa_k0123WFzerrf_kZ3490VNb03J_m30_s
+  port: 8443
+  server: 194.180.188.97
+  skip-cert-verify: true
+  sni: keyhop-offshore.roxa.org
+  type: hysteria2
+- name: hysteria2-768950027
+  password: 2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o
+  port: 443
+  server: pixelcast.wwwinternetvideo.click
+  skip-cert-verify: true
+  sni: pixelcast.wwwinternetvideo.click
+  type: hysteria2
+- name: hysteria2-817282607
+  password: ZYTopBPE6fGijECIcT3KxqFEpjQJ44ND
+  port: 55793
+  server: vip-sg-2.hkd4fwmg.vip
+  skip-cert-verify: true
+  sni: vip-sg-2.hkd4fwmg.vip
+  type: hysteria2
+- name: hysteria2-798045477
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  port: 8080
+  server: 46.229.243.138
+  skip-cert-verify: false
+  sni: grape-turbo-fr.roxa.org
+  type: hysteria2
+- name: hysteria2-589844096
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  port: 443
+  server: cabinet.wwwinternetvideo.click
+  skip-cert-verify: false
+  sni: cabinet.wwwinternetvideo.click
+  type: hysteria2
+- name: hysteria2-837919178
+  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
+  port: 443
+  server: streambox.wwwinternetvideo.click
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-826772058
+  password: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
+  port: 2096
+  server: 138.124.254.68
+  skip-cert-verify: true
+  sni: it-one.quiet-rogue.site
+  type: hysteria2
+- cipher: aes-256-cfb
+  name: shadowsocks-838633420
+  password: 1234!@#$
+  port: 1774
+  server: 49.254.204.134
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-415243975
+  password: qB2Cv9VIlujj
+  port: 8388
+  server: 23.150.248.20
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-159
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.170
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-155
+  password: shadowsocks
+  port: 443
+  server: 173.244.56.6
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: shadowsocks-795694278
+  password: nLqpwVxdbMUL6M4F
+  port: 80
+  server: 159.203.170.52
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-290610756
+  password: pFNN9jKe8jwD
+  port: 32245
+  server: 38.180.92.242
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-129824
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.13
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11047
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.32
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11028
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.207
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11046
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.29
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11048
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.3
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-522222548
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.18
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-258
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.35
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11025
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.198
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-837456852
+  password: QCXDxuDlTTMD7jtgHUjIoj
+  port: 8080
+  server: nl10.levikogjgfdd.ir
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-468218595
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.23.32
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-522222546
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 193.29.139.129
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-56693562
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.26
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-72830589
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.156
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-10898
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.203
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-277388491
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.230
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-837870894
+  password: 3jh4AaJTlphrzU7THNjvY05I5dyO8rw6
+  port: 117
+  server: 23.251.59.41
+  type: ss
+  udp: true
+- name: hysteria2-827675442
+  password: ZYTopBPE6fGijECIcT3KxqFEpjQJ44ND
+  port: 55793
+  server: vip-sg-2.hkd4fwmg.vip
+  skip-cert-verify: false
+  sni: ''
+  type: hysteria2
+- name: hysteria2-827675452
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  port: 443
+  server: usa0003rlbhy01.tcp-reset-club.net
+  skip-cert-verify: false
+  sni: ''
+  type: hysteria2
+- name: hysteria2-483633865
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: "https://t.me/wangcai2ð\x9F\x87¨ð\x9F\x87³"
+  type: hysteria2
+- name: hysteria2-591454512
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.159
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-137781265
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-tw-002.fastervpn.world
+  type: hysteria2
+- name: hysteria2-723819907
+  password: 1427eb10-7529-4d38-a6a2-01b337868b37
+  port: 4433
+  server: hk2.xiaoliyu.cyou
+  skip-cert-verify: true
+  sni: hk2.xiaoliyu.cyou
+  type: hysteria2
+- name: hysteria2-24391
+  password: dongtaiwang.com
+  port: 22000
+  server: 62.210.124.146
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: hysteria2
+- name: hysteria2-819480070
+  password: YMLHGi7mqME1AunL
+  port: 56001
+  server: 52.198.37.46
+  skip-cert-verify: true
+  sni: jp-ls-i-10.czzhkractqqakfzdmrgd.cc
+  type: hysteria2
+- name: hysteria2-819479999
+  password: vRsLCgkE2MZZyznx
+  port: 36001
+  server: 34.221.254.108
+  skip-cert-verify: true
+  sni: us-ls-4.lihmxssuqleitqcxpssa.uk
+  type: hysteria2
+- name: hysteria2-798032514
+  password: Foc_Mcxi45rM9v3ve_N92fdrK_10_Ssc5
+  port: 8443
+  server: 185.39.31.111
+  skip-cert-verify: false
+  sni: grape-beer.yyuyy.com
+  type: hysteria2
+- name: hysteria2-697948503
+  password: 1f619326-cd93-4d6b-aebe-e0b5f8831d02
+  port: 10808
+  server: 79.137.205.35
+  skip-cert-verify: false
+  sni: nl7.unlockvpn.online
+  type: hysteria2
+- name: hysteria2-817361621
+  password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
+  port: 8080
+  server: 82.39.214.83
+  skip-cert-verify: true
+  sni: hopp-us.yyuyy.com
+  type: hysteria2
+- name: hysteria2-781397525
+  password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
+  port: 8443
+  server: 138.124.0.168
+  skip-cert-verify: true
+  sni: hopp-legend-se.roxa.org
+  type: hysteria2
+- name: hysteria2-731857833
+  password: 95e8532b-cc69-42d4-9553-e3c23292b15b
+  port: 8443
+  server: 143.246.208.86
+  skip-cert-verify: true
+  sni: iq5ny.pleiades.codes
+  type: hysteria2
+- name: hysteria2-781395526
+  password: VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC
+  port: 8080
+  server: 82.39.213.226
+  skip-cert-verify: true
+  sni: hopp-us.yyuyy.com
+  type: hysteria2
+- name: hysteria2-266962492
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.74
+  skip-cert-verify: true
+  sni: vpn-kr-003.fastervpn.world
+  type: hysteria2
+- name: hysteria2-612183112
+  password: 2630a66444286f47ce591752f28adf5e
+  port: 50160
+  server: 154-49-127-140.liao.kdns.fr
+  skip-cert-verify: true
+  sni: 154-49-127-140.liao.kdns.fr
+  type: hysteria2
+- name: hysteria2-645328528
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8080
+  server: 85.204.107.167
+  skip-cert-verify: false
+  sni: grape-zet-ro-turbo.bumbleshrimp.com
+  type: hysteria2
+- name: hysteria2-810668757
+  password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
+  port: 32135
+  server: 142.91.104.120
+  skip-cert-verify: false
+  sni: vip-jp-4.hkd4fwmg.vip
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-125093
+  password: d7zh2lMrXNH5+8+8pKzlxiCU9NN022ih+uAyxj5d4qo=
+  port: 31700
+  server: 102.129.229.85
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: shadowsocks-817361619
+  password: 3iyJH8Jin+5GQC8qsc1Z6K7J6J3FlVF2PHvBlydgs50=
+  port: 45819
+  server: 158.178.149.23
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: shadowsocks-817361613
+  password: A6InytdtDyfER2TnQ6BJPWUl88itBkS6ksaMglhcgGU=
+  port: 61312
+  server: 129.151.87.13
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-246
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  port: 16233
+  server: 102.133.165.160
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11022
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.190
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-274
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.10
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-270
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.176
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-114874950
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 193.29.139.132
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-513893045
+  password: zRZNBszYyWo5
+  port: 8388
+  server: fr4.levikogjgfdd.ir
+  type: ss
+  udp: true
+- cipher: aes-128-cfb
+  name: shadowsocks-205
+  password: shadowsocks
+  port: 443
+  server: 109.201.152.181
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-277388489
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.129
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-482887636
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 193.29.139.225
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-129825
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.182
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-189
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.184
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-183
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.179
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-174
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.155
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-181
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.205
+  type: ss
+  udp: true
+- name: hysteria2-474576685
+  password: STYyftThFn
+  port: 12765
+  server: 85.121.122.25
+  skip-cert-verify: true
+  sni: freedom.chenlan.top
+  type: hysteria2
+- name: hysteria2-774524113
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: 152-67-200-82.liao.kdns.fr
+  type: hysteria2
+- name: hysteria2-824168778
+  password: ZYTopBPE6fGijECIcT3KxqFEpjQJ44ND
+  port: 55793
+  server: vip-sg-2.hkd4fwmg.vip
+  skip-cert-verify: false
+  sni: vip-sg-2.hkd4fwmg.vip
+  type: hysteria2
+- name: hysteria2-307174592
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
+- name: hysteria2-101779684
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-us-003.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-us-003.fastervpn.world
+  type: hysteria2
+- name: hysteria2-483633861
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: google.com
+  type: hysteria2
+- name: hysteria2-248653948
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: vpn-de-001.fastervpn.world
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-827675487
+  password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
+  port: 8443
+  server: hy2-germany.unlimited-access.ru
+  skip-cert-verify: false
+  sni: ''
+  type: hysteria2
+- name: hysteria2-290329796
+  password: gf1:gfhysteria2024
+  port: 443
+  server: 5.129.235.85
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-819480146
+  password: WvbKd47Qn76J7w1B
+  port: 46001
+  server: 47.128.15.204
+  skip-cert-verify: true
+  sni: sg-ls-z-17.lihmxssuqleitqcxpssa.uk
+  type: hysteria2
+- name: hysteria2-819480081
+  password: 8oUcHLvmS4tO12QN
+  port: 36001
+  server: 3.25.55.69
+  skip-cert-verify: true
+  sni: aus-ls-b-3.nebulacloud.win
+  type: hysteria2
+- name: hysteria2-817361617
+  password: 1427eb10-7529-4d38-a6a2-01b337868b37
+  port: 4433
+  server: de1.xiaoliyu.cyou
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-744910368
+  password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
+  port: 8443
+  server: 138.124.0.168
+  skip-cert-verify: false
+  sni: hopp-legend-se.roxa.org
+  type: hysteria2
+- name: hysteria2-817361597
+  password: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
+  port: 2056
+  server: els.mangshe.xyz
+  skip-cert-verify: true
+  sni: els.mangshe.xyz
+  type: hysteria2
+- name: hysteria2-232798723
+  password: vpn-hy2-lv-2026
+  port: 8444
+  server: 185.236.22.119
+  skip-cert-verify: true
+  sni: 185.236.22.119
+  type: hysteria2
+- name: hysteria2-781395529
+  password: d9a3a0a2-3bbf-4c04-9ca6-95c7c8390ae7
+  port: 443
+  server: dereserv.just-cloud.org
+  skip-cert-verify: true
+  sni: dereserv.just-cloud.org
+  type: hysteria2
+- name: hysteria2-781395530
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8080
+  server: 85.204.107.168
+  skip-cert-verify: true
+  sni: grape-zet-ro-turbo.bumbleshrimp.com
+  type: hysteria2
+- name: hysteria2-589844072
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8080
+  server: 85.204.107.165
+  skip-cert-verify: false
+  sni: grape-zet-ro-turbo.bumbleshrimp.com
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-833950087
+  password: b1fNrhxfvAkUOEq7LyCrqK3Dg1R/SBeL
+  port: 10586
+  server: vip-ca-1.hkd4fwmg.xyz
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-335127322
+  password: CJmTCCx7Ltud
+  port: 8388
+  server: nl1.levikogjgfdd.ir
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: shadowsocks-817361606
+  password: GTE6aBIunVF3QcgseTwgvwf3VIU/lCB5HMXk5GnSPWw=
+  port: 59924
+  server: 130.61.45.116
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: shadowsocks-817361623
+  password: j8EiUH3gEEIZpk9+m/xPzl7W8tFKgN8X2/ZCEUI4zF8=
+  port: 59924
+  server: 130.61.238.66
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-277388490
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.225
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-331336152
+  password: QCXDxuDlTTMD7jtgHUjIoj
+  port: 8080
+  server: 193.29.139.212
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11049
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.47
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11042
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.11
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-96653029
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.36
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-11023
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.193
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-60057373
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.48
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-175
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.208
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-91981760
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.174
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-10899
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.204
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-40118927
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.34
   type: ss
   udp: true
 - cipher: none
-  client-fingerprint: chrome
-  name: 💎_🇩🇪_DE_德国_160
+  client-fingerprint: firefox
+  name: 💎_🇨🇿_CZ_捷克__🇩🇪_DE_德国_185
   network: tcp
-  port: 22224
-  server: 63.188.40.90
-  servername: 63.188.40.90
+  port: 2027
+  server: 78.159.247.253
+  servername: storage.yandex.net
   tls: true
   type: vless
   udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  uuid: 851ed0d8-a37b-452d-8ef2-5b6c2d28a060
 - cipher: none
-  client-fingerprint: chrome
-  name: 💎_🇺🇸_US_美国__🇰🇷_KR_韩国_162
-  network: tcp
-  port: 8880
-  server: 104.16.100.215
-  servername: 104.16.100.215
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7a2df38b-2d8b-486b-9b43-641c81e11f40
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_🇩🇪_DE_德国_164
-  network: tcp
-  port: 22224
-  server: 63.187.248.131
-  servername: 63.187.248.131
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_🇩🇪_DE_德国_168
-  network: tcp
-  port: 22224
-  server: 63.183.163.238
-  servername: 63.183.163.238
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- cipher: none
-  client-fingerprint: safari
-  name: 💎_🇺🇸_US_美国__🇩🇪_DE_德国_175
+  client-fingerprint: firefox
+  name: 💎_🇩🇪_DE_德国_187
   network: tcp
   port: 443
-  server: d2hplu8rn1zhez.cloudfront.net
-  servername: d2hplu8rn1zhez.cloudfront.net
+  server: 194.87.24.13
+  servername: de1.de-cdn.ru
   tls: true
   type: vless
   udp: true
-  uuid: f17a82cc-4b2b-49bc-8875-51c43cc49c36
+  uuid: 22419260-5475-49d8-a29c-01905c54d1b8
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_🇵🇱_PL_波兰_177
+  name: 💎_🇨🇳_CN_中国_189
+  network: tcp
+  port: 12528
+  server: 120.227.1.43
+  servername: 120.227.1.43
+  tls: true
+  type: vless
+  udp: true
+  uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_🇬🇷_GR_希腊_191
   network: tcp
   port: 443
-  server: pl4.lckdwn.ru
-  servername: pl4.lckdwn.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_🇺🇸_US_美国__🇫🇷_FR_法国_180
-  network: tcp
-  port: 29893
-  server: 155.117.199.13
-  servername: cdnjs.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_🇮🇷_IR_伊朗__🇩🇪_DE_德国_182
-  network: tcp
-  port: 443
-  server: devip2.zeeshop.click
-  servername: devip2.zeeshop.click
-  tls: true
-  type: vless
-  udp: true
-  uuid: 44e3bf2e-155f-43c0-a270-651ecadd16ce
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_🇺🇸_US_美国_186
-  network: tcp
-  port: 443
-  server: one-for-all.levikogjgfdd.ir
-  servername: hhlfy.twiladaphne.ndjp.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- cipher: none
-  client-fingerprint: qq
-  name: 💎_🇳🇴_NO_挪威_189
-  network: tcp
-  port: 13443
-  server: 31.76.5.26
-  servername: auto.cendora.ru
+  server: 85.90.197.131
+  servername: eu-central.cendora.ru
   tls: true
   type: vless
   udp: true
   uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_🇺🇸_US_美国__🇫🇷_FR_法国_191
+  name: 💎_🇬🇧_GB_英国_193
   network: tcp
-  port: 39399
-  server: 155.117.199.13
-  servername: cdnjs.cloudflare.com
+  port: 443
+  server: 109.169.85.140
+  servername: slashdot.org
   tls: true
   type: vless
   udp: true
-  uuid: f06c6039-a489-3d78-a676-ed43be6deca3
+  uuid: faf655fc-690f-4ea8-8eed-77077f493bc8
+- cipher: none
+  client-fingerprint: firefox
+  name: 💎_🇺🇸_US_美国__🇫🇮_FI_芬兰_197
+  network: tcp
+  port: 443
+  server: 151.101.56.6
+  servername: ssl.fastly.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e75fbac1-efaa-45a2-ac76-ac150cb37329
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_195
+  name: 💎_🇩🇪_DE_德国_200
+  network: tcp
+  port: 443
+  server: ger.me1.pingsf.ir
+  servername: ger.me1.pingsf.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 59086073-d6da-44ed-b604-241ecdf03e97
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_🇬🇧_GB_英国_202
+  network: tcp
+  port: 443
+  server: 5.152.223.97
+  servername: strapi.io
+  tls: true
+  type: vless
+  udp: true
+  uuid: be5b6ad6-8184-4b63-82ac-3bc00c09c98c
+- cipher: none
+  client-fingerprint: firefox
+  name: 💎_🇩🇪_DE_德国_205
+  network: tcp
+  port: 443
+  server: 194.87.24.4
+  servername: de1.de-cdn.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 22419260-5475-49d8-a29c-01905c54d1b8
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_🇺🇸_US_美国_207
+  network: tcp
+  port: 10000
+  server: 180.178.60.254
+  servername: 180.178.60.254
+  tls: true
+  type: vless
+  udp: true
+  uuid: caec0d8d-ab2f-4247-b97d-7fb1a34ab195
+- cipher: none
+  client-fingerprint: firefox
+  name: 💎_🇺🇸_US_美国_210
+  network: tcp
+  port: 8443
+  server: 23.237.193.66
+  servername: apkav-1.bosx.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9e512d9b-fa44-4dd1-9d7d-73f1f33f4fa4
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_212
+  network: tcp
+  port: 443
+  server: ge-20b81e.atlanta-api.com
+  servername: ge-20b81e.atlanta-api.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 74099b9e-52fd-4540-b642-b8d60f3b5a2a
+- cipher: none
+  client-fingerprint: qq
+  name: 💎_🇱🇻_LV_拉脱维亚_214
+  network: tcp
+  port: 13443
+  server: 195.123.210.168
+  servername: auto.cendora.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+- cipher: none
+  client-fingerprint: edge
+  name: 💎_🇪🇪_EE_爱沙尼亚_217
+  network: tcp
+  port: 443
+  server: 31.76.70.31
+  servername: baltic.cendora.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_🇨🇳_CN_中国__🇺🇸_US_美国_219
+  network: tcp
+  port: 52683
+  server: jp.sofast.live
+  servername: jp.sofast.live
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5aaa5259-f924-4682-a4a3-149d472a9dcc
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_🇺🇸_US_美国__🇫🇮_FI_芬兰_221
+  network: tcp
+  port: 8080
+  server: connecto1.kolman.com.de
+  servername: connecto1.kolman.com.de
+  tls: true
+  type: vless
+  udp: true
+  uuid: ce71b8c2-54a4-4dd0-b780-a4521b16f2fb
+- cipher: none
+  client-fingerprint: ios
+  name: 💎_🇷🇺_RU_俄罗斯__🇬🇧_GB_英国_223
+  network: tcp
+  port: 2007
+  server: 185.65.148.151
+  servername: cdn.dodostatic.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3e24a03c-c398-43ab-b4c5-c5c953626496
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_🇨🇳_CN_中国__🇺🇸_US_美国_226
+  network: tcp
+  port: 58011
+  server: us22.sofast.live
+  servername: us22.sofast.live
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_🇫🇷_FR_法国__🇫🇮_FI_芬兰_228
+  network: tcp
+  port: 2053
+  server: 162.19.13.248
+  servername: forfreeuse.rtqa.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+- cipher: none
+  client-fingerprint: firefox
+  name: 💎_🇩🇪_DE_德国_230
+  network: tcp
+  port: 443
+  server: 194.87.24.12
+  servername: de1.de-cdn.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 22419260-5475-49d8-a29c-01905c54d1b8
+- cipher: none
+  client-fingerprint: firefox
+  name: 💎_🇩🇪_DE_德国_232
+  network: tcp
+  port: 443
+  server: 194.87.24.3
+  servername: de1.de-cdn.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 22419260-5475-49d8-a29c-01905c54d1b8
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_🇺🇸_US_美国__🇨🇦_CA_加拿大_235
+  network: tcp
+  port: 44547
+  server: vip-ca-1.hkd4fwmg.xyz
+  servername: vip-ca-1.hkd4fwmg.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6419b6a6-87a1-4822-86a3-c5c391f80674
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_237
   network: tcp
   port: 80
   server: 65.109.178.177
@@ -1253,7 +1549,7 @@ proxies:
   uuid: '@Cooonfig@Cooonfig@Cooonfig'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_197
+  name: 💎_VLESS_239
   network: tcp
   port: 50198
   server: 65.109.188.123
@@ -1264,7 +1560,18 @@ proxies:
   uuid: '@Cooonfig'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_199
+  name: 💎_VLESS_241
+  network: tcp
+  port: 50198
+  server: 65.109.188.123
+  servername: 65.109.188.123
+  tls: true
+  type: vless
+  udp: true
+  uuid: '@Cooonfig'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_243
   network: tcp
   port: 20393
   server: 47.250.195.135
@@ -1275,7 +1582,7 @@ proxies:
   uuid: '@Net2ray'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_201
+  name: 💎_VLESS_245
   network: tcp
   port: 443
   server: 69.46.46.123
@@ -1286,7 +1593,7 @@ proxies:
   uuid: '@V2XNET'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_203
+  name: 💎_VLESS_247
   network: tcp
   port: 443
   server: 127.0.0.1
@@ -1297,7 +1604,7 @@ proxies:
   uuid: '@iSeqaro'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_205
+  name: 💎_VLESS_249
   network: tcp
   port: 41546
   server: 85.133.228.198
@@ -1308,7 +1615,7 @@ proxies:
   uuid: '@narcod_ping'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_207
+  name: 💎_VLESS_251
   network: tcp
   port: 8880
   server: 185.146.173.39
@@ -1319,7 +1626,7 @@ proxies:
   uuid: Parsashonam-299
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_209
+  name: 💎_VLESS_253
   network: tcp
   port: 8880
   server: 185.146.173.39
@@ -1330,7 +1637,7 @@ proxies:
   uuid: Parsashonam-299
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_211
+  name: 💎_VLESS_255
   network: tcp
   port: 443
   server: 91.99.16.244
@@ -1341,7 +1648,7 @@ proxies:
   uuid: Parsashonam-299
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_214
+  name: 💎_VLESS_258
   network: tcp
   port: 8080
   server: 185.146.173.39
@@ -1352,7 +1659,7 @@ proxies:
   uuid: Parsashonam-Bot-21
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_216
+  name: 💎_VLESS_260
   network: tcp
   port: 8080
   server: 190.93.247.155
@@ -1363,18 +1670,7 @@ proxies:
   uuid: VPNCUSTOMIZE
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_218
-  network: tcp
-  port: 443
-  server: 199.232.78.160
-  servername: ssl.fastly.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: XpnTeam-11
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_220
+  name: 💎_VLESS_262
   network: tcp
   port: 443
   server: 199.232.78.160
@@ -1385,7 +1681,29 @@ proxies:
   uuid: XpnTeam-17
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_222
+  name: 💎_VLESS_264
+  network: tcp
+  port: 443
+  server: 199.232.78.160
+  servername: 199.232.78.160
+  tls: true
+  type: vless
+  udp: true
+  uuid: XpnTeam-21
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_266
+  network: tcp
+  port: 443
+  server: 199.232.78.160
+  servername: 199.232.78.160
+  tls: true
+  type: vless
+  udp: true
+  uuid: XpnTeam-21
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_268
   network: tcp
   port: 443
   server: 199.232.78.160
@@ -1393,10 +1711,10 @@ proxies:
   tls: true
   type: vless
   udp: true
-  uuid: XpnTeam-7
+  uuid: XpnTeam-21
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_224
+  name: 💎_VLESS_270
   network: tcp
   port: 443
   server: 199.232.78.160
@@ -1407,7 +1725,7 @@ proxies:
   uuid: XpnTeam-9
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_226
+  name: 💎_VLESS_272
   network: tcp
   port: 80
   server: 172.66.40.99
@@ -1418,7 +1736,7 @@ proxies:
   uuid: afb9d5dd-7096-412a-a475-76afb4978039
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_228
+  name: 💎_VLESS_274
   network: tcp
   port: 2020
   server: 91.99.231.221
@@ -1429,7 +1747,7 @@ proxies:
   uuid: e100d3b3-e706-4093-ae07-b820b4a3c6e6
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_230
+  name: 💎_VLESS_276
   network: tcp
   port: 80
   server: 172.66.40.99
@@ -1440,7 +1758,7 @@ proxies:
   uuid: e4e87420-9d40-435f-cb3b-b179bf6fdac5
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_232
+  name: 💎_VLESS_278
   network: tcp
   port: 8080
   server: 172.66.40.99
@@ -1451,7 +1769,7 @@ proxies:
   uuid: eb87a148-cfff-4151-a9d4-6f83e292cb16
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_235
+  name: 💎_VLESS_281
   network: tcp
   port: 1232
   server: 46.245.66.198
@@ -1462,7 +1780,7 @@ proxies:
   uuid: '--------NORBERT-VPN--------'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_237
+  name: 💎_VLESS_283
   network: tcp
   port: 80
   server: www.speedtest.net
@@ -1473,7 +1791,7 @@ proxies:
   uuid: '-----WS-ipV2Ray-----'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_239
+  name: 💎_VLESS_285
   network: tcp
   port: 2096
   server: 103.160.204.88
@@ -1484,263 +1802,10 @@ proxies:
   uuid: '-----v2ray_fark-----'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_241
-  network: tcp
-  port: 2053
-  server: 103.160.204.92
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_243
-  network: tcp
-  port: 2087
-  server: 103.160.204.92
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_245
-  network: tcp
-  port: 2096
-  server: 103.160.204.92
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_247
-  network: tcp
-  port: 2087
-  server: 104.16.199.186
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_249
-  network: tcp
-  port: 2096
-  server: 104.16.199.186
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_251
-  network: tcp
-  port: 2096
-  server: 104.16.48.41
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_253
-  network: tcp
-  port: 2087
-  server: metrix.anvary.ir
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_255
-  network: tcp
-  port: 34671
-  server: v2ray-fark.ddns.net
-  servername: v2ray-fark.ddns.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_257
-  network: tcp
-  port: 443
-  server: v2ray-fark.ddns.net
-  servername: mihanyas.ir
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_259
-  network: tcp
-  port: 443
-  server: v2ray-fark.ddns.net
-  servername: www.speedtest.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_261
-  network: tcp
-  port: 49819
-  server: v2ray-fark.ddns.net
-  servername: v2ray-fark.ddns.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_263
-  network: tcp
-  port: 58082
-  server: v2ray-fark.ddns.net
-  servername: v2ray-fark.ddns.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_265
-  network: tcp
-  port: 58082
-  server: v2ray-fark.ddns.net
-  servername: v2ray-fark.ddns.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_267
-  network: tcp
-  port: 58270
-  server: v2ray-fark.ddns.net
-  servername: v2ray-fark.ddns.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_269
-  network: tcp
-  port: 2096
-  server: v2ray-fark2.ddns.net
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_271
-  network: tcp
-  port: 2096
-  server: v2ray-fark2.ddns.net
-  servername: uy.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_273
-  network: tcp
-  port: 2096
-  server: v2ray-fark3.ddns.net
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_275
-  network: tcp
-  port: 2096
-  server: v2ray-fark3.ddns.net
-  servername: uy.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_277
-  network: tcp
-  port: 2087
-  server: v2ray-fark4.ddns.net
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_279
-  network: tcp
-  port: 2087
-  server: v2ray-fark4.ddns.net
-  servername: uy.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_281
-  network: tcp
-  port: 2087
-  server: v2ray-fark5.ddns.net
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_283
-  network: tcp
-  port: 2087
-  server: v2ray-fark5.ddns.net
-  servername: uy.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_285
-  network: tcp
-  port: 2053
-  server: v2ray-fark6.ddns.net
-  servername: wu.foxnt-telegram-foxnt.shop
-  tls: true
-  type: vless
-  udp: true
-  uuid: '-----v2ray_fark-----'
-- cipher: none
-  client-fingerprint: chrome
   name: 💎_VLESS_287
   network: tcp
   port: 2053
-  server: v2ray-fark7.ddns.net
+  server: 103.160.204.92
   servername: wu.foxnt-telegram-foxnt.shop
   tls: true
   type: vless
@@ -1750,8 +1815,8 @@ proxies:
   client-fingerprint: chrome
   name: 💎_VLESS_289
   network: tcp
-  port: 2053
-  server: v2ray-fark8.ddns.net
+  port: 2087
+  server: 103.160.204.92
   servername: wu.foxnt-telegram-foxnt.shop
   tls: true
   type: vless
@@ -1761,8 +1826,8 @@ proxies:
   client-fingerprint: chrome
   name: 💎_VLESS_291
   network: tcp
-  port: 2053
-  server: zula.ir
+  port: 2096
+  server: 103.160.204.92
   servername: wu.foxnt-telegram-foxnt.shop
   tls: true
   type: vless
@@ -1773,7 +1838,7 @@ proxies:
   name: 💎_VLESS_293
   network: tcp
   port: 2087
-  server: zula.ir
+  server: 104.16.199.186
   servername: wu.foxnt-telegram-foxnt.shop
   tls: true
   type: vless
@@ -1782,6 +1847,259 @@ proxies:
 - cipher: none
   client-fingerprint: chrome
   name: 💎_VLESS_295
+  network: tcp
+  port: 2096
+  server: 104.16.199.186
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_297
+  network: tcp
+  port: 2096
+  server: 104.16.48.41
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_299
+  network: tcp
+  port: 2087
+  server: metrix.anvary.ir
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_301
+  network: tcp
+  port: 34671
+  server: v2ray-fark.ddns.net
+  servername: v2ray-fark.ddns.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_303
+  network: tcp
+  port: 443
+  server: v2ray-fark.ddns.net
+  servername: mihanyas.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_305
+  network: tcp
+  port: 443
+  server: v2ray-fark.ddns.net
+  servername: www.speedtest.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_307
+  network: tcp
+  port: 49819
+  server: v2ray-fark.ddns.net
+  servername: v2ray-fark.ddns.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_309
+  network: tcp
+  port: 58082
+  server: v2ray-fark.ddns.net
+  servername: v2ray-fark.ddns.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_311
+  network: tcp
+  port: 58082
+  server: v2ray-fark.ddns.net
+  servername: v2ray-fark.ddns.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_313
+  network: tcp
+  port: 58270
+  server: v2ray-fark.ddns.net
+  servername: v2ray-fark.ddns.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_315
+  network: tcp
+  port: 2096
+  server: v2ray-fark2.ddns.net
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_317
+  network: tcp
+  port: 2096
+  server: v2ray-fark2.ddns.net
+  servername: uy.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_319
+  network: tcp
+  port: 2096
+  server: v2ray-fark3.ddns.net
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_321
+  network: tcp
+  port: 2096
+  server: v2ray-fark3.ddns.net
+  servername: uy.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_323
+  network: tcp
+  port: 2087
+  server: v2ray-fark4.ddns.net
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_325
+  network: tcp
+  port: 2087
+  server: v2ray-fark4.ddns.net
+  servername: uy.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_327
+  network: tcp
+  port: 2087
+  server: v2ray-fark5.ddns.net
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_329
+  network: tcp
+  port: 2087
+  server: v2ray-fark5.ddns.net
+  servername: uy.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_331
+  network: tcp
+  port: 2053
+  server: v2ray-fark6.ddns.net
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_333
+  network: tcp
+  port: 2053
+  server: v2ray-fark7.ddns.net
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_335
+  network: tcp
+  port: 2053
+  server: v2ray-fark8.ddns.net
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_337
+  network: tcp
+  port: 2053
+  server: zula.ir
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_339
+  network: tcp
+  port: 2087
+  server: zula.ir
+  servername: wu.foxnt-telegram-foxnt.shop
+  tls: true
+  type: vless
+  udp: true
+  uuid: '-----v2ray_fark-----'
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_341
   network: tcp
   port: 2087
   server: zula.ir
@@ -1792,7 +2110,7 @@ proxies:
   uuid: '-----v2ray_fark-----'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_297
+  name: 💎_VLESS_343
   network: tcp
   port: 2087
   server: 198.41.202.5
@@ -1803,7 +2121,7 @@ proxies:
   uuid: '----DIGIV2RAY'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_299
+  name: 💎_VLESS_345
   network: tcp
   port: 2087
   server: 198.41.202.5
@@ -1814,7 +2132,7 @@ proxies:
   uuid: '----DIGIV2RAY'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_301
+  name: 💎_VLESS_347
   network: tcp
   port: 443
   server: 172.66.40.99
@@ -1825,7 +2143,7 @@ proxies:
   uuid: '----telegram--ISVvpn----1'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_303
+  name: 💎_VLESS_349
   network: tcp
   port: 443
   server: 172.66.40.99
@@ -1836,7 +2154,7 @@ proxies:
   uuid: '----telegram--ISVvpn----'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_305
+  name: 💎_VLESS_351
   network: tcp
   port: 443
   server: 172.66.40.99
@@ -1847,7 +2165,7 @@ proxies:
   uuid: '----telegram--ISVvpn----'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_307
+  name: 💎_VLESS_353
   network: tcp
   port: 2095
   server: 185.146.173.68
@@ -1858,7 +2176,7 @@ proxies:
   uuid: '---DIGIV2RAY--'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_309
+  name: 💎_VLESS_355
   network: tcp
   port: 2095
   server: www.speedtest.net
@@ -1869,7 +2187,7 @@ proxies:
   uuid: '---DIGIV2RAY--'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_311
+  name: 💎_VLESS_357
   network: tcp
   port: 80
   server: 185.146.173.59
@@ -1880,7 +2198,7 @@ proxies:
   uuid: '---DIGiV2RAY---'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_313
+  name: 💎_VLESS_359
   network: tcp
   port: 80
   server: discord.gg
@@ -1891,7 +2209,7 @@ proxies:
   uuid: '---DIGiV2RAY---'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_315
+  name: 💎_VLESS_361
   network: tcp
   port: 443
   server: WLF-V-P-N-ID.dnsfree.one
@@ -1902,7 +2220,7 @@ proxies:
   uuid: '---WLFVPN---'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_317
+  name: 💎_VLESS_363
   network: tcp
   port: 443
   server: WLF-V-P-N-ID2.dnsfree.one
@@ -1913,7 +2231,7 @@ proxies:
   uuid: '---WLFVPN---'
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_319
+  name: 💎_VLESS_365
   network: tcp
   port: 443
   server: WLF-V-P-N-ID2.dnsfree.one
@@ -1924,7 +2242,7 @@ proxies:
   uuid: '---WLFVPN---'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_321
+  name: 💎_VLESS_367
   network: tcp
   port: 8080
   server: www.parspack.com
@@ -1935,7 +2253,7 @@ proxies:
   uuid: --V2RAXX
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_323
+  name: 💎_VLESS_369
   network: tcp
   port: 2095
   server: 185.146.173.68
@@ -1946,7 +2264,7 @@ proxies:
   uuid: -DIGIV2RAY-
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_325
+  name: 💎_VLESS_371
   network: tcp
   port: 2095
   server: 185.146.173.68
@@ -1957,7 +2275,7 @@ proxies:
   uuid: -DIGIV2RAY-
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_327
+  name: 💎_VLESS_373
   network: tcp
   port: 2095
   server: www.speedtest.net
@@ -1968,7 +2286,7 @@ proxies:
   uuid: -DIGIV2RAY-
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_329
+  name: 💎_VLESS_375
   network: tcp
   port: 8080
   server: www.parsvds.ir
@@ -1979,7 +2297,29 @@ proxies:
   uuid: -JOIN--ELiV2RAY--EiV2RAY-
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_331
+  name: 💎_VLESS_377
+  network: tcp
+  port: 8080
+  server: www.parsvds.ir
+  servername: www.parsvds.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: -JOIN--ELiV2RAY--EiV2RAY-
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_379
+  network: tcp
+  port: 8080
+  server: repo.steampowered.com
+  servername: repo.steampowered.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: -Telegram-id-ELiV2ray-
+- cipher: none
+  client-fingerprint: chrome
+  name: 💎_VLESS_381
   network: tcp
   port: 80
   server: test.fast.hosting-ip.com
@@ -1990,7 +2330,7 @@ proxies:
   uuid: -V2RAXX
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_333
+  name: 💎_VLESS_383
   network: tcp
   port: 2095
   server: 188.114.98.224
@@ -2001,7 +2341,7 @@ proxies:
   uuid: -VPNCUSTOMIZE-
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_335
+  name: 💎_VLESS_385
   network: tcp
   port: 443
   server: fishlab.ucdavis.edu
@@ -2012,7 +2352,7 @@ proxies:
   uuid: -VPNCUSTOMIZE-
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_337
+  name: 💎_VLESS_387
   network: tcp
   port: 8180
   server: example.ir
@@ -2023,7 +2363,7 @@ proxies:
   uuid: '...'
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_339
+  name: 💎_VLESS_389
   network: tcp
   port: 4002
   server: 37.114.50.157
@@ -2034,7 +2374,7 @@ proxies:
   uuid: 00000000-0000-4000-8000-000000000000
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_341
+  name: 💎_VLESS_391
   network: tcp
   port: 4433
   server: 84.247.129.205
@@ -2045,7 +2385,7 @@ proxies:
   uuid: 00000000-0000-4000-8000-000000000000
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_343
+  name: 💎_VLESS_393
   network: tcp
   port: 443
   server: 38.180.220.203
@@ -2056,7 +2396,7 @@ proxies:
   uuid: 0000e293-996d-4c32-99dc-29a8aba80d06
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_345
+  name: 💎_VLESS_395
   network: tcp
   port: 443
   server: cave.magazinetut.online
@@ -2067,7 +2407,7 @@ proxies:
   uuid: 0000e293-996d-4c32-99dc-29a8aba80d06
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_347
+  name: 💎_VLESS_397
   network: tcp
   port: 443
   server: cave.magazinetut.online
@@ -2078,7 +2418,7 @@ proxies:
   uuid: 0000e293-996d-4c32-99dc-29a8aba80d06
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_349
+  name: 💎_VLESS_399
   network: tcp
   port: 443
   server: hydrovpnsrv1.craftedrpg.ir
@@ -2089,7 +2429,7 @@ proxies:
   uuid: 0001691a-e408-461c-9a09-96e46c156bdb
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_351
+  name: 💎_VLESS_401
   network: tcp
   port: 443
   server: 104.17.242.183
@@ -2100,7 +2440,7 @@ proxies:
   uuid: 00026cc2-d2a5-41b2-86a0-2c5fb2e5018d
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_353
+  name: 💎_VLESS_403
   network: tcp
   port: 443
   server: 85.198.12.25
@@ -2111,7 +2451,7 @@ proxies:
   uuid: 000dec39-61ac-4ff2-97e1-5f7c003cf2e5
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_355
+  name: 💎_VLESS_405
   network: tcp
   port: 40443
   server: 149.248.77.106
@@ -2122,7 +2462,7 @@ proxies:
   uuid: 000f16e8-cc68-4951-b336-acd81996efde
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_357
+  name: 💎_VLESS_407
   network: tcp
   port: 40443
   server: 162.33.177.100
@@ -2133,7 +2473,7 @@ proxies:
   uuid: 000f16e8-cc68-4951-b336-acd81996efde
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_359
+  name: 💎_VLESS_409
   network: tcp
   port: 50443
   server: 45.155.71.170
@@ -2144,7 +2484,7 @@ proxies:
   uuid: 000f16e8-cc68-4951-b336-acd81996efde
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_361
+  name: 💎_VLESS_411
   network: tcp
   port: 50443
   server: 62.60.159.137
@@ -2155,7 +2495,7 @@ proxies:
   uuid: 000f16e8-cc68-4951-b336-acd81996efde
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_363
+  name: 💎_VLESS_413
   network: tcp
   port: 40443
   server: 69.48.229.50
@@ -2166,7 +2506,7 @@ proxies:
   uuid: 000f16e8-cc68-4951-b336-acd81996efde
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_365
+  name: 💎_VLESS_415
   network: tcp
   port: 40443
   server: 72.5.42.70
@@ -2177,7 +2517,7 @@ proxies:
   uuid: 000f16e8-cc68-4951-b336-acd81996efde
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_367
+  name: 💎_VLESS_417
   network: tcp
   port: 40443
   server: 81.19.137.144
@@ -2188,7 +2528,7 @@ proxies:
   uuid: 000f16e8-cc68-4951-b336-acd81996efde
 - cipher: none
   client-fingerprint: firefox
-  name: 💎_VLESS_369
+  name: 💎_VLESS_419
   network: tcp
   port: 50443
   server: 89.208.113.54
@@ -2199,463 +2539,23 @@ proxies:
   uuid: 000f16e8-cc68-4951-b336-acd81996efde
 - cipher: none
   client-fingerprint: chrome
-  name: 💎_VLESS_371
-  network: tcp
-  port: 2082
-  server: llc.v2sub.ir
-  servername: llc.v2sub.ir
-  tls: true
-  type: vless
-  udp: true
-  uuid: 000f1ace-a4d6-44ea-93b0-d5d384fc9cd7
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_373
-  network: tcp
-  port: 2082
-  server: llc.v2sub.ir
-  servername: llc.v2sub.ir
-  tls: true
-  type: vless
-  udp: true
-  uuid: 000f1ace-a4d6-44ea-93b0-d5d384fc9cd7
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_375
-  network: tcp
-  port: 8080
-  server: zula.ir
-  servername: zula.ir
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00114363-e4b7-4dab-a9bf-956ccadf84f7
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_377
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_379
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_381
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_383
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_385
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_387
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_389
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_391
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_393
-  network: tcp
-  port: 443
-  server: 167.17.69.171
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_395
-  network: tcp
-  port: 7443
-  server: 116.204.164.27
-  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00274dd7-7cee-420d-9942-b24d047611a7
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_397
-  network: tcp
-  port: 443
-  server: 184.tradeip.store
-  servername: play.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00364cb4-6849-4f39-af14-b254bc63968d
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_399
-  network: tcp
-  port: 6243
-  server: 31.77.57.112
-  servername: github.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 003c712d-daa1-4c3f-bed2-658e7787d04c
-- cipher: none
-  client-fingerprint: firefox
-  name: 💎_VLESS_401
-  network: tcp
-  port: 6243
-  server: 31.77.57.112
-  servername: github.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 003c712d-daa1-4c3f-bed2-658e7787d04c
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_403
-  network: tcp
-  port: 6243
-  server: 31.77.57.112
-  servername: github.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 003c712d-daa1-4c3f-bed2-658e7787d04c
-- cipher: none
-  client-fingerprint: firefox
-  name: 💎_VLESS_405
-  network: tcp
-  port: 6243
-  server: 31.77.57.112
-  servername: github.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 003c712d-daa1-4c3f-bed2-658e7787d04c
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_407
-  network: tcp
-  port: 8080
-  server: Hh.somo44.sbs
-  servername: Hh.somo44.sbs
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0043c18f-c3a8-4762-9815-b54989eabdd5
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_409
-  network: tcp
-  port: 8443
-  server: 154.83.159.14
-  servername: storage.yandex.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0047a8bc-0025-4d45-899b-c75c669f3ede
-- cipher: none
-  client-fingerprint: firefox
-  name: 💎_VLESS_411
-  network: tcp
-  port: 8443
-  server: 154.83.159.14
-  servername: storage.yandex.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0047a8bc-0025-4d45-899b-c75c669f3ede
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_413
-  network: tcp
-  port: 8443
-  server: 154.83.159.240
-  servername: storage.yandex.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0047a8bc-0025-4d45-899b-c75c669f3ede
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_415
-  network: tcp
-  port: 8443
-  server: 154.83.159.240
-  servername: storage.yandex.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0047a8bc-0025-4d45-899b-c75c669f3ede
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_417
-  network: tcp
-  port: 8443
-  server: 154.83.159.9
-  servername: storage.yandex.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0047a8bc-0025-4d45-899b-c75c669f3ede
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_419
-  network: tcp
-  port: 8443
-  server: cherry-nll-01.live
-  servername: storage.yandex.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0047a8bc-0025-4d45-899b-c75c669f3ede
-- cipher: none
-  client-fingerprint: random
   name: 💎_VLESS_421
   network: tcp
-  port: 443
-  server: 104.26.6.18
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
+  port: 2082
+  server: llc.v2sub.ir
+  servername: llc.v2sub.ir
   tls: true
   type: vless
   udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
+  uuid: 000f1ace-a4d6-44ea-93b0-d5d384fc9cd7
 - cipher: none
   client-fingerprint: chrome
   name: 💎_VLESS_423
   network: tcp
-  port: 443
-  server: 104.26.6.18
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
+  port: 2082
+  server: llc.v2sub.ir
+  servername: llc.v2sub.ir
   tls: true
   type: vless
   udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: random
-  name: 💎_VLESS_425
-  network: tcp
-  port: 443
-  server: 104.26.6.18
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_427
-  network: tcp
-  port: 443
-  server: 104.26.6.18
-  servername: 104.26.6.18
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_429
-  network: tcp
-  port: 443
-  server: 104.26.6.18
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_431
-  network: tcp
-  port: 443
-  server: 104.26.6.18
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: random
-  name: 💎_VLESS_433
-  network: tcp
-  port: 443
-  server: 104.26.7.18
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_435
-  network: tcp
-  port: 443
-  server: 104.26.7.18
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_437
-  network: tcp
-  port: 443
-  server: www.indyskipass.com
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_439
-  network: tcp
-  port: 443
-  server: www.indyskipass.com
-  servername: albedoalbedochan.violetchaan.ip-ddns.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_441
-  network: tcp
-  port: 443
-  server: www.indyskipass.com
-  servername: www.indyskipass.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 004ba5d4-d448-4960-a762-e5190ab415f2
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_443
-  network: tcp
-  port: 80
-  server: 151.101.109.223
-  servername: 151.101.109.223
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_445
-  network: tcp
-  port: 2096
-  server: 167.233.104.128
-  servername: 167.233.104.128
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_447
-  network: tcp
-  port: 2096
-  server: 167.233.36.115
-  servername: 167.233.36.115
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_449
-  network: tcp
-  port: 2096
-  server: 167.233.69.85
-  servername: 167.233.69.85
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_451
-  network: tcp
-  port: 80
-  server: 167.82.0.1
-  servername: 167.82.0.1
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-- cipher: none
-  client-fingerprint: chrome
-  name: 💎_VLESS_453
-  network: tcp
-  port: 8080
-  server: 172.67.164.242
-  servername: 172.67.164.242
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  uuid: 000f1ace-a4d6-44ea-93b0-d5d384fc9cd7
