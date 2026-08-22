@@ -46,7 +46,7 @@ jobs:
           seen_names = set()
 
           # ЭТАП 0: АБСОЛЮТНЫЙ ПРИОРИТЕТ — РУЧНОЕ УПРАВЛЕНИЕ
-          manual_dir = "manual_proxies"
+          manual_dir = ".github/workflows/manual_proxies"
           if os.path.exists(manual_dir):
               for filename in sorted(os.listdir(manual_dir)):
                   if proxy_count >= 70: break
