@@ -45,7 +45,7 @@ jobs:
           proxy_count = 0
           seen_names = set()
 
-          # ЭТАП 0: АБСОЛЮТНЫЙ ПРИОРИТЕТ — РУЧНОЕ УПРАВЛЕНИЕ (Читаем файлы из папки manual_proxies)
+          # ЭТАП 0: АБСОЛЮТНЫЙ ПРИОРИТЕТ — РУЧНОЕ УПРАВЛЕНИЕ
           manual_dir = "manual_proxies"
           if os.path.exists(manual_dir):
               for filename in sorted(os.listdir(manual_dir)):
@@ -57,50 +57,58 @@ jobs:
                           with open(file_path, "r", encoding="utf-8") as f:
                               content = f.read()
                           
-                          # Если это готовый YAML ручной работы
+                          # Если закинули готовый YAML ручной работы
                           if "proxies:" in content or "- name:" in content:
                               parsed_manual = yaml.safe_load(content)
-                              # Если скопировали только блоки прокси без "proxies:" заголовка
                               proxies_list = parsed_manual if isinstance(parsed_manual, list) else parsed_manual.get("proxies", [])
                               for proxy in proxies_list:
                                   p_name = proxy.get("name", f"Manual_{proxy_count}")
                                   if p_name not in seen_names:
                                       seen_names.add(p_name)
+                                      proxy["name"] = f"⭐_{p_name}"  # Клеим почетную звезду!
                                       if "password" in proxy: proxy["password"] = str(proxy["password"]).strip('"').strip("'")
                                       final_structure["proxies"].append(proxy)
                                       proxy_count += 1
-                                      if proxy_count >= 300: break
+                                      if proxy_count >= 70: break
                                       
-                          # Если закинули простой текстовый список vless:// / ss:// из буфера V2Ray
+                          # Если закинули простой список vless:// / ss:// из буфера V2Ray
                           else:
                               links = content.splitlines()
                               for idx, link in enumerate(links):
                                   if proxy_count >= 70: break
-                                  if not link.strip(): continue
-                                  clean_link = unquote(link.strip())
-                                  parsed = urlparse(clean_link)
-                                  if parsed.scheme == "vless":
+                                  if not link.strip() or "://" not in link: continue
+                                  
+                                  # Парсим ссылку профессионально и безопасно
+                                  try:
+                                      clean_link = unquote(link.strip())
+                                      parsed = urlparse(clean_link)
+                                      if parsed.scheme != "vless": continue
+                                      
                                       uuid = parsed.username
                                       server_port = parsed.netloc.split("@")[-1]
-                                      server, port = server_port.split(":")
-                                      raw_name = unquote(parsed.fragment) if parsed.fragment else "Manual_VLESS"
-                                      clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:25]
+                                      if ":" not in server_port: continue
+                                      server, port = server_port.split(":")[:2]
                                       
+                                      raw_name = unquote(parsed.fragment) if parsed.fragment else "Manual"
+                                      clean_name = re.sub(r'[\s"\'#:\-\[\]\(\)\{\}\*,\|&><`!?=]', '_', raw_name).strip('_')[:20]
                                       params = parse_qs(parsed.query)
+                                      
                                       vless_block = {
                                           "name": f"⭐_{clean_name}_{proxy_count}",
                                           "type": "vless", "server": server, "port": int(port), "uuid": uuid,
-                                          "cipher": "none", "tls": True, "udp": True, "network": params.get("network", ["tcp"]),
-                                          "servername": params.get("sni", [server]), "client-fingerprint": params.get("fp", ["chrome"])
+                                          "cipher": "none", "tls": True, "udp": True,
+                                          "network": params.get("network", ["tcp"])[0],
+                                          "servername": params.get("sni", [server])[0],
+                                          "client-fingerprint": params.get("fp", ["chrome"])[0]
                                       }
                                       if vless_block["name"] not in seen_names:
                                           final_structure["proxies"].append(vless_block)
                                           seen_names.add(vless_block["name"])
                                           proxy_count += 1
+                                  except: continue
                       except Exception as e:
                           print(f"❌ Ошибка разбора ручного файла {filename}: {e}")
 
-          print(f"📊 Ручной этап завершен. Железно закреплено {proxy_count} приоритетных серверов.")
 
           # ЭТАП 1: ДОБИРАЕМ ОСТАТКИ ИЗ ГОТОВЫХ YAML БАЗ (Hysteria2 / Shadowsocks)
           for url in yaml_urls:
