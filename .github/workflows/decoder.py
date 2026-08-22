@@ -8,8 +8,8 @@ from urllib.parse import urlparse, parse_qs, unquote
 complex_raw_urls = [
     #"https://githubusercontent.com",
     "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
-    "https://raw.githubusercontent.com/flaafix/AetrisVPN/refs/heads/main/AetrisVPN.txt"
-    "https://raw.githubusercontent.com/bobrinaw/vlessforu/refs/heads/main/working_configs.txt"
+    "https://raw.githubusercontent.com/flaafix/AetrisVPN/refs/heads/main/AetrisVPN.txt",
+    "https://raw.githubusercontent.com/bobrinaw/vlessforu/refs/heads/main/working_configs.txt",
     "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml"
 ]
 
