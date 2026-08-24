@@ -1,11 +1,4 @@
 proxies:
-- name: hysteria2-862407208
-  password: 3e8790e4fb6629aa819217d9655eafa3
-  port: 50160
-  server: 140.83.85.233
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
 - name: hysteria2-862491530
   password: b4c65d3711d27d46f32263f1dd9caf48
   port: 50160
@@ -13,47 +6,12 @@ proxies:
   skip-cert-verify: true
   sni: www.bing.com
   type: hysteria2
-- name: hysteria2-474576783
-  password: dongtaiwang.com
-  port: 44356
-  server: 142.249.37.90
+- name: hysteria2-863197537
+  password: 023c40e3394dd2c2f1b5d12556db2a6f
+  port: 50160
+  server: 38.180.190.215
   skip-cert-verify: true
-  sni: hy2.561891.xyz
-  type: hysteria2
-- name: hysteria2-722298640
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.96.245
-  skip-cert-verify: true
-  sni: vk.com
-  type: hysteria2
-- name: hysteria2-561697888
-  password: dongtaiwang.com
-  port: 44356
-  server: hy2.561891.xyz
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-721489367
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
-- name: hysteria2-468898830
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-467420662
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: https://t.me/oneclickvpnkeys
+  sni: www.bing.com
   type: hysteria2
 - name: hysteria2-860028626
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
@@ -62,6 +20,48 @@ proxies:
   skip-cert-verify: true
   sni: 44.255.13.86
   type: hysteria2
+- name: hysteria2-859306119
+  password: c85bd762dc136495ddc02b30b0b7c5c5
+  port: 50160
+  server: 107-172-212-12.liao.kdns.fr
+  skip-cert-verify: false
+  sni: 107-172-212-12.liao.kdns.fr
+  type: hysteria2
+- name: hysteria2-860755869
+  password: c85bd762dc136495ddc02b30b0b7c5c5
+  port: 50160
+  server: 107-172-212-12.liao.kdns.fr
+  skip-cert-verify: false
+  sni: ''
+  type: hysteria2
+- name: hysteria2-857628135
+  password: 49f8bb8047
+  port: 11592
+  server: srv-12c1e0.21freedom.net
+  skip-cert-verify: false
+  sni: srv-12c1e0.21freedom.net
+  type: hysteria2
+- name: hysteria2-867103490
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.96.245
+  skip-cert-verify: true
+  sni: 3.36.96.245
+  type: hysteria2
+- name: hysteria2-863967007
+  password: oCYFcbOo8s
+  port: 443
+  server: hys22.wba-pn.ru
+  skip-cert-verify: false
+  sni: hys22.wba-pn.ru
+  type: hysteria2
+- name: hysteria2-651117978
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.228.168.117
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  type: hysteria2
 - cipher: chacha20-ietf-poly1305
   name: shadowsocks-864048591
   password: ljqdalu13..
@@ -69,11 +69,32 @@ proxies:
   server: 54.95.233.51
   type: ss
   udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-863726182
+  password: e936372a-d976-4e25-8b3b-29c1a5841e06
+  port: 43345
+  server: 140.245.121.101
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-863726169
+  password: 5d79906d-89ab-430b-acbc-3327568a5be3
+  port: 43345
+  server: 140.245.121.101
+  type: ss
+  udp: true
 - cipher: aes-256-cfb
   name: shadowsocks-696792801
   password: 7eadc6dbe2ae
   port: 65443
   server: 118.107.222.231
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: shadowsocks-867167160
+  password: MBWd9MH0JMh2G5od
+  port: 8388
+  server: 194.87.10.112
   type: ss
   udp: true
 - name: hysteria2-107825281
@@ -90,20 +111,6 @@ proxies:
   skip-cert-verify: true
   sni: 202.146.222.29
   type: hysteria2
-- name: hysteria2-4524389
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.29
-  skip-cert-verify: true
-  sni: https://t.me/wangcai2🇨🇳
-  type: hysteria2
-- name: hysteria2-862443285
-  password: c86222db9b5784ef6a2c0ab13f6ef658
-  port: 50160
-  server: 168.107.13.220
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
 - name: hysteria2-474576922
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
@@ -118,12 +125,26 @@ proxies:
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
   type: hysteria2
+- name: hysteria2-573042062
+  password: a56619e2bed91121eabb97d20be207c3
+  port: 50160
+  server: 85.237.207.49
+  skip-cert-verify: true
+  sni: 85-237-207-49.liao.kdns.fr
+  type: hysteria2
 - name: hysteria2-387719591
   password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
   port: 4433
   server: us4.xiaoliyu.cyou
   skip-cert-verify: true
   sni: ''
+  type: hysteria2
+- name: hysteria2-863197530
+  password: 569354367bdf7f34d31bbf33760bf314
+  port: 50160
+  server: 166.0.16.52
+  skip-cert-verify: true
+  sni: www.bing.com
   type: hysteria2
 - name: hysteria2-855401603
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
@@ -153,33 +174,82 @@ proxies:
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
   type: hysteria2
-- name: hysteria2-561634417
-  password: Krab9Hyst2_Rk7pQ2xL
-  port: 36723
-  server: fr.vpn.legendaah.xyz
-  skip-cert-verify: true
-  sni: 127.0.0.1
-  type: hysteria2
-- name: hysteria2-619899526
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+- name: hysteria2-650429104
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: admin.wwwinternetvideo.click
+  server: 103.115.109.49
   skip-cert-verify: true
   sni: ''
   type: hysteria2
-- name: hysteria2-474574828
-  password: 6f7a8009ecf6a12e10d03f9d88493c89
-  port: 55443
-  server: gorbachev-th.kvnfreetest.uk
-  skip-cert-verify: true
-  sni: gorbachev-th.kvnfreetest.uk
-  type: hysteria2
-- name: hysteria2-692912199
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+- name: hysteria2-863201254
+  password: 5d36ddf8-dde5-4b2d-8213-d3255f22a0f1
   port: 443
-  server: 202.146.222.29
+  server: it-two.letsgodance.site
+  skip-cert-verify: false
+  sni: it-two.letsgodance.site
+  type: hysteria2
+- name: hysteria2-860759581
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  port: 8443
+  server: 162.249.124.112
   skip-cert-verify: true
-  sni: css.rbxcdn.com
+  sni: hopp-germany-new.ddnsguru.com
+  type: hysteria2
+- name: hysteria2-860759626
+  password: oCYFcbOo8s
+  port: 443
+  server: hys22.wba-pn.ru
+  skip-cert-verify: true
+  sni: hys22.wba-pn.ru
+  type: hysteria2
+- name: hysteria2-863433857
+  password: ac7fb60f-0b7a-465d-a002-05160ec04ed6
+  port: 443
+  server: dora5.api3-max.ru
+  skip-cert-verify: true
+  sni: dora5.api3-max.ru
+  type: hysteria2
+- name: hysteria2-651117979
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.52.5
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  type: hysteria2
+- name: hysteria2-651117969
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.229.54.166
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  type: hysteria2
+- name: hysteria2-859744350
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  port: 443
+  server: che01plrhy01.tcp-reset-club.net
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
+- name: hysteria2-858964478
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  port: 443
+  server: che01plrhy01.tcp-reset-club.net
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-651117973
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 47.129.98.169
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  type: hysteria2
+- name: hysteria2-651117977
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 52.221.227.91
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
   type: hysteria2
 - name: hysteria2-798045479
   password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
@@ -188,12 +258,19 @@ proxies:
   skip-cert-verify: false
   sni: grape-turbo-fr.roxa.org
   type: hysteria2
-- name: hysteria2-474574827
-  password: 6f7a8009ecf6a12e10d03f9d88493c89
-  port: 55443
-  server: 167.179.34.13
+- name: hysteria2-561634417
+  password: Krab9Hyst2_Rk7pQ2xL
+  port: 36723
+  server: fr.vpn.legendaah.xyz
   skip-cert-verify: true
-  sni: gorbachev-th.kvnfreetest.uk
+  sni: 127.0.0.1
+  type: hysteria2
+- name: hysteria2-651117971
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.254.190.23
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
   type: hysteria2
 - name: hysteria2-667703181
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
@@ -202,25 +279,46 @@ proxies:
   skip-cert-verify: true
   sni: https://t.me/wangcai2
   type: hysteria2
-- name: hysteria2-720834172
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  port: 8443
-  server: 46.229.243.133
+- name: hysteria2-705682202
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
   skip-cert-verify: true
-  sni: grape-turbo-fr.roxa.org
+  sni: "https://t.me/wangcai2ð\x9F\x87"
   type: hysteria2
-- name: hysteria2-686500209
-  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
-  port: 4433
-  server: us4.xiaoliyu.cyou
+- name: hysteria2-657042644
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.83.43
   skip-cert-verify: true
-  sni: 127.0.0.1
+  sni: vpn-sg-001.fastervpn.world
   type: hysteria2
-- cipher: 2022-blake3-chacha20-poly1305
-  name: shadowsocks-863196667
-  password: 8C+C41HLztRjvq+sf6K94V2i+6SYGHN/ldg2UttNNY4=
-  port: 56927
-  server: 129.150.48.175
+- name: hysteria2-827675452
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  port: 443
+  server: usa0003rlbhy01.tcp-reset-club.net
+  skip-cert-verify: false
+  sni: ''
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-863726164
+  password: e936372a-d976-4e25-8b3b-29c1a5841e06
+  port: 52345
+  server: 152.67.250.45
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-863726159
+  password: be6cbb46-ebb0-4726-9202-6a3bac1d0afb
+  port: 52345
+  server: 152.67.250.45
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-863726179
+  password: 5d79906d-89ab-430b-acbc-3327568a5be3
+  port: 52345
+  server: 152.67.250.45
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -249,13 +347,6 @@ proxies:
   password: sZSZi7tGs9wodT7k
   port: 443
   server: 155.138.136.240
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-863726169
-  password: 5d79906d-89ab-430b-acbc-3327568a5be3
-  port: 43345
-  server: 140.245.121.101
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
@@ -293,33 +384,19 @@ proxies:
   server: 139.180.133.90
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-863659272
-  password: MTFlN
-  port: 8388
-  server: 194.147.35.56
-  type: ss
-  udp: true
-- name: hysteria2-863197533
-  password: 9c5be37406b6584005b8de0ee3734dd9
-  port: 50160
-  server: 140.238.43.0
+- name: hysteria2-4524389
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
   skip-cert-verify: true
-  sni: www.bing.com
+  sni: https://t.me/wangcai2🇨🇳
   type: hysteria2
-- name: hysteria2-859458637
-  password: c85bd762dc136495ddc02b30b0b7c5c5
-  port: 50160
-  server: 107-172-212-12.liao.kdns.fr
+- name: hysteria2-860759606
+  password: P6qkAwznuC076mbIR2cGPg==
+  port: 34567
+  server: 43.156.90.144
   skip-cert-verify: true
-  sni: 107-172-212-12.liao.kdns.fr
-  type: hysteria2
-- name: hysteria2-859306119
-  password: c85bd762dc136495ddc02b30b0b7c5c5
-  port: 50160
-  server: 107-172-212-12.liao.kdns.fr
-  skip-cert-verify: false
-  sni: 107-172-212-12.liao.kdns.fr
+  sni: bing.com\u0026amp
   type: hysteria2
 - name: hysteria2-855401608
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
@@ -335,20 +412,6 @@ proxies:
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
   type: hysteria2
-- name: hysteria2-798032514
-  password: Foc_Mcxi45rM9v3ve_N92fdrK_10_Ssc5
-  port: 8443
-  server: 185.39.31.111
-  skip-cert-verify: false
-  sni: grape-beer.yyuyy.com
-  type: hysteria2
-- name: hysteria2-721758799
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.148.164.219
-  skip-cert-verify: true
-  sni: vpn-us-003.fastervpn.world
-  type: hysteria2
 - name: hysteria2-355425186
   password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
   port: 4466
@@ -356,40 +419,47 @@ proxies:
   skip-cert-verify: true
   sni: sg3.xiaoliyu.cyou
   type: hysteria2
-- name: hysteria2-859744350
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  port: 443
-  server: che01plrhy01.tcp-reset-club.net
-  skip-cert-verify: true
-  sni: 127.0.0.1
-  type: hysteria2
-- name: hysteria2-468898820
-  password: 6f7a8009ecf6a12e10d03f9d88493c89
-  port: 55443
-  server: gorbachev-th.kvnfreetest.uk
+- name: hysteria2-859306099
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  port: 8443
+  server: 162.249.124.112
   skip-cert-verify: false
-  sni: ''
+  sni: hopp-germany-new.ddnsguru.com
   type: hysteria2
-- name: hysteria2-798045477
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  port: 8080
-  server: 46.229.243.138
-  skip-cert-verify: false
-  sni: grape-turbo-fr.roxa.org
-  type: hysteria2
-- name: hysteria2-651117971
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 54.254.190.23
+- name: hysteria2-863197524
+  password: e660daf2da753ca8317387342b8af384
+  port: 50160
+  server: 3.71.196.174
   skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
+  sni: www.bing.com
   type: hysteria2
-- name: hysteria2-857587363
-  password: 41edb44c8e
-  port: 11592
-  server: srv-17e124.21freedom.net
+- name: hysteria2-864137162
+  password: 95e8532b-cc69-42d4-9553-e3c23292b15b
+  port: 8443
+  server: 143.246.208.86
   skip-cert-verify: true
-  sni: 127.0.0.1
+  sni: 143.246.208.86
+  type: hysteria2
+- name: hysteria2-721489370
+  password: zhangyang
+  port: 6443
+  server: 130.61.50.75
+  skip-cert-verify: true
+  sni: www.calmloud.com
+  type: hysteria2
+- name: hysteria2-864736516
+  password: 0bacdaea-099b-462b-b625-d7d44c89aace
+  port: 55000
+  server: 94.156.250.67
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+- name: hysteria2-860759612
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8443
+  server: 85.204.107.172
+  skip-cert-verify: true
+  sni: hopp-romania-new.roxa.org
   type: hysteria2
 - name: hysteria2-705682240
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
@@ -398,94 +468,24 @@ proxies:
   skip-cert-verify: true
   sni: www.bing.com
   type: hysteria2
-- name: hysteria2-490133896
-  password: Krab9Hyst2_Rk7pQ2xL
-  port: 36723
-  server: fr.vpn.legendaah.xyz
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: hysteria2
-- name: hysteria2-768950027
-  password: 2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o
-  port: 443
-  server: pixelcast.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: pixelcast.wwwinternetvideo.click
-  type: hysteria2
-- name: hysteria2-705682202
+- name: hysteria2-547757561
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 202.146.222.29
+  server: 3.36.96.245
   skip-cert-verify: true
-  sni: "https://t.me/wangcai2ð\x9F\x87"
+  sni: css.rbxcdn.com
   type: hysteria2
-- name: hysteria2-651117979
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.52.5
+- name: hysteria2-857366686
+  password: 49f8bb8047
+  port: 11592
+  server: srv-12c1e0.21freedom.net
   skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
+  sni: srv-12c1e0.21freedom.net
   type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-817361612
-  password: ljqdalu13..
-  port: 8319
-  server: 95.40.120.162
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-696792832
-  password: 7eadc6dbe2ae
-  port: 65443
-  server: 82.23.146.72
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-859419806
-  password: amazonskr05
-  port: 443
-  server: 16.52.46.12
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-218
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-863726182
-  password: e936372a-d976-4e25-8b3b-29c1a5841e06
-  port: 43345
-  server: 140.245.121.101
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-717969065
-  password: goRz8CTFE6zPZXIA
-  port: 80
-  server: 94.72.127.58
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-256-gcm
-  name: shadowsocks-126340
-  password: fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0=
-  port: 27755
-  server: 167.150.100.115
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-696792823
-  password: 7eadc6dbe2ae
-  port: 65443
-  server: 154.127.56.212
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-696780667
-  password: 5QCeIKUZUEp4mR9Z
-  port: 80
-  server: 194.233.94.119
-  type: ss
-  udp: true
+- name: hysteria2-855920168
+  password: 41edb44c8e
+  port: 11592
+  server: srv-17e124.21freedom.net
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
