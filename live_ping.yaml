@@ -1,94 +1,43 @@
 proxies:
-- name: 001_t.me_freekesha21_d345736a9c
+- name: 001_vless_84.38.184.126_2089_74f74de725
   type: vless
-  server: 132.243.230.251
-  port: 443
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  server: 84.38.184.126
+  port: 2089
+  uuid: a628c583-24a8-4ce5-98ad-c6458abf1cc4
+  udp: true
+  network: grpc
+  tls: true
+  servername: s3.storage.selcloud.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 4Ba7EKm90gUC57U-0WtkSVXgmeLzR9TG5Qw3dqgjbDQ
+    short-id: c1db0a1b
+  grpc-opts:
+    grpc-service-name: cas-fi
+- name: 002_Helsinki_fe8501783e
+  type: vless
+  server: 109.206.243.38
+  port: 8443
+  uuid: 265db9a9-1a90-4d41-9375-02a9fbc41def
   udp: true
   network: xhttp
   tls: true
-  servername: www.kinopoisk.ru
-  client-fingerprint: qq
+  servername: lasomant.rivohost.cc
+  client-fingerprint: firefox
   reality-opts:
-    public-key: Uz1UbBDf84n7oNfFIhFvXbuFcj1nbNEroiKC_Ud4ajg
-    short-id: b2f9bb426426e0e7
+    public-key: vtCsEueLtZBBAMfQgrIVvD-DGDL6WOMTN4y5csFbMxA
+    short-id: 30205c951f2e6df3
   xhttp-opts:
-    path: /entry-xh
-    mode: auto
-- name: 002_vless_213.182.201.96_3090_4390d6e7a3
-  type: vless
-  server: 213.182.201.96
-  port: 3090
-  uuid: bd0316ca-1e62-4f62-8184-70aac6aa7ef9
-  udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-    multi-mode: true
-- name: 003_vless_188.130.209.222_443_521a839c34
-  type: vless
-  server: 188.130.209.222
-  port: 443
-  uuid: 5c2b47d0-38c0-4b01-b8ff-ab1c145292f0
-  udp: true
-  network: tcp
-  tls: true
-  servername: thumbs.mycdn-io.ru
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
-    short-id: 11979c0c9b2da371
-- name: 004_shadowsocks-1875022930_21a90b9537
+    path: /api/v2/sync
+    host: lasomant.rivohost.cc
+- name: 003_shadowsocks-1875023019_0da41573a7
   type: ss
-  server: 202.50.253.18
+  server: 202.50.253.63
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 005_t.me_freekesha21_8527261303
-  type: vless
-  server: 201.58.183.173
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: sundaylanzgem.site
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 006_AetrisVPN_99a7249446
-  type: vless
-  server: 109.196.102.102
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: cache-41.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 007_trojan_70.34.207.14_443_2679c85eac
-  type: trojan
-  server: 70.34.207.14
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: searchhealthcarejobsandbuildmedicalcareerpathway.com
-- name: 008_shadowsocks-1875022946_d0c4afbde8
-  type: ss
-  server: 202.50.253.54
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 009_vless_sundaylanzgem.site_443_a8c043eb39
+- name: 004_t.me_freekesha21_21b71aae28
   type: vless
   server: sundaylanzgem.site
   port: 443
@@ -101,7 +50,27 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 010_t.me_freekesha21_0fcdb9ff6c
+- name: 005_vless_201.58.183.99_443_0b112dfa85
+  type: vless
+  server: 201.58.183.99
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: geminilanzerotte.live
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: _aURfmVUjvCRZipDI2eqMO0VQa64BJRGYFOdlBFi1XQ
+- name: 006_shadowsocks-1939844061_8a5dbee56a
+  type: ss
+  server: 8.211.196.252
+  port: 443
+  cipher: 2022-blake3-chacha20-poly1305
+  password: Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4=
+  udp: true
+- name: 007_t.me_freekesha21_3b3675890a
   type: vless
   server: 78.159.250.214
   port: 443
@@ -110,25 +79,39 @@ proxies:
   network: tcp
   tls: true
   servername: qq.utiltools.site
-  client-fingerprint: random
+  client-fingerprint: chrome
   flow: xtls-rprx-vision
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
     short-id: '00000000'
-- name: 011_t.me_freekesha21_484490928e
+- name: 008_vless_138.124.32.139_443_58861f9eb5
   type: vless
-  server: 201.58.183.173
+  server: 138.124.32.139
   port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  uuid: 5254c281-3bc1-40ee-ba89-1aaf8c251402
   udp: true
   network: tcp
   tls: true
-  servername: sundaylanzgem.site
+  servername: nl-modx-prime.storagedirectguide.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: node0aB_7yyVADkeieiBBpxqIlxNLQcvgotRClh0QXQ
+- name: 009_tg_VLESSFORU_3c79b5ce27
+  type: vless
+  server: 95.133.245.250
+  port: 2027
+  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
+  udp: true
+  network: tcp
+  tls: true
+  servername: deo.skysafe.online
   client-fingerprint: chrome
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 012_Offenbach_Am_Main_48d369eb55
+    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
+    short-id: 6ba7b8109dad11d1
+- name: 010_Offenbach_Am_Main_48d369eb55
   type: vless
   server: freetg.ghost-service.cc
   port: 443
@@ -142,133 +125,28 @@ proxies:
   reality-opts:
     public-key: bzv2S23383rd8Ega-o_QrY4PypA6hEA3PrwWWI6LEnQ
     short-id: d4943b89d83cb97d
-- name: 013_shadowsocks-1827147473_a53e0e49f4
+- name: 011_shadowsocks-1875022946_d0c4afbde8
   type: ss
-  server: 57.131.48.45
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-  udp: true
-- name: 014_t.me_freekesha21_80ed140b97
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 015_vless_178.17.52.236_2083_7980a2c438
-  type: vless
-  server: 178.17.52.236
-  port: 2083
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
-  udp: true
-  network: xhttp
-  tls: true
-  servername: maps.blog-forme.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY
-    short-id: 3258252d44113e23
-  xhttp-opts:
-    path: /v2/sync/6e9367
-    mode: auto
-- name: 016_AetrisVPN_a22d9171d7
-  type: vless
-  server: 193.233.90.10
-  port: 443
-  uuid: ce64591a-fe2d-48cd-b738-e5f591eea784
-  udp: true
-  network: tcp
-  tls: true
-  servername: ru2ge1.farenheits.pro
-  client-fingerprint: random
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: UslWHx0oHHuBxqQ-lhho62MSgeVEaIvQY9S9Q4GTDxk
-    short-id: 682d733f5bbbfcc5
-- name: 017_vless_217.60.183.205_443_1aa3ded974
-  type: vless
-  server: 217.60.183.205
-  port: 443
-  uuid: cb94f4fe-24aa-4f8b-bc82-db10090d68f9
-  udp: true
-  network: tcp
-  tls: true
-  servername: gertime.stroikazaborov.shop
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: kt6KHz6LTNrfelVTZm9kXAfPv4S63-_xZT1naz552Ew
-    short-id: 06c5090f78599841
-- name: 018_shadowsocks-1875023009_222846e419
-  type: ss
-  server: 202.50.253.27
+  server: 202.50.253.54
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 019_t.me_freekesha21_be95ab0d33
+- name: 012_vless_150.251.143.86_443_be733eb042
   type: vless
-  server: sundaylanzgem.site
+  server: 150.251.143.86
   port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  uuid: c29fa587-b10d-445d-b7e3-eaa6d1bd1330
   udp: true
   network: tcp
   tls: true
-  servername: sundaylanzgem.site
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 020_vless_201.58.183.173_443_a718507aa5
-  type: vless
-  server: 201.58.183.173
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: sundaylanzgem.site
+  servername: est1.srv.luckdns.fun
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 021_vless_147.45.164.160_443_7600b4ce12
-  type: vless
-  server: 147.45.164.160
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: edge-54.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 022_AetrisVPN_9d64631568
-  type: vless
-  server: 193.233.129.207
-  port: 443
-  uuid: ce64591a-fe2d-48cd-b738-e5f591eea784
-  udp: true
-  network: tcp
-  tls: true
-  servername: au4ru.farenheits.pro
-  client-fingerprint: random
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: X9MDC9_LM2OPqoYPm7VlZ28A4xGDlP43_fEiKjiCAxE
-    short-id: 5c9cc38762191124
-- name: 023_t.me_freekesha21_ed27f1a000
+    public-key: ASRlLIMLrchtPN9Jc8hC3HPjcDU_xzZlnQj2rcdUJ1k
+    short-id: c5787235
+- name: 013_t.me_freekesha21_418ee3aea2
   type: vless
   server: 78.159.250.214
   port: 443
@@ -281,337 +159,21 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 024_vless_62.60.229.216_443_a591e9839a
+- name: 014_vless_138.124.38.65_443_0869b0198a
   type: vless
-  server: 62.60.229.216
+  server: 138.124.38.65
   port: 443
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  uuid: 4c9f78a0-5ff8-485d-b783-e8672d566dc3
   udp: true
   network: tcp
   tls: true
-  servername: aezaf1.uni-plan.com
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: eh8WqxaSUlfNmlGzFLYFYrJzk1novnvfU6qmaLLOiX4
-    short-id: 72d410ce5f2036c9
-- name: 025_vless_37.46.209.31_443_7aff6e6e61
-  type: vless
-  server: 37.46.209.31
-  port: 443
-  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
-  udp: true
-  network: xhttp
-  tls: true
-  servername: chek.skysafe.online
-  client-fingerprint: qq
-  reality-opts:
-    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
-    short-id: 6ba7b8109dad11d1
-  xhttp-opts:
-    path: /patch
-    mode: auto
-- name: 026_Moscow_2d76973aaa
-  type: vless
-  server: 132.243.230.251
-  port: 443
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
-  udp: true
-  network: xhttp
-  tls: true
-  servername: www.kinopoisk.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: Uz1UbBDf84n7oNfFIhFvXbuFcj1nbNEroiKC_Ud4ajg
-    short-id: b2f9bb426426e0e7
-  xhttp-opts:
-    path: /entry-xh
-- name: 027_Moscow_2941592dea
-  type: vless
-  server: 193.233.88.34
-  port: 8443
-  uuid: d5b3e363-4143-435f-80d3-a51568283a22
-  udp: true
-  network: tcp
-  tls: true
-  servername: de7-site.kartamira.cc
+  servername: gewair.underground.company
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-- name: 028_shadowsocks-1875023031_7b50dd1b48
-  type: ss
-  server: 202.50.253.99
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 029_vless_31.59.140.17_443_723d9ed77c
-  type: vless
-  server: 31.59.140.17
-  port: 443
-  uuid: 3de59cd0-f92c-40bf-829c-db7bf6043d1d
-  udp: true
-  network: tcp
-  tls: true
-  servername: nl.reus.lol
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: OWnQ9xwvYFlNw_Fnmf4ceZMtb0SVLuVUoq2WP5P8lkw
-    short-id: 5f2d02dc7ec1e539
-- name: 030_vless_2.26.224.5_1443_154a94330a
-  type: vless
-  server: 2.26.224.5
-  port: 1443
-  uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
-  udp: true
-  network: tcp
-  tls: true
-  servername: pl-balancer.peregrine-sub.net
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: PUj1la__ltNjv_ASE5n4HJY7GiRs--N-0aYhkcAApCI
-    short-id: 7b6803a79bba5c52
-- name: 031_vless_94.249.195.177_2027_129402f73a
-  type: vless
-  server: 94.249.195.177
-  port: 2027
-  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
-  udp: true
-  network: xhttp
-  tls: true
-  servername: nlka.skysafe.online
-  client-fingerprint: qq
-  reality-opts:
-    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
-    short-id: 6ba7b8109dad11d1
-  xhttp-opts:
-    path: /patch
-    mode: auto
-- name: 032_vless_94.249.187.68_43000_1a00043287
-  type: vless
-  server: 94.249.187.68
-  port: 43000
-  uuid: c19bd198-a393-492e-86fd-b389a03b4180
-  udp: true
-  network: tcp
-  tls: true
-  servername: 94.249.187.68
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: NXN75t-gk0tpVh74Thc7nPBXM4fytgMOZafDzSe8xAk
-    short-id: 353fdd95
-- name: 033_vless_147.45.153.29_443_63a7c68783
-  type: vless
-  server: 147.45.153.29
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: patch-46.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 034_DEU_59c7a24599
-  type: vless
-  server: 91.107.147.12
-  port: 46605
-  uuid: 0c45be70-e001-41e5-b39d-39351fe4a2d7
-  udp: true
-  network: tcp
-- name: 035_vless_94.249.187.88_43000_f74c2487b9
-  type: vless
-  server: 94.249.187.88
-  port: 43000
-  uuid: 390c7bd2-d83c-49b6-a6d5-c454583bbb2d
-  udp: true
-  network: tcp
-  tls: true
-  servername: 94.249.187.88
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: r710c3Is-baifKzevzR4GKPnWOdolchLdP1NoOOtK2A
-    short-id: ecef9d30
-- name: 036_t.me_freekesha21_25856b50ac
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 037_vless_147.45.157.204_443_14bd12f4f0
-  type: vless
-  server: 147.45.157.204
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: files-50.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 038_t.me_freekesha21_418ee3aea2
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 039_vless_95.133.245.250_2027_86a0e9514e
-  type: vless
-  server: 95.133.245.250
-  port: 2027
-  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
-  udp: true
-  network: tcp
-  tls: true
-  servername: deo.skysafe.online
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
-    short-id: 6ba7b8109dad11d1
-- name: 040_vless_79.137.248.102_443_4f0a279b9d
-  type: vless
-  server: 79.137.248.102
-  port: 443
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  udp: true
-  network: tcp
-  tls: true
-  servername: aezaf2.uni-plan.com
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: JcpAia5U7dHrLI5GQuaPlbO2eKGfz1p9-KHW2pu99wk
-    short-id: b97e38914de00ee9
-- name: 041_vless_147.45.245.177_443_ecccdd8d4b
-  type: vless
-  server: 147.45.245.177
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: media-91.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 042_t.me_freekesha21_023eedd77f
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: safari
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 043_LTE_5G_ca1a9406fa
-  type: vless
-  server: vivozim.vyvoz-musora.cc
-  port: 443
-  uuid: a0052f4f-4c63-485a-a16f-ab2d5d718cd3
-  udp: true
-  network: ws
-  tls: true
-  servername: vivozim.vyvoz-musora.cc
-  client-fingerprint: edge
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /e8ws
-    headers:
-      Host: vivozim.vyvoz-musora.cc
-- name: 044_vless_5.129.202.74_443_8fefd380e9
-  type: vless
-  server: 5.129.202.74
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: patch-25.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 045_t.me_freekesha21_cfcd68944e
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: safari
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 046_t.me_freekesha21_d6697344b0
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: random
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 047_vless_31.76.252.142_443_6361cedd9c
-  type: vless
-  server: 31.76.252.142
-  port: 443
-  uuid: eb8af077-a580-4f67-8042-9572a39e699d
-  udp: true
-  network: xhttp
-  tls: true
-  servername: cl-78.file-rkat.online
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: tbKg89n1kirBQbHyexrBIH21iHS0JigQnPqits499R4
-    short-id: f7c8ee5aa55993a0
-  xhttp-opts:
-    path: /assets/media/7c2a83
-    mode: auto
-- name: 048_t.me_freekesha21_ed36943333
+    public-key: z6S5mw-BVxPv2cm2XvV05MDWGODAL_3trl_vK63HzUE
+    short-id: 146ef2a26338adad
+- name: 015_t.me_freekesha21_7158b0d485
   type: vless
   server: qq.utiltools.site
   port: 443
@@ -620,11 +182,243 @@ proxies:
   network: tcp
   tls: true
   servername: qq.utiltools.site
+  client-fingerprint: ios
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 016_t.me_freekesha21_d6697344b0
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
   client-fingerprint: random
   flow: xtls-rprx-vision
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 049_t.me_freekesha21_865f85c547
+- name: 017_AetrisVPN_6b6f24253e
+  type: vless
+  server: 213.165.54.59
+  port: 8443
+  uuid: 70a43052-8d45-45c1-b9da-ec745890790a
+  udp: true
+  network: xhttp
+  tls: true
+  servername: www.kinopoisk.ru
+  client-fingerprint: edge
+  reality-opts:
+    public-key: CI4hMTvVsem9mloOgRCW9A6WC-srPPwu3jlylwOnd3A
+    short-id: 2e6d668958829998
+  xhttp-opts:
+    path: /entry-xh
+    mode: auto
+- name: 018_t.me_freekesha21_8527261303
+  type: vless
+  server: 201.58.183.173
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 019_vless_13.143.165.126_443_d0af888ab4
+  type: vless
+  server: 13.143.165.126
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: update-26.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: EHlZh1OuiO6gQLTSV2-BVeV0Niv23vvIxQaPvcWCJUw
+    short-id: db382e1979d80ecb
+- name: 020_t.me_freekesha21_e3e9a9d27f
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: ios
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 021_vless_138.124.39.251_443_4d74de8bf0
+  type: vless
+  server: 138.124.39.251
+  port: 443
+  uuid: 5254c281-3bc1-40ee-ba89-1aaf8c251402
+  udp: true
+  network: tcp
+  tls: true
+  servername: nl-modx-prime.storagedirectguide.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: node0aB_7yyVADkeieiBBpxqIlxNLQcvgotRClh0QXQ
+- name: 022_t.me_freekesha21_2e958e8c3c
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    short-id: '00000000'
+- name: 023_t.me_freekesha21_7010cb6759
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    short-id: '00000000'
+- name: 024_t.me_freekesha21_0fcdb9ff6c
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: random
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    short-id: '00000000'
+- name: 025_vless_186.246.0.11_443_4eda23d6c7
+  type: vless
+  server: 186.246.0.11
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: media-53.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 026_t.me_freekesha21_ffad8bbd55
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 027_t.me_freekesha21_f35bad56f2
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 028_vless_85.239.146.95_444_4a86cf3557
+  type: vless
+  server: 85.239.146.95
+  port: 444
+  uuid: 79247bff-828f-41f7-b733-968eeb0742aa
+  udp: true
+  network: tcp
+  tls: true
+  servername: de1.vrsvpn.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: tEHL8oz8kXsEPy224pqQ0go5CkbDYRrDMG8DMfMrPSs
+    short-id: 45ba24f917ad1f12
+- name: 029_t.me_freekesha21_fa15be9f45
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    short-id: '00000000'
+- name: 030_t.me_freekesha21_cfcd68944e
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    short-id: '00000000'
+- name: 031_vless_sundaylanzgem.site_443_a8c043eb39
+  type: vless
+  server: sundaylanzgem.site
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 032_t.me_freekesha21_e6bee86021
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 033_t.me_freekesha21_17a23e0074
   type: vless
   server: 78.159.250.214
   port: 443
@@ -638,48 +432,28 @@ proxies:
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
     short-id: '00000000'
-- name: 050_vless_sports.blog-forme.ru_8443_1ed50c9e17
-  type: vless
-  server: sports.blog-forme.ru
-  port: 8443
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+- name: 034_AetrisVPN_cbdd901d58
+  type: ss
+  server: 82.38.31.46
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  network: tcp
-  tls: true
-  servername: sports.blog-forme.ru
-  client-fingerprint: edge
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
-    short-id: fb3a5f2d4ca346ed
-- name: 051_vless_191.44.108.6_443_562d7b4a21
+- name: 035_AetrisVPN_c61695a7d3
   type: vless
-  server: 191.44.108.6
+  server: 147.45.161.4
   port: 443
-  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
   udp: true
   network: tcp
   tls: true
-  servername: c9.qwyak.ru
+  servername: defs-68.topp-con.xyz
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: A0QL_j-ReX7AotEj1w8qX9rHRgN2WycTZ43gUvuvZ00
-    short-id: 3cf8d11aa0415d29
-- name: 052_t.me_freekesha21_1f6b4113fd
-  type: vless
-  server: 201.58.183.173
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: sundaylanzgem.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 053_t.me_freekesha21_e1259f709a
+    public-key: xTePrM5IyjR8o52B2mRAO2nNivfyMpBZxya93MQk4Qc
+    short-id: 2a40b6d6495debf3
+- name: 036_t.me_freekesha21_e1259f709a
   type: vless
   server: qq.utiltools.site
   port: 443
@@ -692,21 +466,22 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 054_vless_5.129.222.175_443_7833b13e20
+- name: 037_vless_150.251.143.86_8443_282f33ee54
   type: vless
-  server: 5.129.222.175
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  server: 150.251.143.86
+  port: 8443
+  uuid: c29fa587-b10d-445d-b7e3-eaa6d1bd1330
   udp: true
-  network: tcp
+  network: grpc
   tls: true
-  servername: sig-45.topp-con.xyz
+  servername: est1.srv.luckdns.fun
   client-fingerprint: firefox
-  flow: xtls-rprx-vision
   reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 055_t.me_freekesha21_53428cd109
+    public-key: ASRlLIMLrchtPN9Jc8hC3HPjcDU_xzZlnQj2rcdUJ1k
+    short-id: c5787235
+  grpc-opts:
+    grpc-service-name: Windows.Update
+- name: 038_t.me_freekesha21_53428cd109
   type: vless
   server: 78.159.250.214
   port: 443
@@ -719,35 +494,68 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 056_vless_45.147.251.111_443_530c12cc6f
+- name: 039_shadowsocks-1875023048_e9588a2528
+  type: ss
+  server: 202.50.253.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 040_vless_147.45.153.29_443_63a7c68783
   type: vless
-  server: 45.147.251.111
+  server: 147.45.153.29
   port: 443
-  uuid: 9ab3a362-1518-496d-b08d-eced45cec936
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
   udp: true
   network: tcp
   tls: true
-  servername: es.srv.dvzh.net
+  servername: patch-46.topp-con.xyz
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
-    short-id: e0ccc8c2f487d913
-- name: 057_vless_94.249.187.43_43000_6cf1b632fe
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 041_Frankfurt_am_Main_2941592dea
   type: vless
-  server: 94.249.187.43
-  port: 43000
-  uuid: 30b08c3d-f208-4993-91c9-af86a5f4a2f0
+  server: 193.233.88.34
+  port: 8443
+  uuid: d5b3e363-4143-435f-80d3-a51568283a22
   udp: true
   network: tcp
   tls: true
-  servername: 94.249.187.43
+  servername: de7-site.kartamira.cc
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: cVy14rseOu0oTTXUjxSTcedkkxEJfH9XCdxFW3fT92k
-    short-id: 6fa3822e
-- name: 058_t.me_freekesha21_3b3675890a
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+- name: 042_vless_88.216.70.92_443_759c31ba03
+  type: vless
+  server: 88.216.70.92
+  port: 443
+  uuid: 5254c281-3bc1-40ee-ba89-1aaf8c251402
+  udp: true
+  network: tcp
+  tls: true
+  servername: nl-modx-prime.storagedirectguide.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: node0aB_7yyVADkeieiBBpxqIlxNLQcvgotRClh0QXQ
+- name: 043_t.me_freekesha21_75f43f9fbc
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 044_t.me_freekesha21_cbf1f52e05
   type: vless
   server: 78.159.250.214
   port: 443
@@ -761,47 +569,113 @@ proxies:
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
     short-id: '00000000'
-- name: 059_AetrisVPN_54e77f38a0
+- name: 045_t.me_freekesha21_be95ab0d33
   type: vless
-  server: 185.221.199.95
-  port: 443
-  uuid: ce64591a-fe2d-48cd-b738-e5f591eea784
-  udp: true
-  network: tcp
-  tls: true
-  servername: ru2ge1.farenheits.pro
-  client-fingerprint: random
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: UslWHx0oHHuBxqQ-lhho62MSgeVEaIvQY9S9Q4GTDxk
-    short-id: 682d733f5bbbfcc5
-- name: 060_t.me_freekesha21_ecf9f0b028
-  type: vless
-  server: 201.58.183.147
+  server: sundaylanzgem.site
   port: 443
   uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   udp: true
   network: tcp
   tls: true
-  servername: gemsubbgem.world
+  servername: sundaylanzgem.site
   client-fingerprint: chrome
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
-- name: 061_t.me_freekesha21_e6bee86021
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 046_vless_147.45.164.160_443_7600b4ce12
   type: vless
-  server: qq.utiltools.site
+  server: 147.45.164.160
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: edge-54.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 047_shadowsocks-1875023009_222846e419
+  type: ss
+  server: 202.50.253.27
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 048_AetrisVPN_0f901b7394
+  type: vless
+  server: 94.183.206.83
+  port: 2087
+  uuid: cc1ee312-b12c-4c1b-b3b5-08f8179a4970
+  udp: true
+  network: tcp
+  tls: true
+  servername: media-assets.ozonvideo.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: aealosmlpyQiwde8B-Ury6OHAop218qtaFJjhWYp8xQ
+    short-id: 2bae9991a388f1e0
+- name: 049_IT_1a53f61459
+  type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 050_AetrisVPN_811e7819ff
+  type: vless
+  server: 2.26.6.244
+  port: 443
+  uuid: ea797f77-8088-4966-8ee5-299039264c1b
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.amd.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cP-AKv1-x5V4YaGdkUtqx5MDUHhPBDTYZWAS0bm2W28
+    short-id: c3afdc491738a5dc
+- name: 051_AetrisVPN_c1c583285a
+  type: vless
+  server: 178.17.52.236
+  port: 2083
+  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  udp: true
+  network: xhttp
+  tls: true
+  servername: maps.blog-forme.ru
+  client-fingerprint: edge
+  reality-opts:
+    public-key: mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY
+    short-id: 3258252d44113e23
+  xhttp-opts:
+    path: /v2/sync/6e9367
+    mode: auto
+- name: 052_shadowsocks-1830344687_19c4f2f693
+  type: ss
+  server: 178.83.185.156
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: 053_t.me_freekesha21_865f85c547
+  type: vless
+  server: 78.159.250.214
   port: 443
   uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
   udp: true
   network: tcp
   tls: true
   servername: qq.utiltools.site
-  client-fingerprint: qq
+  client-fingerprint: ios
   flow: xtls-rprx-vision
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 062_AetrisVPN_2070d6a3a2
+    short-id: '00000000'
+- name: 054_AetrisVPN_2070d6a3a2
   type: vless
   server: 81.17.154.97
   port: 443
@@ -817,29 +691,49 @@ proxies:
     path: /ccxf5snr06b8xxb6
     host: is-tw-relay.cdn.cachefleet.com
     mode: auto
-- name: 063_Warsaw_9e59be43c4
+- name: 055_vless_85.31.148.207_446_bdda74f70b
   type: vless
-  server: 94.249.187.43
-  port: 43000
-  uuid: 30b08c3d-f208-4993-91c9-af86a5f4a2f0
+  server: 85.31.148.207
+  port: 446
+  uuid: 79247bff-828f-41f7-b733-968eeb0742aa
   udp: true
   network: tcp
   tls: true
-  servername: 94.249.187.43
-  client-fingerprint: chrome
+  servername: nl2.vrsvpn.com
+  client-fingerprint: edge
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: cVy14rseOu0oTTXUjxSTcedkkxEJfH9XCdxFW3fT92k
-    short-id: 6fa3822e
-    spider-x: /
-- name: 064_shadowsocks-1827146083_69965be470
-  type: ss
-  server: 82.38.31.17
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+    public-key: rk3eixZgzGiz0HWQyMAJ1wRutvlMM1ZfoiCXec3fHE4
+    short-id: 14ba28f812ad1f22
+- name: 056_t.me_freekesha21_7a33cb2a19
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
   udp: true
-- name: 065_t.me_freekesha21_cbf1f52e05
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: ios
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    short-id: '00000000'
+- name: 057_t.me_freekesha21_ed27f1a000
+  type: vless
+  server: 78.159.250.214
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    short-id: '00000000'
+- name: 058_t.me_freekesha21_80ed140b97
   type: vless
   server: 78.159.250.214
   port: 443
@@ -853,42 +747,20 @@ proxies:
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
     short-id: '00000000'
-- name: 066_vless_217.60.33.67_8443_e8f303cecc
+- name: 059_AetrisVPN_a718507aa5
   type: vless
-  server: 217.60.33.67
-  port: 8443
-  uuid: 2a66ad35-93ce-4fd2-831f-bcaa63cdac1e
-  udp: true
-  network: tcp
-  tls: true
-  servername: go-obsh-auto-drun.keno.su
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -r5xcA3iTzAf63kkb0VIILrLHH1VUq550pFZ-M74Jlc
-    short-id: de
-- name: 067_shadowsocks-1875022929_7fb3c34076
-  type: ss
-  server: 202.50.253.90
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 068_vless_93.152.215.204_443_c19612d606
-  type: vless
-  server: 93.152.215.204
+  server: 201.58.183.173
   port: 443
-  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   udp: true
   network: tcp
   tls: true
-  servername: remote.propaint.cl
+  servername: sundaylanzgem.site
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: -zjl4KNE4PFeuthfmw_2JeCbiXAA2kaoYVHODPq-sXQ
-    short-id: 11a2fc
-- name: 069_Amsterdam_743756551d
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 060_Amsterdam_743756551d
   type: vless
   server: 147.45.187.188
   port: 8443
@@ -904,30 +776,97 @@ proxies:
   grpc-opts:
     grpc-service-name: grpc
     multi-mode: true
-- name: 070_t.me_freekesha21_fa15be9f45
+- name: 061_vless_201.58.183.147_443_ecf9f0b028
   type: vless
-  server: 78.159.250.214
+  server: 201.58.183.147
   port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   udp: true
   network: tcp
   tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 071_trojan_193.108.119.78_443_364783b4db
-  type: trojan
-  server: 193.108.119.78
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: www.iloverussia2026.com
+  servername: gemsubbgem.world
   client-fingerprint: chrome
-- name: 072_t.me_freekesha21_7010cb6759
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
+- name: 062_Sofia_83e79e7666
+  type: vless
+  server: 45.137.201.74
+  port: 443
+  uuid: 3de59cd0-f92c-40bf-829c-db7bf6043d1d
+  udp: true
+  network: tcp
+  tls: true
+  servername: bg.reus.lol
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: OWnQ9xwvYFlNw_Fnmf4ceZMtb0SVLuVUoq2WP5P8lkw
+    short-id: 5f2d02dc7ec1e539
+- name: 063_Helsinki_3e12b94ac2
+  type: vless
+  server: 109.206.243.38
+  port: 50443
+  uuid: 265db9a9-1a90-4d41-9375-02a9fbc41def
+  udp: true
+  network: grpc
+  tls: true
+  servername: lasomant.rivohost.cc
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: vtCsEueLtZBBAMfQgrIVvD-DGDL6WOMTN4y5csFbMxA
+    short-id: 1f6f3a685ed7e790
+  grpc-opts:
+    grpc-service-name: api.v1.sync
+- name: 064_AetrisVPN_be63795a3f
+  type: ss
+  server: 82.38.31.212
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: 065_Warsaw_b90331c9de
+  type: vless
+  server: 188.130.209.185
+  port: 443
+  uuid: 107c5437-3982-4e4d-9ff5-0249b4c10ba2
+  udp: true
+  network: tcp
+  tls: true
+  servername: images.mycdn-io.ru
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: kjUd2XnkDKju6yOKi5zDna2_iFt_TzXUlQRsIHp1AEk
+    short-id: fbe42a5d4788bacc
+- name: 066_vless_201.58.183.173_443_484490928e
+  type: vless
+  server: 201.58.183.173
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 067_AetrisVPN_3f4305bdb8
+  type: vless
+  server: 91.210.169.181
+  port: 443
+  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+  udp: true
+  network: ws
+  tls: true
+  servername: wstg.datasynctrue.online
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/connect
+    headers:
+      Host: wstg.datasynctrue.online
+- name: 068_t.me_freekesha21_023eedd77f
   type: vless
   server: 78.159.250.214
   port: 443
@@ -936,67 +875,26 @@ proxies:
   network: tcp
   tls: true
   servername: qq.utiltools.site
-  client-fingerprint: firefox
+  client-fingerprint: safari
   flow: xtls-rprx-vision
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
     short-id: '00000000'
-- name: 073_vless_186.246.0.11_443_4eda23d6c7
+- name: 069_AetrisVPN_b978f37eb8
   type: vless
-  server: 186.246.0.11
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  server: 178.236.242.254
+  port: 8443
+  uuid: c05ec3c7-2784-da2b-aa98-a3c132860fcb
   udp: true
   network: tcp
   tls: true
-  servername: media-53.topp-con.xyz
+  servername: xnod13x.artemida.live
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 074_vless_171.25.158.163_443_1a3760cb1e
-  type: vless
-  server: 171.25.158.163
-  port: 443
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  udp: true
-  network: tcp
-  tls: true
-  servername: s9se1.newagetechnologies.live
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Dt6OmhEDOi-Y204u5jWdQsHIgof7g8i52NUnTGc-yjM
-    short-id: ecb6f8fb31668176
-- name: 075_t.me_freekesha21_7158b0d485
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: ios
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 076_t.me_freekesha21_7a33cb2a19
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: ios
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 077_vless_201.51.29.153_443_7ac9d9adbd
+    public-key: ZRTNgwFRP8viY4SQOgPTfWlLWJCwY3dr0aawA7vHwhU
+    short-id: a1b2c3d4e5f6a7b8
+- name: 070_AetrisVPN_7ac9d9adbd
   type: vless
   server: 201.51.29.153
   port: 443
@@ -1010,35 +908,173 @@ proxies:
   reality-opts:
     public-key: Elmq7GhYEGaiujWnLYeK3HidTkZV6JYH-aYJXBG9iwc
     short-id: 20b37477b1d93f7e
-- name: 078_vless_179.236.130.201_443_b6b49f71ac
+- name: 071_Prague_a77a1c1fa6
   type: vless
-  server: 179.236.130.201
-  port: 443
-  uuid: 12b38dd4-d74c-4222-a58f-eee6940634d8
+  server: 31.77.13.22
+  port: 2063
+  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
   udp: true
   network: tcp
   tls: true
-  servername: eu121.cdn77.icu
+  servername: rusbid.de
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+- name: 072_AetrisVPN_b5d2bfc8a5
+  type: vless
+  server: 5.42.99.64
+  port: 8443
+  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
+  udp: true
+  network: tcp
+  tls: true
+  servername: du-rov.secureservice.top
+  client-fingerprint: random
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
+    short-id: 3cbc3d737fb9c4af
+- name: 073_AetrisVPN_ecccdd8d4b
+  type: vless
+  server: 147.45.245.177
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: media-91.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 074_Prague_998460d813
+  type: vless
+  server: 31.77.13.22
+  port: 2063
+  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+  udp: true
+  network: tcp
+  tls: true
+  servername: rusbid.de
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+- name: 075_Warsaw_4b72166769
+  type: vless
+  server: 31.59.143.147
+  port: 443
+  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+  udp: true
+  network: tcp
+  tls: true
+  servername: pl2.waspnest.space
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk
+    short-id: ae97223a8f799889
+- name: 076_AetrisVPN_2e4e03223e
+  type: vless
+  server: 82.152.132.223
+  port: 443
+  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
+  udp: true
+  network: xhttp
+  tls: true
+  servername: rom.skysafe.online
   client-fingerprint: firefox
   reality-opts:
-    public-key: zYNnGVEkMFCUR_9NcYeaXfm9A_L-PP6iG2sIIST6S0M
-    short-id: 1ed136481e0ede74
-- name: 079_t.me_freekesha21_568f9ccb77
+    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
+    short-id: 6ba7b8109dad11d1
+  xhttp-opts:
+    path: /patch
+- name: 077_t.me_freekesha21_25856b50ac
   type: vless
-  server: 196.196.204.180
+  server: 78.159.250.214
   port: 443
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
   udp: true
-  network: grpc
+  network: tcp
   tls: true
-  servername: 36a466g.fi1.h1clayd.click
-  client-fingerprint: safari
+  servername: qq.utiltools.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
-    short-id: b3c9d0c6bdd114a6
-  grpc-opts:
-    grpc-service-name: 0adb9638509b
-- name: 080_vless_201.34.158.224_443_034e6bb534
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+    short-id: '00000000'
+- name: 078_AetrisVPN_716a3f66d4
+  type: vless
+  server: 186.246.9.101
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: update-61.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 079_AetrisVPN_6be6c4bd7c
+  type: vless
+  server: 201.51.5.181
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: pkg-77.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 080_vless_ee-2e06d85dc0.shamanapp.online_34451_9fe754fc6d
+  type: vless
+  server: ee-2e06d85dc0.shamanapp.online
+  port: 34451
+  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
+  udp: true
+  network: xhttp
+  tls: true
+  servername: ee-2e06d85dc0.shamanapp.online
+  xhttp-opts:
+    path: /ShamanXHTTP2026
+    host: ee-2e06d85dc0.shamanapp.online
+    mode: stream-up
+- name: 081_tg_VLESSFORU_3fc1b56aa3
+  type: vless
+  server: 191.217.211.145
+  port: 444
+  uuid: 79247bff-828f-41f7-b733-968eeb0742aa
+  udp: true
+  network: tcp
+  tls: true
+  servername: pl1.vrsvpn.com
+  client-fingerprint: edge
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: kwxHjH-aN-LBMcfkTs5CD0QEWpPjCJGjhSDhkuLpmAQ
+    short-id: 14ba51f812ad1f22
+- name: 082_Chicago_f2a2be3073
+  type: vmess
+  server: 104.17.147.222
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  servername: vmess.lbw666.dpdns.org
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 083_vless_201.34.158.224_443_034e6bb534
   type: vless
   server: 201.34.158.224
   port: 443
@@ -1052,35 +1088,140 @@ proxies:
   reality-opts:
     public-key: 3QAi5iLidk8pDh988LPCWkX0dj41f4ajbrCQNQtw_XQ
     short-id: 87c393d5776f8d5c
-- name: 081_t.me_freekesha21_17a23e0074
+- name: 084_vless_31.77.57.204_443_316b79e04f
   type: vless
-  server: 78.159.250.214
+  server: 31.77.57.204
   port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  uuid: 4c9f78a0-5ff8-485d-b783-e8672d566dc3
   udp: true
   network: tcp
   tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: ios
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 082_vless_177.1.192.117_443_506741d5ef
-  type: vless
-  server: 177.1.192.117
-  port: 443
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  udp: true
-  network: tcp
-  tls: true
-  servername: up7.uni-plan.com
+  servername: adminde2.underground.company
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: Lt3gSdGmfQMx50yH-OOJaNBSg80vzIveaNVwUUWJwzQ
-    short-id: 3952a220c86628a8
-- name: 083_vless_82.152.132.223_443_eed99b8023
+    public-key: NNR12b373pwW9EiP_rdSlY5969AOEuFsnCAeiRoINgo
+    short-id: 6a612e74d2304b0f
+- name: 085_vless_195.63.139.79_443_838dfb954f
+  type: vless
+  server: 195.63.139.79
+  port: 443
+  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  udp: true
+  network: xhttp
+  tls: true
+  servername: sports.blog-forme.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
+    short-id: fb3a5f2d4ca346ed
+  xhttp-opts:
+    path: /v2/sync/af2c0c
+- name: 086_trojan_45.128.76.242_443_c5c318fa78
+  type: trojan
+  server: 45.128.76.242
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  servername: www.trusteeforward.com
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 087_vless_130.49.162.137_443_7bab24dc05
+  type: vless
+  server: 130.49.162.137
+  port: 443
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: sk3.speedtestinternet.link
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  alpn:
+  - h2
+  - http/1.1
+- name: 088_AetrisVPN_637430b969
+  type: vless
+  server: 185.126.93.227
+  port: 443
+  uuid: f04cc810-aaf2-4a7b-8cad-356cdd30d394
+  udp: true
+  network: xhttp
+  tls: true
+  servername: tg1.cdnphotos.org
+  client-fingerprint: firefox
+  xhttp-opts:
+    path: /api/v1/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    mode: auto
+- name: 089_AetrisVPN_481bf42e85
+  type: vless
+  server: 94.249.148.20
+  port: 443
+  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
+  udp: true
+  network: grpc
+  tls: true
+  servername: a.de-3.bnc-gt.co.uk
+  client-fingerprint: qq
+  alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 090_AL_Tirana_3d73c9fbd7
+  type: vless
+  server: 130.49.189.56
+  port: 443
+  uuid: 3de59cd0-f92c-40bf-829c-db7bf6043d1d
+  udp: true
+  network: tcp
+  tls: true
+  servername: al.reus.lol
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: jVNJH18MECOqhciQLa-w7Y7yp3N9IdseIDpgCEu2LhU
+    short-id: 81785a5f59d66d7d
+- name: 091_AetrisVPN_81c2960142
+  type: vless
+  server: 217.198.6.206
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: patch-51.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 092_vless_130.49.177.193_443_23790c6a65
+  type: vless
+  server: 130.49.177.193
+  port: 443
+  uuid: 727a9178-d7f0-4142-8205-b0d19959ded0
+  udp: true
+  network: tcp
+  tls: true
+  servername: de-2.ffpn.pro
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc
+    short-id: 681fc2dd643bc2f3
+- name: 093_shadowsocks-1945028329_cb81928182
+  type: ss
+  server: 130.49.189.54
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: hTTg7lwQMzpaF7KXpY3A8w
+  udp: true
+- name: 094_vless_82.152.132.223_443_eed99b8023
   type: vless
   server: 82.152.132.223
   port: 443
@@ -1096,644 +1237,23 @@ proxies:
   xhttp-opts:
     path: /patch
     mode: auto
-- name: 084_t.me_freekesha21_75f43f9fbc
+- name: 095_vless_193.233.253.138_443_64fc3b3ac3
   type: vless
-  server: qq.utiltools.site
+  server: 193.233.253.138
   port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: safari
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 085_Moscow_5f00afb4c9
-  type: vless
-  server: router.hermit.pw
-  port: 24127
-  uuid: 69158986-cfae-4567-8391-0f96d9d985bd
-  udp: true
-  network: tcp
-  tls: true
-  servername: uk.neuroniko.com
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ud15DX-emDBS7QsLMabJ7CjgIteK61jxwSp1v0Fewxc
-    short-id: 10a59b0a94367ac2
-- name: 086_vless_31.56.187.35_34451_c53bd8b599
-  type: vless
-  server: 31.56.187.35
-  port: 34451
-  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
+  uuid: 24409c31-447c-401a-9260-b5f701cf2e8e
   udp: true
   network: xhttp
   tls: true
-  servername: ee-2e06d85dc0.shamanapp.online
+  servername: friren.iki-servers.com
   client-fingerprint: firefox
+  reality-opts:
+    public-key: iD0nfLVyK9EbtFtKZgj_UcuGINq6yTqQM4jFfuTMFSY
+    short-id: 5f5962cc9ec6b180
   xhttp-opts:
-    path: /ShamanXHTTP2026
-    host: ee-2e06d85dc0.shamanapp.online
-    mode: stream-up
-- name: 087_AetrisVPN_c61695a7d3
-  type: vless
-  server: 147.45.161.4
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: defs-68.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: xTePrM5IyjR8o52B2mRAO2nNivfyMpBZxya93MQk4Qc
-    short-id: 2a40b6d6495debf3
-- name: 088_vless_157.22.241.193_444_0f33311979
-  type: vless
-  server: 157.22.241.193
-  port: 444
-  uuid: 7a4bf57c-ebbe-4779-a469-9d803e6c29fd
-  udp: true
-  network: tcp
-  tls: true
-  servername: spb1.nexfile.net
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e6RrKgiMRFZEKHn7bcpQHV_skmM-45eX6-G92U0tykY
-    short-id: edc4c30c
-- name: 089_vless_217.198.6.206_443_81c2960142
-  type: vless
-  server: 217.198.6.206
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: patch-51.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 090_vless_144.31.241.92_443_4c7a36cb88
-  type: vless
-  server: 144.31.241.92
-  port: 443
-  uuid: 3fd63ca9-0813-407d-a3aa-53552c0f3487
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.evovpn.pro
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZKd5bjQ8ACciPQo_0ol7WEkUYUjGXaK9fMciQkFurF4
-    short-id: b4c823
-- name: 091_vless_187.52.45.50_443_fafe77ffb3
-  type: vless
-  server: 187.52.45.50
-  port: 443
-  uuid: 265db9a9-1a90-4d41-9375-02a9fbc41def
-  udp: true
-  network: tcp
-  tls: true
-  servername: oasjosa.rivohost.cc
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 0L92s8N9lxhJZICBmnq_iXD5LzdUksQec4-Clf6sCyQ
-    short-id: 6c68997252d4d6d7
-- name: 092_Paris_b61ddfaf90
-  type: vless
-  server: 94.249.187.88
-  port: 43000
-  uuid: 390c7bd2-d83c-49b6-a6d5-c454583bbb2d
-  udp: true
-  network: tcp
-  tls: true
-  servername: 94.249.187.88
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: r710c3Is-baifKzevzR4GKPnWOdolchLdP1NoOOtK2A
-    short-id: ecef9d30
-- name: 093_trojan-1945021228_02ae9fdfa3
-  type: trojan
-  server: 208.69.78.19
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: www.yourultimateprofessionalcareerhub.com
-- name: 094_vless_177.1.192.60_443_ee95020ff9
-  type: vless
-  server: 177.1.192.60
-  port: 443
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  udp: true
-  network: tcp
-  tls: true
-  servername: up3.uni-plan.com
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: lKbpDhowtl4lMNYnquakbW_Kx3Xhej2RJ2ip3ZgBVAs
-    short-id: 1aa60663532077ad
-- name: 095_Warsaw_de2a73f421
-  type: vless
-  server: 94.249.187.43
-  port: 43000
-  uuid: 30b08c3d-f208-4993-91c9-af86a5f4a2f0
-  udp: true
-  network: tcp
-  tls: true
-  servername: 94.249.187.43
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: cVy14rseOu0oTTXUjxSTcedkkxEJfH9XCdxFW3fT92k
-    short-id: 6fa3822e
-- name: 096_shadowsocks-1939844061_8a5dbee56a
-  type: ss
-  server: 8.211.196.252
-  port: 443
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4=
-  udp: true
-- name: 097_AetrisVPN_c9fa95173a
-  type: vless
-  server: 185.126.93.225
-  port: 443
-  uuid: f04cc810-aaf2-4a7b-8cad-356cdd30d394
-  udp: true
-  network: xhttp
-  tls: true
-  servername: tg1.cdnphotos.org
-  client-fingerprint: firefox
-  xhttp-opts:
-    path: /api/v1/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    mode: auto
-- name: 098_vless_177.1.192.90_443_dc33c21407
-  type: vless
-  server: 177.1.192.90
-  port: 443
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  udp: true
-  network: tcp
-  tls: true
-  servername: up6.uni-plan.com
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: PA7rbht6SKwvUgysJka_ffHvVEzl4s4RPDO3uPeuLxc
-    short-id: e12ed4adc5aee929
-- name: 099_t.me_freekesha21_e3e9a9d27f
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: ios
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 100_vless_201.58.183.147_443_c0909081a7
-  type: vless
-  server: 201.58.183.147
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: gemsubbgem.world
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
-- name: 101_t.me_freekesha21_2e958e8c3c
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: safari
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-    short-id: '00000000'
-- name: 102_AetrisVPN_b978f37eb8
-  type: vless
-  server: 178.236.242.254
-  port: 8443
-  uuid: c05ec3c7-2784-da2b-aa98-a3c132860fcb
-  udp: true
-  network: tcp
-  tls: true
-  servername: xnod13x.artemida.live
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZRTNgwFRP8viY4SQOgPTfWlLWJCwY3dr0aawA7vHwhU
-    short-id: a1b2c3d4e5f6a7b8
-- name: 103_AetrisVPN_b5d2bfc8a5
-  type: vless
-  server: 5.42.99.64
-  port: 8443
-  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
-  udp: true
-  network: tcp
-  tls: true
-  servername: du-rov.secureservice.top
-  client-fingerprint: random
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
-    short-id: 3cbc3d737fb9c4af
-- name: 104_Sofia_83e79e7666
-  type: vless
-  server: 45.137.201.74
-  port: 443
-  uuid: 3de59cd0-f92c-40bf-829c-db7bf6043d1d
-  udp: true
-  network: tcp
-  tls: true
-  servername: bg.reus.lol
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: OWnQ9xwvYFlNw_Fnmf4ceZMtb0SVLuVUoq2WP5P8lkw
-    short-id: 5f2d02dc7ec1e539
-- name: 105_vless_188.130.209.185_443_b90331c9de
-  type: vless
-  server: 188.130.209.185
-  port: 443
-  uuid: 107c5437-3982-4e4d-9ff5-0249b4c10ba2
-  udp: true
-  network: tcp
-  tls: true
-  servername: images.mycdn-io.ru
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: kjUd2XnkDKju6yOKi5zDna2_iFt_TzXUlQRsIHp1AEk
-    short-id: fbe42a5d4788bacc
-- name: 106_AetrisVPN_218ebcf940
-  type: vless
-  server: 83.171.241.199
-  port: 443
-  uuid: fafc7c16-f890-45ee-a856-02df225172dd
-  udp: true
-  network: tcp
-  tls: true
-  servername: 898305t.es4.h1clayd.click
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qF1f5MNrOiov0tyPftS96_Osal5sWTL4keXlW32UtV8
-    short-id: f06b6d8a57f5fd8f
-- name: 107_vless-1936406828_af7bbeb76f
-  type: vless
-  server: edge.bookmai.com
-  port: 443
-  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-  udp: true
-  network: tcp
-  tls: true
-  servername: mother-earth.fyi
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-- name: 108_vless_es.srv.dvzh.net_443_d5aefbb292
-  type: vless
-  server: es.srv.dvzh.net
-  port: 443
-  uuid: 9ab3a362-1518-496d-b08d-eced45cec936
-  udp: true
-  network: tcp
-  tls: true
-  servername: es.srv.dvzh.net
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
-    short-id: e0ccc8c2f487d913
-- name: 109_LTE_5G_3d7f573a6a
-  type: vless
-  server: 185.178.208.140
-  port: 443
-  uuid: ea277838-a188-44f1-a2e8-94aa110c4f27
-  udp: true
-  network: xhttp
-  tls: true
-  servername: static.bakarova-top.ru
-  client-fingerprint: edge
-  xhttp-opts:
-    path: /api/v2/events
-- name: 110_vless_poland.biznes.lol_443_1307777a02
-  type: vless
-  server: poland.biznes.lol
-  port: 443
-  uuid: 7d43670b-6b08-45b9-8a24-8f3971abc132
-  udp: true
-  network: tcp
-  tls: true
-  servername: poland.biznes.lol
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk
-    spider-x: /
-- name: 111_vless_222.167.248.199_443_589e4190de
-  type: vless
-  server: 222.167.248.199
-  port: 443
-  uuid: 3fd63ca9-0813-407d-a3aa-53552c0f3487
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.evovpn.pro
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZKd5bjQ8ACciPQo_0ol7WEkUYUjGXaK9fMciQkFurF4
-    short-id: b4c823
-- name: 112_Tallinn_e0649be5c8
-  type: vless
-  server: 163.245.52.140
-  port: 443
-  uuid: 265db9a9-1a90-4d41-9375-02a9fbc41def
-  udp: true
-  network: tcp
-  tls: true
-  servername: majuas.rivohost.cc
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: R5Q-oKGFqq8tZlp5oJ5Qv48qDq2rlkPXUaIqW1hDsH0
-    short-id: 66826a572267d996
-- name: 113_AetrisVPN_e020031926
-  type: vless
-  server: 188.225.33.141
-  port: 443
-  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
-  udp: true
-  network: ws
-  tls: true
-  servername: wstg.datasynctrue.online
-  client-fingerprint: firefox
-  ws-opts:
-    path: /api/connect
-    headers:
-      Host: wstg.datasynctrue.online
-- name: 114_vless_103.118.209.80_443_9438aa9e0e
-  type: vless
-  server: 103.118.209.80
-  port: 443
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  udp: true
-  network: tcp
-  tls: true
-  servername: nlsq.giftsbattle.vip
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: d66SelbTIURp_YpyFF83ApzzPEQFxOiEbrO7TFSdDRI
-    short-id: ff9881defc3b9cda
-- name: 115_t.me_freekesha21_21b71aae28
-  type: vless
-  server: sundaylanzgem.site
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: sundaylanzgem.site
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 116_trojan_en001.zestapp778.com_29813_f704a10274
-  type: trojan
-  server: en001.zestapp778.com
-  port: 29813
-  password: 5t6i121em5lkmsmk
-  udp: true
-  tls: true
-  servername: en001.zestapp778.com
-  client-fingerprint: chrome
-- name: 117_vless_177.1.192.38_8443_ea31f9c9f9
-  type: vless
-  server: 177.1.192.38
-  port: 8443
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  udp: true
-  network: tcp
-  tls: true
-  servername: upnl.giftsbattle.vip
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: rczv8z0BFqH3QS9PfFAzLYZY8Iao1yEBhwcRskkQugo
-    short-id: b3e515e37815559d
-- name: 118_vless_192.177.26.161_2027_cb347ef2a4
-  type: vless
-  server: 192.177.26.161
-  port: 2027
-  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
-  udp: true
-  network: xhttp
-  tls: true
-  servername: uusa.skysafe.online
-  client-fingerprint: qq
-  reality-opts:
-    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
-    short-id: 6ba7b8109dad11d1
-  xhttp-opts:
-    path: /patch
-    mode: auto
-- name: 119_vless_72.56.11.99_443_7b1f7c254e
-  type: vless
-  server: 72.56.11.99
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: updates-94.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 120_vless_178.83.111.82_3090_1875e3f3eb
-  type: vless
-  server: 178.83.111.82
-  port: 3090
-  uuid: 1bb910d7-f6ea-41d3-836d-652c772dea99
-  udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-    multi-mode: true
-- name: 121_vless_192.177.26.55_443_9110cce9db
-  type: vless
-  server: 192.177.26.55
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: repo-16.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: cC6kqzQ1mdCXyPey8xRXS7TQ1S4kF3nJW-h1ItJ4SH8
-    short-id: bdaddda4cbc8c7bf
-- name: 122_vless_178.83.111.126_3090_fab2dff982
-  type: vless
-  server: 178.83.111.126
-  port: 3090
-  uuid: 1bb910d7-f6ea-41d3-836d-652c772dea99
-  udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-    multi-mode: true
-- name: 123_DEU_12ea41b880
-  type: vless
-  server: 130.49.177.193
-  port: 443
-  uuid: 727a9178-d7f0-4142-8205-b0d19959ded0
-  udp: true
-  network: tcp
-  tls: true
-  servername: de-2.ffpn.pro
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc
-    short-id: 681fc2dd643bc2f3
-- name: 124_vless_178.83.111.122_3090_9f8404b013
-  type: vless
-  server: 178.83.111.122
-  port: 3090
-  uuid: bd0316ca-1e62-4f62-8184-70aac6aa7ef9
-  udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-    multi-mode: true
-- name: 125_AL_Tirana_cbd895be33
-  type: vless
-  server: 130.49.189.56
-  port: 443
-  uuid: 3de59cd0-f92c-40bf-829c-db7bf6043d1d
-  udp: true
-  network: tcp
-  tls: true
-  servername: al.reus.lol
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: jVNJH18MECOqhciQLa-w7Y7yp3N9IdseIDpgCEu2LhU
-    short-id: 81785a5f59d66d7d
-- name: 126_t.me_freekesha21_f35bad56f2
-  type: vless
-  server: 78.159.250.214
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 127_vless_fn.skysafe.online_2027_204bb22ec7
-  type: vless
-  server: fn.skysafe.online
-  port: 2027
-  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
-  udp: true
-  network: xhttp
-  tls: true
-  servername: fn.skysafe.online
-  client-fingerprint: qq
-  reality-opts:
-    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
-    short-id: 6ba7b8109dad11d1
-  xhttp-opts:
-    path: /patch
-    mode: auto
-- name: 128_t.me_freekesha21_ffad8bbd55
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 129_t.me_freekesha21_281237f134
-  type: vless
-  server: gemsubbgem.world
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: gemsubbgem.world
-  client-fingerprint: safari
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
-- name: 130_vless_89.125.37.175_33744_c1817b579e
-  type: vless
-  server: 89.125.37.175
-  port: 33744
-  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
-  udp: true
-  network: xhttp
-  tls: true
-  servername: se-5060f39afb.shamanapp.online
-  client-fingerprint: firefox
-  xhttp-opts:
-    path: /ShamanXHTTP2026
-    host: se-5060f39afb.shamanapp.online
-    mode: stream-up
-- name: 131_trojan-1941512523_bc95ce0291
-  type: trojan
-  server: 216.152.147.79
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: blog.connectingpeoplewithgreatjobs.com
-- name: 132_trojan-1939845052_00481e47b7
-  type: trojan
-  server: 216.152.147.201
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: resources.connectingpeoplewithgreatjobs.com
-- name: 133_AetrisVPN_80c5edd09d
+    path: /shield
+    mode: packet-up
+- name: 096_AetrisVPN_80c5edd09d
   type: vless
   server: 81.17.154.181
   port: 443
@@ -1749,7 +1269,20 @@ proxies:
     path: /ccxf5snr06b8xxb6
     host: fafeqdhlett2p5la6d.cdn.cachefleet.com
     mode: auto
-- name: 134_AL_Tirana_3d73c9fbd7
+- name: 097_vless_87.228.92.104_443_f61fd22fa3
+  type: vless
+  server: 87.228.92.104
+  port: 443
+  uuid: 01a8c896-1abd-425d-bf75-b0b355754cc1
+  udp: true
+  network: tcp
+  tls: true
+  servername: 9fd04ct.fi4.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: JpBC1XkdycLVlXlt2oe-pMVLYlI83WEurSPA8fPkPiE
+    short-id: d9d36cd07fbe103e
+- name: 098_AL_Tirana_cbd895be33
   type: vless
   server: 130.49.189.56
   port: 443
@@ -1758,28 +1291,515 @@ proxies:
   network: tcp
   tls: true
   servername: al.reus.lol
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   flow: xtls-rprx-vision
   reality-opts:
     public-key: jVNJH18MECOqhciQLa-w7Y7yp3N9IdseIDpgCEu2LhU
     short-id: 81785a5f59d66d7d
-- name: 135_shadowsocks-1875023048_e9588a2528
-  type: ss
-  server: 202.50.253.72
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 099_vless_185.188.30.67_444_5bc9c6046a
+  type: vless
+  server: 185.188.30.67
+  port: 444
+  uuid: 79247bff-828f-41f7-b733-968eeb0742aa
   udp: true
-- name: 136_trojan_170.101.101.211_443_989c914fd5
+  network: tcp
+  tls: true
+  servername: fl.vrsvpn.com
+  client-fingerprint: edge
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: xHgddaRPxBto36gkycD74578Ng4_vjjcUFoVGMk5UC0
+    short-id: 14ba51f812ad1f22
+- name: 100_HKG_d8b9976106
+  type: vmess
+  server: 47.242.81.94
+  port: 52080
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: http
+  servername: openai.com
+  h2-opts:
+    path: /QQqun-737805443
+    host:
+    - openai.com
+- name: 101_AetrisVPN_27782bbc8b
+  type: vless
+  server: s12.bsh-net.ru
+  port: 443
+  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  udp: true
+  network: tcp
+  tls: true
+  servername: s12.bsh-net.ru
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk
+    short-id: 51079f144d661484
+- name: 102_Frankfurt_am_Main_95437473c6
+  type: vless
+  server: de166.mech-pro.online
+  port: 443
+  uuid: 976f82d9-0e6b-40ed-9c09-cafd06c4bc98
+  udp: true
+  network: tcp
+  tls: true
+  servername: de166.mech-pro.online
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: 16e0f049
+- name: 103_AetrisVPN_3576bf254e
+  type: vless
+  server: aq.skysafe.online
+  port: 2027
+  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
+  udp: true
+  network: xhttp
+  tls: true
+  servername: aq.skysafe.online
+  client-fingerprint: qq
+  reality-opts:
+    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
+    short-id: 6ba7b8109dad11d1
+  xhttp-opts:
+    path: /patch
+    mode: auto
+- name: 104_t.me_freekesha21_1f6b4113fd
+  type: vless
+  server: 201.58.183.173
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 105_AetrisVPN_269282898e
+  type: vless
+  server: fi-1.bnc-gt.co.uk
+  port: 443
+  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
+  udp: true
+  network: tcp
+  tls: true
+  servername: b.fi-1.bnc-gt.co.uk
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: CegqLjzOImUmYD9ZdpOOG65UgNTGeQfRmpIni8iraB0
+    short-id: 7be1e9c243451b14
+- name: 106_AetrisVPN_e020031926
+  type: vless
+  server: 188.225.33.141
+  port: 443
+  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+  udp: true
+  network: ws
+  tls: true
+  servername: wstg.datasynctrue.online
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/connect
+    headers:
+      Host: wstg.datasynctrue.online
+- name: 107_vless_217.60.33.67_8443_e8f303cecc
+  type: vless
+  server: 217.60.33.67
+  port: 8443
+  uuid: 2a66ad35-93ce-4fd2-831f-bcaa63cdac1e
+  udp: true
+  network: tcp
+  tls: true
+  servername: go-obsh-auto-drun.keno.su
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -r5xcA3iTzAf63kkb0VIILrLHH1VUq550pFZ-M74Jlc
+    short-id: de
+- name: 108_vless_209.50.229.58_443_dc797de29c
+  type: vless
+  server: 209.50.229.58
+  port: 443
+  uuid: 4c9f78a0-5ff8-485d-b783-e8672d566dc3
+  udp: true
+  network: tcp
+  tls: true
+  servername: u4.underground.company
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: pS4MvwoGLQMp70jrdLK9oGoSg7yj29eZ8RglrOzJtVU
+    short-id: 618bbb7554f5c1c6
+- name: 109_AetrisVPN_f9df7281e9
+  type: vless
+  server: 2.27.26.129
+  port: 2027
+  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
+  udp: true
+  network: xhttp
+  tls: true
+  servername: aq.skysafe.online
+  client-fingerprint: qq
+  reality-opts:
+    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
+    short-id: 6ba7b8109dad11d1
+  xhttp-opts:
+    path: /patch
+    mode: auto
+- name: 110_AetrisVPN_4eb90cecdc
+  type: vless
+  server: 91.196.33.157
+  port: 443
+  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
+  udp: true
+  network: grpc
+  tls: true
+  servername: b.us-1.bnc-gt.co.uk
+  client-fingerprint: qq
+  alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 111_vless_176.124.208.36_443_f094fbfdb3
+  type: vless
+  server: 176.124.208.36
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: media-32.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 112_vless_192.177.26.55_443_9110cce9db
+  type: vless
+  server: 192.177.26.55
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: repo-16.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cC6kqzQ1mdCXyPey8xRXS7TQ1S4kF3nJW-h1ItJ4SH8
+    short-id: bdaddda4cbc8c7bf
+- name: 113_vless_5.129.222.175_443_7833b13e20
+  type: vless
+  server: 5.129.222.175
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: sig-45.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 114_t.me_freekesha21_ca1a9406fa
+  type: vless
+  server: vivozim.vyvoz-musora.cc
+  port: 443
+  uuid: a0052f4f-4c63-485a-a16f-ab2d5d718cd3
+  udp: true
+  network: ws
+  tls: true
+  servername: vivozim.vyvoz-musora.cc
+  client-fingerprint: edge
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /e8ws
+    headers:
+      Host: vivozim.vyvoz-musora.cc
+- name: 115_AetrisVPN_7cc5e5f56b
+  type: vless
+  server: 36a466g.fi1.h1clayd.click
+  port: 443
+  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  udp: true
+  network: grpc
+  tls: true
+  servername: 36a466g.fi1.h1clayd.click
+  client-fingerprint: ios
+  reality-opts:
+    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
+    short-id: b3c9d0c6bdd114a6
+  grpc-opts:
+    grpc-service-name: 0adb9638509b
+- name: 116_AetrisVPN_ee07d38516
+  type: vless
+  server: 172.238.221.223
+  port: 8443
+  uuid: a9a048ad-f2d9-43a1-a3f3-7159178cc9fe
+  udp: true
+  network: tcp
+  tls: true
+  servername: play.googleapis.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: t6LRyu57wxd8AzA4kMqGRMBNyyE-z4GdvX7M0gd4400
+    short-id: d284b7e1d9b687fb
+- name: 117_vless_5.129.202.74_443_8fefd380e9
+  type: vless
+  server: 5.129.202.74
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: patch-25.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 118_t.me_freekesha21_716517f55e
+  type: vless
+  server: gemsubbgem.world
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: gemsubbgem.world
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
+- name: 119_AetrisVPN_71002eb751
   type: trojan
-  server: 170.101.101.211
+  server: 8.6.112.206
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  servername: www.trusteeforward.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.trusteeforward.com
+- name: 120_AetrisVPN_77f532a9b8
+  type: trojan
+  server: 170.101.101.53
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   tls: true
-  servername: api.explorecreativejobsandenhanceyourcareerportfolio.com
+  servername: www.explorecreativejobsandenhanceyourcareerportfolio.com
+  client-fingerprint: firefox
+- name: 121_Prague_1314d114fd
+  type: vless
+  server: cz-prg.dontblockmepls.com
+  port: 2063
+  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+  udp: true
+  network: tcp
+  tls: true
+  servername: rusbid.de
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  alpn:
+  - h2
+  - http/1.1
+  reality-opts:
+    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+- name: 122_vless_178.17.52.236_2083_7980a2c438
+  type: vless
+  server: 178.17.52.236
+  port: 2083
+  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  udp: true
+  network: xhttp
+  tls: true
+  servername: maps.blog-forme.ru
   client-fingerprint: chrome
-- name: 137_AetrisVPN_8aa53f2739
+  reality-opts:
+    public-key: mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY
+    short-id: 3258252d44113e23
+  xhttp-opts:
+    path: /v2/sync/6e9367
+    mode: auto
+- name: 123_trojan-1941512523_bc95ce0291
+  type: trojan
+  server: 216.152.147.79
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: blog.connectingpeoplewithgreatjobs.com
+- name: 124_AetrisVPN_61fab8e3ef
+  type: vless
+  server: 72.56.11.115
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: dl-65.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+- name: 125_AetrisVPN_1b975c16a1
+  type: vless
+  server: 87.199.207.116
+  port: 443
+  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  udp: true
+  network: xhttp
+  tls: true
+  servername: docs.blog-forme.ru
+  client-fingerprint: edge
+  reality-opts:
+    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
+    short-id: fb3a5f2d4ca346ed
+  xhttp-opts:
+    path: /v2/sync/af2c0c
+    mode: auto
+- name: 126_AetrisVPN_0225125cbf
+  type: vless
+  server: de-3.bnc-gt.co.uk
+  port: 443
+  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
+  udp: true
+  network: tcp
+  tls: true
+  servername: de-3.bnc-gt.co.uk
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: CegqLjzOImUmYD9ZdpOOG65UgNTGeQfRmpIni8iraB0
+    short-id: 7be1e9c243451b14
+- name: 127_Helsinki_a8c7fc5d40
+  type: vless
+  server: 87.228.92.104
+  port: 443
+  uuid: 01a8c896-1abd-425d-bf75-b0b355754cc1
+  udp: true
+  network: tcp
+  tls: true
+  servername: 81f270t.fi4.h1clayd.click
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: TKmclms1Y4UZPdn_UJR2FMPLGRbMIw4mI7Vul2SevTw
+    short-id: 0521d8e5f34296ae
+- name: 128_AetrisVPN_c9fa95173a
+  type: vless
+  server: 185.126.93.225
+  port: 443
+  uuid: f04cc810-aaf2-4a7b-8cad-356cdd30d394
+  udp: true
+  network: xhttp
+  tls: true
+  servername: tg1.cdnphotos.org
+  client-fingerprint: firefox
+  xhttp-opts:
+    path: /api/v1/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    mode: auto
+- name: 129_vless_31.76.55.162_443_ee06e78903
+  type: vless
+  server: 31.76.55.162
+  port: 443
+  uuid: c29fa587-b10d-445d-b7e3-eaa6d1bd1330
+  udp: true
+  network: xhttp
+  tls: true
+  servername: est1.dnsfire.fun
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk
+    short-id: f4e0550a
+  xhttp-opts:
+    path: /fwlink/
+- name: 130_trojan-1941512528_194c461a26
+  type: trojan
+  server: 169.197.140.245
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: www.discoverfreshgraduatejobsstartyourprofessionaljourney.com
+- name: 131_AetrisVPN_3813b80f07
+  type: vless
+  server: 45.198.55.200
+  port: 25150
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.samsung.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Qvn7tV54mdqxJ40LmmoI1PRM1QKXEbfFOZS-omPKhGY
+    short-id: 4301a484cc762aa6
+- name: 132_AetrisVPN_a6b54f7e92
+  type: vless
+  server: 91.84.115.36
+  port: 443
+  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  udp: true
+  network: xhttp
+  tls: true
+  servername: shorts.blog-forme.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
+    short-id: fb3a5f2d4ca346ed
+  xhttp-opts:
+    path: /v2/sync/af2c0c
+    mode: auto
+- name: 133_shadowsocks-1875022929_7fb3c34076
+  type: ss
+  server: 202.50.253.90
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 134_AetrisVPN_dc02eefcb4
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+- name: 135_vless-1936406828_af7bbeb76f
+  type: vless
+  server: edge.bookmai.com
+  port: 443
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+  udp: true
+  network: tcp
+  tls: true
+  servername: mother-earth.fyi
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- name: 136_AetrisVPN_8aa53f2739
   type: vless
   server: 200.165.231.209
   port: 443
@@ -1793,74 +1813,15 @@ proxies:
     path: /api/connect
     headers:
       Host: wstg.datasynctrue.online
-- name: 138_AetrisVPN_3f4305bdb8
-  type: vless
-  server: 91.210.169.181
-  port: 443
-  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
-  udp: true
-  network: ws
-  tls: true
-  servername: wstg.datasynctrue.online
-  client-fingerprint: firefox
-  ws-opts:
-    path: /api/connect
-    headers:
-      Host: wstg.datasynctrue.online
-- name: 139_vless_195.63.139.79_443_838dfb954f
-  type: vless
-  server: 195.63.139.79
-  port: 443
-  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
-  udp: true
-  network: xhttp
-  tls: true
-  servername: sports.blog-forme.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
-    short-id: fb3a5f2d4ca346ed
-  xhttp-opts:
-    path: /v2/sync/af2c0c
-- name: 140_vless_5.180.46.128_443_519b1bb022
-  type: vless
-  server: 5.180.46.128
-  port: 443
-  uuid: eb8af077-a580-4f67-8042-9572a39e699d
-  udp: true
-  network: xhttp
-  tls: true
-  servername: kz-02.file-rkat.online
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo
-    short-id: 026b90d74d4ba58c
-  xhttp-opts:
-    path: /assets/f9104995
-    mode: stream-one
-- name: 141_trojan-1931254753_1e20246797
+- name: 137_trojan-1943481633_911ce716be
   type: trojan
-  server: 169.197.140.169
+  server: 169.197.140.171
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   tls: true
-  servername: api.discoverfreshgraduatejobsstartyourprofessionaljourney.com
-- name: 142_vless_186.246.9.101_443_716a3f66d4
-  type: vless
-  server: 186.246.9.101
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  network: tcp
-  tls: true
-  servername: update-61.topp-con.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-- name: 143_trojan-1929965331_846d0f8b60
+  servername: cdn.discoverfreshgraduatejobsstartyourprofessionaljourney.com
+- name: 138_trojan-1929965331_846d0f8b60
   type: trojan
   server: 216.152.156.81
   port: 443
@@ -1868,34 +1829,111 @@ proxies:
   udp: true
   tls: true
   servername: www.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-- name: 144_shadowsocks-1875023050_681fbda296
-  type: ss
-  server: 202.50.253.36
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 145_AetrisVPN_422b6e46f2
+- name: 139_AetrisVPN_20ca871f39
   type: vless
-  server: 185.126.93.226
+  server: 146.185.197.95
   port: 443
-  uuid: f04cc810-aaf2-4a7b-8cad-356cdd30d394
+  uuid: 9ea8b000-58ce-0005-b108-989dd4f248f1
+  udp: true
+  network: ws
+  ws-opts:
+    path: /live/ws2
+- name: 140_Amsterdam_9e314b4481
+  type: vless
+  server: shorts.blog-forme.ru
+  port: 443
+  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
   udp: true
   network: xhttp
   tls: true
-  servername: tg1.cdnphotos.org
-  client-fingerprint: firefox
+  servername: shorts.blog-forme.ru
+  client-fingerprint: edge
+  reality-opts:
+    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
+    short-id: fb3a5f2d4ca346ed
   xhttp-opts:
-    path: /api/v1/?ed#
+    path: /v2/sync/af2c0c
     mode: auto
-- name: 146_trojan-1939845055_5a47ab7b3f
+- name: 141_vless_sports.blog-forme.ru_443_43970f7677
+  type: vless
+  server: sports.blog-forme.ru
+  port: 443
+  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  udp: true
+  network: xhttp
+  tls: true
+  servername: sports.blog-forme.ru
+  client-fingerprint: edge
+  reality-opts:
+    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
+    short-id: fb3a5f2d4ca346ed
+  xhttp-opts:
+    path: /v2/sync/af2c0c
+    mode: auto
+- name: 142_trojan-1941512529_eba0d77c0c
   type: trojan
-  server: 216.152.147.74
+  server: 170.101.101.53
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   tls: true
-  servername: api.connectingpeoplewithgreatjobs.com
+  servername: www.explorecreativejobsandenhanceyourcareerportfolio.com
+- name: 143_vless_179.254.92.134_443_142cfacc8d
+  type: vless
+  server: 179.254.92.134
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: assets-70.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: OQu-e59wDwOSwiBBawquNAPhg8Li1hmioWU2Up1TGDw
+    short-id: c33807f76b689c9a
+- name: 144_vless_179.254.92.190_443_a810d47077
+  type: vless
+  server: 179.254.92.190
+  port: 443
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  udp: true
+  network: tcp
+  tls: true
+  servername: assets-32.topp-con.xyz
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 66-TFe0f5ub9A27G6hLPLm-KRZ4LGixHi8IA_Nv7jVM
+    short-id: 81d36ba71dddfc3e
+- name: 145_vless_91.84.115.36_443_cc815ddc29
+  type: vless
+  server: 91.84.115.36
+  port: 443
+  uuid: 6da2c981-8c77-4340-bda3-93399b7aea26
+  udp: true
+  network: xhttp
+  tls: true
+  servername: lectures.blog-forme.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nalACuCZjV1sZx7QOH6yAIDio8mFI0FgVKYQvQHBKS4
+    short-id: fb3a5f2d4ca346ed
+  xhttp-opts:
+    path: /v2/sync/af2c0c
+- name: 146_t.me_freekesha21_56bf2fa4d9
+  type: vless
+  server: gemsubbgem.world
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: gemsubbgem.world
+  client-fingerprint: ios
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
 - name: 147_vless_201.51.4.89_443_ed6ecce416
   type: vless
   server: 201.51.4.89
@@ -1910,23 +1948,20 @@ proxies:
   reality-opts:
     public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
     short-id: b9120cd53ffd7bba
-- name: 148_trojan-1939845058_212f11c87b
-  type: trojan
-  server: 170.101.101.211
+- name: 148_vless_2.26.97.145_443_8fb13a3694
+  type: vless
+  server: 2.26.97.145
   port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  uuid: 8fa83828-9777-4a5b-a951-60a4523f3e3d
   udp: true
+  network: xhttp
   tls: true
-  servername: api.explorecreativejobsandenhanceyourcareerportfolio.com
-- name: 149_trojan-1941512528_194c461a26
-  type: trojan
-  server: 169.197.140.245
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: www.discoverfreshgraduatejobsstartyourprofessionaljourney.com
-- name: 150_trojan-1931768145_e5e78ede19
+  servername: x4n8bd.kolombur24.website
+  client-fingerprint: chrome
+  xhttp-opts:
+    path: /xh
+    mode: packet-up
+- name: 149_trojan-1929965351_e5e78ede19
   type: trojan
   server: 66.163.114.106
   port: 443
@@ -1934,3 +1969,11 @@ proxies:
   udp: true
   tls: true
   servername: www.findconnectwithemployersandbuildprofessionalnetwork.com
+- name: 150_trojan-1929965354_62ddadf8d6
+  type: trojan
+  server: 66.163.114.45
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: cdn.findconnectwithemployersandbuildprofessionalnetwork.com
