@@ -1,5 +1,5 @@
 proxies:
-- name: 001_Germany_BL_34bf6cead5
+- name: 001_Germany_BL_f1e98cbeef
   type: vless
   server: 151.101.36.235
   port: 443
@@ -8,73 +8,40 @@ proxies:
   network: xhttp
   tls: true
   servername: accounts.fastly.com
-  client-fingerprint: chrome
+  client-fingerprint: ios
   alpn:
   - h3
   xhttp-opts:
     path: /
     host: ovd13.global.ssl.fastly.net
     mode: auto
-- name: 002_t.me_freekesha21_8d27d8150d
+- name: 002_Germany_BL_5cabec6b46
   type: vless
-  server: 188.130.209.212
+  server: 151.101.36.235
   port: 443
-  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
-  servername: thumbs.mycdn-io.ru
-  client-fingerprint: ios
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
-    short-id: 11979c0c9b2da371
-    spider-x: /
-- name: 003_t.me_freekesha21_b35d083204
-  type: vless
-  server: 188.130.209.212
-  port: 443
-  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
-  udp: true
-  network: tcp
-  tls: true
-  servername: thumbs.mycdn-io.ru
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
-    short-id: 11979c0c9b2da371
-    spider-x: /
-- name: 004_AetrisVPN_t.me_rjsxrd_0d9bb1466d
-  type: vless
-  server: 83.217.201.82
-  port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
-  udp: true
-  network: tcp
-  tls: true
-  servername: skvoz-dpi.com
+  servername: accounts.fastly.com
   client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    short-id: d1579a8745398e34
-- name: 005_AetrisVPN_b58922c36f
+  xhttp-opts:
+    host: ovd13.global.ssl.fastly.net
+    mode: auto
+- name: 003_France_BL_b7e56dc6a0
   type: vless
-  server: 188.130.209.212
+  server: 151.101.36.61
   port: 443
-  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
-  servername: thumbs.mycdn-io.ru
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
-    short-id: 11979c0c9b2da371
-    spider-x: /
-- name: 006_vless_169.40.34.41_443_e0744d4e19
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  xhttp-opts:
+    host: ovd10.global.ssl.fastly.net
+    mode: auto
+- name: 004_vless_169.40.34.41_443_e0744d4e19
   type: vless
   server: 169.40.34.41
   port: 443
@@ -88,107 +55,22 @@ proxies:
   reality-opts:
     public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
     short-id: 1c3e8241a8743df9
-- name: 007_AetrisVPN_50cda91701
+- name: 005_t.me_freekesha21_54ed31e433
   type: vless
-  server: 201.58.185.103
+  server: 188.130.209.212
   port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
   udp: true
   network: tcp
   tls: true
-  servername: sundaylanzgem.site
-  client-fingerprint: qq
+  servername: thumbs.mycdn-io.ru
+  client-fingerprint: edge
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 008_vless_185.242.247.66_443_f0f17072e3
-  type: vless
-  server: 185.242.247.66
-  port: 443
-  uuid: cf1b08a7-55b7-4241-b80a-c59116272b43
-  udp: true
-  network: tcp
-  tls: true
-  servername: home.asperwild.com
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: DXc-l15XMaLM1zoeGdtkZd-1MymTHrnplcEHxyDvLRQ
-    short-id: d9dbc840ce42cd95
-- name: 009_AetrisVPN_a8c043eb39
-  type: vless
-  server: sundaylanzgem.site
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: sundaylanzgem.site
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 010_AetrisVPN_3ad5a43b84
-  type: vless
-  server: 95.129.234.113
-  port: 8443
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
-  udp: true
-  network: xhttp
-  tls: true
-  servername: tansy-wharf.cdn.cachefleet.com
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  xhttp-opts:
-    path: /ccxf5snr06b8xxb6
-    host: is-tw-relay.cdn.cachefleet.com
-    mode: auto
-- name: 011_Poland_BL_14dc20662e
-  type: vless
-  server: 151.101.36.128
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: firefox
-  alpn:
-  - h3
-  xhttp-opts:
-    path: /
-    host: ovd7.global.ssl.fastly.net
-    mode: auto
-- name: 012_1129ms_ef83a34f82
-  type: vless
-  server: gemsubbgem.world
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: gemsubbgem.world
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
-- name: 013_vless_94.183.164.96_443_6e54e408d4
-  type: vless
-  server: 94.183.164.96
-  port: 443
-  uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  udp: true
-  network: xhttp
-  tls: true
-  servername: tgnl.blog-forme.ru
-  client-fingerprint: ios
-  reality-opts:
-    public-key: qkwh_hd7pYmvQcABVy4IHMF9l_RtAOqqFqRhkRBVyQI
-    short-id: e114741e080317d4
-  xhttp-opts:
-    path: /v2/notes/a41a632988f9
-- name: 014_vless_151.101.36.235_443_55545e19ef
+    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
+    short-id: 11979c0c9b2da371
+    spider-x: /
+- name: 006_Germany_BL_71fe7045f4
   type: vless
   server: 151.101.36.235
   port: 443
@@ -197,380 +79,29 @@ proxies:
   network: xhttp
   tls: true
   servername: accounts.fastly.com
-  client-fingerprint: chrome
-  xhttp-opts:
-    host: ovd13.global.ssl.fastly.net
-    mode: auto
-- name: 015_vless_5.104.74.162_8443_00cf0fd97d
-  type: vless
-  server: 5.104.74.162
-  port: 8443
-  uuid: d6a6ba0c-9e30-4636-b5ea-b78154e3203e
-  udp: true
-  network: tcp
-  tls: true
-  servername: uk-room07.filesnap.tech
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: dbef98744832b751
-- name: 016_AetrisVPN_a5bc7e1f76
-  type: vless
-  server: sundaylanzgem.site
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: sundaylanzgem.site
   client-fingerprint: safari
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 017_327ms_e1259f709a
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 018_vless_130.78.25.16_47443_e578955f8a
-  type: vless
-  server: 130.78.25.16
-  port: 47443
-  uuid: 38628f72-783b-4605-8530-67cc8567bab5
-  udp: true
-  network: tcp
-  tls: true
-  servername: ge-1.waspguard.ru
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: zHU0WVJ6mMqTgBj6hEt_B0yRnegzdTGGLBydGyAPvlk
-    short-id: ae97223a8f799001
-- name: 019_vless_50.7.169.242_443_0c0af8ee9e
-  type: vless
-  server: 50.7.169.242
-  port: 443
-  uuid: 33f3c1ee-f026-4f3f-bed3-8c7c01de8a96
-  udp: true
-  network: tcp
-  tls: true
-  servername: user.betust.net
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: TXP6hQVE4PdXDEdDk2k_5_f92jcOKZ15Fuw14jCJTQg
-    short-id: c1064ddb
-- name: 020_Lithuania_CIDR_1c13103fc5
-  type: vless
-  server: lorettmay.top
-  port: 443
-  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
-  udp: true
-  network: ws
-  tls: true
-  servername: lorettmay.top
-  alpn:
-  - http%2525252F1.1
-  ws-opts:
-    path: /blog/posts
-- name: 021_Poland_BL_45062c5da0
-  type: vless
-  server: 151.101.36.227
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: chrome
   alpn:
   - h3
   xhttp-opts:
     path: /
-    host: oh1.global.ssl.fastly.net
+    host: ovd13.global.ssl.fastly.net
     mode: auto
-- name: 022_367ms_bc65e7295a
+- name: 007_AetrisVPN_b58922c36f
   type: vless
-  server: qq.utiltools.site
+  server: 188.130.209.212
   port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
   udp: true
   network: tcp
   tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 023_France_BL_9b566e2f24
-  type: vless
-  server: 151.101.36.61
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: firefox
-  xhttp-opts:
-    path: /?@MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI?ed=2048
-    host: ovd10.global.ssl.fastly.net
-    mode: auto
-- name: 024_vless_154.86.119.227_443_baae4c45dc
-  type: vless
-  server: 154.86.119.227
-  port: 443
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  udp: true
-  network: tcp
-  tls: true
-  servername: be.golangwikito.cfd
+  servername: thumbs.mycdn-io.ru
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 6sEquzhND4g7HGZptDdnO-B0UjAKib9Pcjkd2_IoC2s
-    short-id: 5f0e533560ec8582
-- name: 025_The_Netherlands_CIDR_e5411f77c5
-  type: vless
-  server: chat.gpt.prem-ai.shop
-  port: 443
-  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
-  udp: true
-  network: ws
-  tls: true
-  servername: chat.gpt.prem-ai.shop
-  client-fingerprint: chrome
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-    headers:
-      Host: chat.gpt.prem-ai.shop
-- name: 026_LTE_5G_d229bb0901
-  type: vless
-  server: 78.159.250.107
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 027_vless_94.183.164.119_443_ce8db44e0f
-  type: vless
-  server: 94.183.164.119
-  port: 443
-  uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  udp: true
-  network: xhttp
-  tls: true
-  servername: tgnl2.blog-forme.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 31_G-lTr8GVS33I-ySfmMOXJ7SzpS48Ela7xXeT9D1Y
-    short-id: 29f834cf893710f9
-  xhttp-opts:
-    path: /v2/notes/86cf7ba6ede1
-    host: tgnl2.blog-forme.ru
-- name: 028_433ms_a843c02d54
-  type: vless
-  server: hollandlanzerotte.xyz
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: hollandlanzerotte.xyz
-  client-fingerprint: edge
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
-- name: 029_vless_212.69.135.145_8443_8051404ec3
-  type: vless
-  server: 212.69.135.145
-  port: 8443
-  uuid: d6a6ba0c-9e30-4636-b5ea-b78154e3203e
-  udp: true
-  network: tcp
-  tls: true
-  servername: uk-room05.filesnap.tech
-  client-fingerprint: ios
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
-    short-id: 7da3ba09a037e956
-- name: 030_vless_147.45.210.56_443_d1a2cb549a
-  type: vless
-  server: 147.45.210.56
-  port: 443
-  uuid: d2fc9881-cbc9-421f-a782-b6f7d274b787
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.google.com
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: LvFqyJeNirhMzd15XfdJ-MW3i0BZs5mXU1c-Llox8hQ
-    short-id: c97e0a447f8b2811
-- name: 031_vless_13.143.175.47_443_8a206e8d4d
-  type: vless
-  server: 13.143.175.47
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: hollandlanzerotte.xyz
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
-- name: 032_vless_130.78.25.15_47443_7210d3ae9e
-  type: vless
-  server: 130.78.25.15
-  port: 47443
-  uuid: 38628f72-783b-4605-8530-67cc8567bab5
-  udp: true
-  network: tcp
-  tls: true
-  servername: ge-2.waspguard.ru
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ITUrGb0T4zee52YrsT7lPXvdPmBDDN5R9nh1zBoVnkg
-    short-id: ae97223a8f799002
-- name: 033_vless_sundaylanzgem.site_443_263cf397cb
-  type: vless
-  server: sundaylanzgem.site
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: sundaylanzgem.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 034_AetrisVPN_38cf106fce
-  type: vless
-  server: 187.7.206.49
-  port: 443
-  uuid: 976f82d9-0e6b-40ed-9c09-cafd06c4bc98
-  udp: true
-  network: tcp
-  tls: true
-  servername: de166.mech-pro.online
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
-    short-id: 16e0f049
-- name: 035_vless_5.104.74.162_8443_c2ad4a274d
-  type: vless
-  server: 5.104.74.162
-  port: 8443
-  uuid: 1ad0852d-958b-4a50-863d-8ef3844619ca
-  udp: true
-  network: tcp
-  tls: true
-  servername: uk-room07.filesnap.tech
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: dbef98744832b751
-- name: 036_311ms_5860b09570
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 037_vless_87.120.126.43_443_33d616a358
-  type: vless
-  server: 87.120.126.43
-  port: 443
-  uuid: cbd6c099-5d4f-467e-86d2-92cb292892fb
-  udp: true
-  network: tcp
-  tls: true
-  servername: gr.connect-qik.uk
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-- name: 038_vless_144.31.166.72_443_0188eec77a
-  type: vless
-  server: 144.31.166.72
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: gemsubbgem.world
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
-- name: 039_342ms_95ec579479
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 040_The_Netherlands_CIDR_84199974ef
-  type: vless
-  server: chat.gpt.prem-ai.shop
-  port: 443
-  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
-  udp: true
-  network: ws
-  tls: true
-  servername: chat.gpt.prem-ai.shop
-  alpn:
-  - http%25252F1.1
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-- name: 041_AetrisVPN_7adc6297da
-  type: vless
-  server: 185.178.208.167
-  port: 443
-  uuid: 4662bf2b-af58-0001-ae5f-ef3d7d3a624f
-  udp: true
-  network: ws
-  tls: true
-  servername: mbr.rkn-pediki.site
-  client-fingerprint: ios
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /session
-    headers:
-      Host: mbr.rkn-pediki.site
-- name: 042_France_BL_9192b6736d
+    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
+    short-id: 11979c0c9b2da371
+    spider-x: /
+- name: 008_France_BL_73ac762ea6
   type: vless
   server: 151.101.36.88
   port: 443
@@ -579,32 +110,30 @@ proxies:
   network: xhttp
   tls: true
   servername: accounts.fastly.com
-  client-fingerprint: ios
+  client-fingerprint: safari
   alpn:
   - h3
   xhttp-opts:
     path: /
     host: ovd5.global.ssl.fastly.net
     mode: auto
-- name: 043_United_Kingdom_CIDR_dc7500c3b6
+- name: 009_AetrisVPN_5459b1d31b
   type: vless
-  server: 138.16.249.118
-  port: 14443
-  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+  server: 83.217.201.82
+  port: 443
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
   udp: true
-  network: ws
+  network: tcp
   tls: true
-  servername: lt.neuroblur.top
+  servername: skvoz-dpi.com
   client-fingerprint: firefox
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /api/generate
-    headers:
-      Host: lt.neuroblur.top
-- name: 044_Germany_BL_bdd19e1bbe
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: 93ae75024604f796
+- name: 010_Poland_BL_9aad9eda7d
   type: vless
-  server: 151.101.36.235
+  server: 151.101.36.227
   port: 443
   uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
   udp: true
@@ -613,95 +142,66 @@ proxies:
   servername: accounts.fastly.com
   xhttp-opts:
     path: /
-    host: ovd13.global.ssl.fastly.net
+    host: oh1.global.ssl.fastly.net
     mode: auto
-- name: 045_AetrisVPN_0074ad683a
+- name: 011_France_BL_175b3442cc
   type: vless
-  server: 94.183.164.119
-  port: 443
-  uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  udp: true
-  network: xhttp
-  tls: true
-  servername: tgnl2.blog-forme.ru
-  client-fingerprint: edge
-  reality-opts:
-    public-key: 31_G-lTr8GVS33I-ySfmMOXJ7SzpS48Ela7xXeT9D1Y
-    short-id: 29f834cf893710f9
-  xhttp-opts:
-    path: /v2/notes/86cf7ba6ede1
-    mode: auto
-- name: 046_The_Netherlands_CIDR_d18f8c2a6d
-  type: vless
-  server: chat.gpt.prem-ai.shop
-  port: 443
-  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
-  udp: true
-  network: ws
-  tls: true
-  servername: chat.gpt.prem-ai.shop
-  client-fingerprint: chrome
-  alpn:
-  - http%252F1.1
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-- name: 047_vless_151.101.36.235_443_06ae06e86a
-  type: vless
-  server: 151.101.36.235
+  server: 151.101.36.2
   port: 443
   uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
   udp: true
   network: xhttp
   tls: true
   servername: accounts.fastly.com
-  client-fingerprint: chrome
   xhttp-opts:
-    host: ovd13.global.ssl.fastly.net
+    path: /
+    host: oh4.global.ssl.fastly.net
     mode: auto
-- name: 048_United_Kingdom_CIDR_8ab01045f0
+- name: 012_Poland_BL_ea93b109ad
   type: vless
-  server: lt.krevetkabs111.net
-  port: 14443
-  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
-  udp: true
-  network: ws
-  tls: true
-  servername: lt.krevetkabs111.net
-  ws-opts:
-    path: /api/generate
-- name: 049_France_Roubaix_BL_e5a3255985
-  type: vless
-  server: 185.221.213.22
-  port: 443
-  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
-  udp: true
-  network: ws
-  tls: true
-  servername: Frfast11.onlineai.pro
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /assets/sync-6d2f4a
-    headers:
-      Host: Frfast11.onlineai.pro
-- name: 050_Poland_BL_76c0c8ed1f
-  type: vless
-  server: 151.101.36.128
+  server: 151.101.36.227
   port: 443
   uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
   udp: true
   network: xhttp
   tls: true
   servername: accounts.fastly.com
-  client-fingerprint: safari
+  client-fingerprint: firefox
+  xhttp-opts:
+    host: oh1.global.ssl.fastly.net
+    mode: auto
+- name: 013_Poland_BL_786c08c74c
+  type: vless
+  server: 151.101.36.227
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: edge
   alpn:
   - h3
   xhttp-opts:
     path: /
-    host: ovd7.global.ssl.fastly.net
+    host: oh1.global.ssl.fastly.net
     mode: auto
-- name: 051_AetrisVPN_t.me_rjsxrd_7a7c347b26
+- name: 014_vless_188.130.209.212_443_1688e8499a
+  type: vless
+  server: 188.130.209.212
+  port: 443
+  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
+  udp: true
+  network: tcp
+  tls: true
+  servername: thumbs.mycdn-io.ru
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
+    short-id: 11979c0c9b2da371
+    spider-x: /
+- name: 015_AetrisVPN_t.me_rjsxrd_7a7c347b26
   type: vless
   server: 95.129.234.108
   port: 8443
@@ -717,66 +217,320 @@ proxies:
     path: /ccxf5snr06b8xxb6
     host: fafeqdhlett2p5la6d.cdn.cachefleet.com
     mode: auto
-- name: 052_France_CIDR_t.me_rjsxrd_629690958c
+- name: 016_AetrisVPN_655f79e357
   type: vless
-  server: frfast11.onlineai.pro
+  server: 188.130.209.212
   port: 443
-  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
   udp: true
-  network: ws
+  network: tcp
   tls: true
-  servername: Frfast11.onlineai.pro
+  servername: thumbs.mycdn-io.ru
   client-fingerprint: firefox
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /assets/sync-6d2f4a
-    headers:
-      Host: Frfast11.onlineai.pro
-- name: 053_AetrisVPN_t.me_rjsxrd_12c69b6554
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
+    short-id: 11979c0c9b2da371
+- name: 017_AetrisVPN_089e828472
   type: vless
-  server: 95.129.234.108
-  port: 8443
-  uuid: b229d38c-35ec-4a0b-9c86-8fceba243d6c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: linden-crest.cdn.cachefleet.com
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  xhttp-opts:
-    path: /ccxf5snr06b8xxb6
-    host: fafeqdhlett2p5la6d.cdn.cachefleet.com
-    mode: auto
-- name: 054_Germany_BL_5cabec6b46
-  type: vless
-  server: 151.101.36.235
+  server: sundaylanzgem.site
   port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 018_DE_VLESS_t.me_rjsxrd_95437473c6
+  type: vless
+  server: de166.mech-pro.online
+  port: 443
+  uuid: 976f82d9-0e6b-40ed-9c09-cafd06c4bc98
+  udp: true
+  network: tcp
+  tls: true
+  servername: de166.mech-pro.online
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: 16e0f049
+- name: 019_326ms_03df1b4af9
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 020_418ms_281237f134
+  type: vless
+  server: gemsubbgem.world
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: gemsubbgem.world
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
+- name: 021_AetrisVPN_7e20ed94b7
+  type: vless
+  server: 188.130.209.212
+  port: 443
+  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
+  udp: true
+  network: tcp
+  tls: true
+  servername: thumbs.mycdn-io.ru
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
+    short-id: 11979c0c9b2da371
+- name: 022_AetrisVPN_t.me_rjsxrd_0d9bb1466d
+  type: vless
+  server: 83.217.201.82
+  port: 443
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  udp: true
+  network: tcp
+  tls: true
+  servername: skvoz-dpi.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: d1579a8745398e34
+- name: 023_vless_151.101.36.253_443_0539f16b54
+  type: vless
+  server: 151.101.36.253
+  port: 443
+  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
   udp: true
   network: xhttp
   tls: true
   servername: accounts.fastly.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   xhttp-opts:
-    host: ovd13.global.ssl.fastly.net
+    host: ovd9.global.ssl.fastly.net
     mode: auto
-- name: 055_vless_154.86.119.227_443_5c39db2cef
+- name: 024_AetrisVPN_c360fa2ffd
   type: vless
-  server: 154.86.119.227
+  server: 185.178.208.167
   port: 443
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  uuid: 4662bf2b-af58-0001-ae5f-ef3d7d3a624f
+  udp: true
+  network: ws
+  tls: true
+  servername: mbr.rkn-pediki.site
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /session
+    headers:
+      Host: mbr.rkn-pediki.site
+- name: 025_327ms_e1259f709a
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
   udp: true
   network: tcp
   tls: true
-  servername: be.golangwikito.cfd
+  servername: qq.utiltools.site
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 6sEquzhND4g7HGZptDdnO-B0UjAKib9Pcjkd2_IoC2s
-    short-id: 01d2246b4bd92f49
-- name: 056_The_Netherlands_CIDR_4e2e8ed159
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 026_367ms_bc65e7295a
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 027_Anycast-IP_BL_bb496621fc
+  type: vless
+  server: 162.159.198.1
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: 028_LTE_5G_d229bb0901
+  type: vless
+  server: 78.159.250.107
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 029_The_Netherlands_CIDR_0077d6399d
+  type: vless
+  server: ru1.cdn-space.org
+  port: 443
+  uuid: f219ffe2-bc36-495f-a83d-8f9ac4af05fd
+  udp: true
+  network: xhttp
+  tls: true
+  servername: ru1.cdn-space.org
+  alpn:
+  - h2
+  xhttp-opts:
+    path: /assets/api/v3/connect/
+    host: ru1.cdn-space.org
+    mode: auto
+- name: 030_vless_201.8.81.117_443_7f61a70a95
+  type: vless
+  server: 201.8.81.117
+  port: 443
+  uuid: 172d15c6-f308-5473-aa40-d661b1b8c30b
+  udp: true
+  network: xhttp
+  tls: true
+  servername: ethz.ch
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: k7RqsI1Kip_ORgCMLeDHjyleJFoN0AJqxOXXCQnGjG4
+    short-id: 6266751745c4f0df
+  xhttp-opts:
+    path: /api/v1/stream
+    host: www.ethz.ch
+    mode: packet-up
+- name: 031_t.me_freekesha21_1f9becc677
+  type: vless
+  server: 176.108.245.237
+  port: 443
+  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
+  udp: true
+  network: tcp
+  tls: true
+  servername: tfusq-ru-40sb.fade.mom
+  client-fingerprint: safari
+- name: 032_vless_50.7.169.242_443_0c0af8ee9e
+  type: vless
+  server: 50.7.169.242
+  port: 443
+  uuid: 33f3c1ee-f026-4f3f-bed3-8c7c01de8a96
+  udp: true
+  network: tcp
+  tls: true
+  servername: user.betust.net
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TXP6hQVE4PdXDEdDk2k_5_f92jcOKZ15Fuw14jCJTQg
+    short-id: c1064ddb
+- name: 033_CYBERPORTAL_White_List_Lite_16_t.me_rjsxrd_8648226b7e
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 034_CYBERPORTAL_White_Keys_110_t.me_rjsxrd_ffad8bbd55
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 035_United_Kingdom_Manchester_BL_e506421de2
+  type: vless
+  server: 138.16.249.118
+  port: 14443
+  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+  udp: true
+  network: ws
+  tls: true
+  servername: lt.neuroblur.top
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /api/generate
+    headers:
+      Host: lt.neuroblur.top
+- name: 036_AetrisVPN_a8c043eb39
+  type: vless
+  server: sundaylanzgem.site
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 037_vless-1924318482_81518efa74
+  type: vless
+  server: edge.bookmai.com
+  port: 443
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+  udp: true
+  network: tcp
+  tls: true
+  servername: mother-earth.fyi
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- name: 038_336ms_b65833ee8a
+  type: vless
+  server: hollandlanzerotte.xyz
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: hollandlanzerotte.xyz
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
+- name: 039_The_Netherlands_CIDR_0ef881e022
   type: vless
   server: chat.gpt.prem-ai.shop
   port: 443
@@ -786,12 +540,64 @@ proxies:
   tls: true
   servername: chat.gpt.prem-ai.shop
   alpn:
-  - http/1.1
+  - http%2F1.1
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+- name: 040_vless_179.254.190.22_2443_18b0381ef4
+  type: vless
+  server: 179.254.190.22
+  port: 2443
+  uuid: a9496f88-4c9f-4011-93a7-8b14c2101684
+  udp: true
+  network: tcp
+  tls: true
+  servername: node21.overcdn.ru
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs
+    short-id: a20d3ed244c76426
+- name: 041_AetrisVPN_ab5605bb7a
+  type: vless
+  server: 201.58.185.103
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 042_1129ms_ef83a34f82
+  type: vless
+  server: gemsubbgem.world
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: gemsubbgem.world
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
+- name: 043_Anycast-IP_BL_18c57a27a0
+  type: vless
+  server: 172.67.74.177
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fp=chrome
     headers:
-      Host: chat.gpt.prem-ai.shop
-- name: 057_AetrisVPN_t.me_rjsxrd_7c4b141858
+      Host: fs.qicai99.com
+- name: 044_AetrisVPN_t.me_rjsxrd_7c4b141858
   type: vless
   server: 95.129.234.113
   port: 8443
@@ -807,28 +613,23 @@ proxies:
     path: /ccxf5snr06b8xxb6
     host: is-tw-relay.cdn.cachefleet.com
     mode: auto
-- name: 058_AetrisVPN_089e828472
+- name: 045_France_BL_d282daec5b
   type: vless
-  server: sundaylanzgem.site
+  server: 151.101.36.61
   port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
   udp: true
-  network: tcp
+  network: xhttp
   tls: true
-  servername: sundaylanzgem.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
-- name: 059_hysteria2_94.183.164.119_24403_5145945ee0
-  type: hysteria2
-  server: 94.183.164.119
-  port: 24403
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  tls: true
-  udp: true
-  servername: docs.blog-forme.ru
-- name: 060_CYBERPORTAL_White_Keys_110_t.me_rjsxrd_ffad8bbd55
+  servername: accounts.fastly.com
+  client-fingerprint: safari
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd10.global.ssl.fastly.net
+    mode: auto
+- name: 046_311ms_5860b09570
   type: vless
   server: qq.utiltools.site
   port: 443
@@ -837,11 +638,38 @@ proxies:
   network: tcp
   tls: true
   servername: qq.utiltools.site
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
     public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 061_1003ms_024655bf62
+- name: 047_The_Netherlands_CIDR_8b097301ff
+  type: vless
+  server: chat.gpt.prem-ai.shop
+  port: 443
+  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
+  udp: true
+  network: ws
+  tls: true
+  servername: chat.gpt.prem-ai.shop
+  client-fingerprint: safari
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+- name: 048_329ms_75f43f9fbc
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 049_679ms_04007fa1a6
   type: vless
   server: gemsubbgem.world
   port: 443
@@ -854,89 +682,36 @@ proxies:
   flow: xtls-rprx-vision
   reality-opts:
     public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
-- name: 062_vless_89.105.195.151_443_d4b2d84fe2
+- name: 050_428ms_716517f55e
   type: vless
-  server: 89.105.195.151
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: hub.mediacorphub.org
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: hub.v1.ObjectService
-- name: 063_France_BL_d8ea263a76
-  type: vless
-  server: 151.101.36.61
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: chrome
-  alpn:
-  - h3
-  xhttp-opts:
-    path: /
-    host: ovd10.global.ssl.fastly.net
-    mode: auto
-- name: 064_France_BL_2ffff15b6c
-  type: vless
-  server: 151.101.36.201
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: ios
-  alpn:
-  - h3
-  xhttp-opts:
-    path: /
-    host: oh6.global.ssl.fastly.net
-    mode: auto
-- name: 065_The_Netherlands_CIDR_096cd9269e
-  type: vless
-  server: chat.gpt.prem-ai.shop
-  port: 443
-  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
-  udp: true
-  network: ws
-  tls: true
-  servername: chat.gpt.prem-ai.shop
-  client-fingerprint: chrome
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-- name: 066_France_BL_175b3442cc
-  type: vless
-  server: 151.101.36.2
-  port: 443
-  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  xhttp-opts:
-    path: /
-    host: oh4.global.ssl.fastly.net
-    mode: auto
-- name: 067_350ms_b33281b015
-  type: vless
-  server: hollandlanzerotte.xyz
+  server: gemsubbgem.world
   port: 443
   uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   udp: true
   network: tcp
   tls: true
-  servername: hollandlanzerotte.xyz
-  client-fingerprint: qq
+  servername: gemsubbgem.world
+  client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
-- name: 068_AetrisVPN_f42c7f4df6
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
+- name: 051_AetrisVPN_t.me_rjsxrd_12c69b6554
+  type: vless
+  server: 95.129.234.108
+  port: 8443
+  uuid: b229d38c-35ec-4a0b-9c86-8fceba243d6c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: linden-crest.cdn.cachefleet.com
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  xhttp-opts:
+    path: /ccxf5snr06b8xxb6
+    host: fafeqdhlett2p5la6d.cdn.cachefleet.com
+    mode: auto
+- name: 052_AetrisVPN_f42c7f4df6
   type: vless
   server: 95.129.234.113
   port: 8443
@@ -952,36 +727,59 @@ proxies:
     path: /ccxf5snr06b8xxb6
     host: is-tw-relay.cdn.cachefleet.com
     mode: auto
-- name: 069_Poland_BL_9aad9eda7d
+- name: 053_AetrisVPN_50cda91701
   type: vless
-  server: 151.101.36.227
+  server: 201.58.185.103
   port: 443
-  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   udp: true
-  network: xhttp
+  network: tcp
   tls: true
-  servername: accounts.fastly.com
-  xhttp-opts:
-    path: /
-    host: oh1.global.ssl.fastly.net
-    mode: auto
-- name: 070_vless_9.247.54.228_443_7a9ff5240c
-  type: vless
-  server: 9.247.54.228
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  udp: true
-  network: xhttp
-  tls: true
-  servername: fc82dfx.nl8.h1clayd.click
-  client-fingerprint: firefox
+  servername: sundaylanzgem.site
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: dtO7khFLUkpFDQOtNzo4Th4hJKLoPSY2VtD_9k4Hgiw
-    short-id: 7b2b1a14a6e0630d
-  xhttp-opts:
-    path: /0616f2d729aa
-    host: fc82dfx.nl8.h1clayd.click
-- name: 071_428ms_716517f55e
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 054_Anycast-IP_BL_8108373e04
+  type: vless
+  server: fs.qicai99.com
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /
+    headers:
+      Host: fs.qicai99.com
+- name: 055_375ms_7d0ba6048f
+  type: vless
+  server: hollandlanzerotte.xyz
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: hollandlanzerotte.xyz
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
+- name: 056_AetrisVPN_a5bc7e1f76
+  type: vless
+  server: sundaylanzgem.site
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 057_427ms_56bf2fa4d9
   type: vless
   server: gemsubbgem.world
   port: 443
@@ -990,336 +788,40 @@ proxies:
   network: tcp
   tls: true
   servername: gemsubbgem.world
-  client-fingerprint: firefox
+  client-fingerprint: ios
   flow: xtls-rprx-vision
   reality-opts:
     public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
-- name: 072_vless_94.183.164.119_8443_cee3e37325
+- name: 058_vless_151.101.36.227_443_36d4cee221
   type: vless
-  server: 94.183.164.119
-  port: 8443
-  uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  udp: true
-  network: tcp
-  tls: true
-  servername: tgnl2.blog-forme.ru
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 31_G-lTr8GVS33I-ySfmMOXJ7SzpS48Ela7xXeT9D1Y
-    short-id: 29f834cf893710f9
-- name: 073_vless_89.105.195.148_443_6ba5a95d4e
-  type: vless
-  server: 89.105.195.148
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: get.mediacorphub.org
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: gw.v2.PushService
-- name: 074_United_Kingdom_CIDR_t.me_rjsxrd_b28c1ecceb
-  type: vless
-  server: lt.krevetkabs111.net
-  port: 14443
-  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
-  udp: true
-  network: ws
-  tls: true
-  servername: lt.krevetkabs111.net
-  client-fingerprint: firefox
-  ws-opts:
-    path: /api/generate
-- name: 075_France_BL_b56c6c18e6
-  type: vless
-  server: 151.101.36.88
+  server: 151.101.36.227
   port: 443
   uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
   udp: true
   network: xhttp
   tls: true
   servername: accounts.fastly.com
+  client-fingerprint: chrome
   xhttp-opts:
-    path: /
-    host: ovd5.global.ssl.fastly.net
+    host: oh1.global.ssl.fastly.net
     mode: auto
-- name: 076_Poland_BL_5efc16d1d5
+- name: 059_AetrisVPN_7adc6297da
   type: vless
-  server: 151.101.36.128
+  server: 185.178.208.167
   port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  uuid: 4662bf2b-af58-0001-ae5f-ef3d7d3a624f
   udp: true
-  network: xhttp
+  network: ws
   tls: true
-  servername: accounts.fastly.com
+  servername: mbr.rkn-pediki.site
   client-fingerprint: ios
   alpn:
-  - h3
-  xhttp-opts:
-    path: /
-    host: ovd7.global.ssl.fastly.net
-    mode: auto
-- name: 077_Netherlands_TG_HardVpn_robot_t.me_rjsxrd_68556ea097
-  type: vless
-  server: 195.206.235.202
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  udp: true
-  network: tcp
-  tls: true
-  servername: 4935e4t.de25.h1clayd.click
-  client-fingerprint: safari
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-    short-id: 6976d670818644cc
-- name: 078_AetrisVPN_t.me_rjsxrd_f0db21eb9f
-  type: vless
-  server: 176.108.245.237
-  port: 443
-  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
-  udp: true
-  network: tcp
-  tls: true
-  servername: tfusq-ru-40sb.fade.mom
-  client-fingerprint: qq
-  alpn:
-  - h2
   - http/1.1
-- name: 079_vless-1924318482_81518efa74
-  type: vless
-  server: edge.bookmai.com
-  port: 443
-  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-  udp: true
-  network: tcp
-  tls: true
-  servername: mother-earth.fyi
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-- name: 080_Netherlands_TG_HardVpn_robot_t.me_rjsxrd_05b8a6295f
-  type: vless
-  server: 89.105.195.148
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: api.mediacorphub.org
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: gw.v2.PushService
-    multi-mode: true
-- name: 081_Anycast-IP_BL_18c57a27a0
-  type: vless
-  server: 172.67.74.177
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  client-fingerprint: chrome
   ws-opts:
-    path: /fp=chrome
+    path: /session
     headers:
-      Host: fs.qicai99.com
-- name: 082_t.me_freekesha21_ccb8a483fd
-  type: vless
-  server: 176.108.245.237
-  port: 443
-  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
-  udp: true
-  network: tcp
-  tls: true
-  servername: tfusq-ru-40sb.fade.mom
-  client-fingerprint: edge
-  alpn:
-  - h2
-  - http/1.1
-- name: 083_France_BL_b7e56dc6a0
-  type: vless
-  server: 151.101.36.61
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: chrome
-  xhttp-opts:
-    host: ovd10.global.ssl.fastly.net
-    mode: auto
-- name: 084_vless_94.183.164.96_8443_68bc565129
-  type: vless
-  server: 94.183.164.96
-  port: 8443
-  uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  udp: true
-  network: tcp
-  tls: true
-  servername: tgnl.blog-forme.ru
-  client-fingerprint: ios
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: qkwh_hd7pYmvQcABVy4IHMF9l_RtAOqqFqRhkRBVyQI
-    short-id: e114741e080317d4
-- name: 085_France_BL_6c90c0a0a8
-  type: vless
-  server: 151.101.36.2
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: safari
-  alpn:
-  - h3
-  xhttp-opts:
-    path: /
-    host: oh4.global.ssl.fastly.net
-    mode: auto
-- name: 086_Anycast-IP_BL_bb496621fc
-  type: vless
-  server: 162.159.198.1
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- name: 087_France_BL_75b7910d61
-  type: vless
-  server: 151.101.36.61
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: chrome
-  xhttp-opts:
-    path: /?@MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI?ed=2048
-    host: ovd10.global.ssl.fastly.net
-    mode: auto
-- name: 088_326ms_5420fd098e
-  type: vless
-  server: swedenafteraventura.space
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: swedenafteraventura.space
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY
-- name: 089_Poland_BL_bf053ae28e
-  type: vless
-  server: 151.101.36.128
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: edge
-  alpn:
-  - h3
-  xhttp-opts:
-    path: /
-    host: ovd7.global.ssl.fastly.net
-    mode: auto
-- name: 090_vless_89.105.195.151_443_b7a7aa3843
-  type: vless
-  server: 89.105.195.151
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: edge.mediacorphub.org
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: hub.v1.ObjectService
-- name: 091_www.v2nodes.com_vless-FI-1..._11_e9b3f41138
-  type: vless
-  server: 138.124.49.108
-  port: 8443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- name: 092_CYBERPORTAL_White_List_Lite_16_t.me_rjsxrd_8648226b7e
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 093_France_BL_3fd4dc0898
-  type: vless
-  server: 151.101.36.88
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: chrome
-  alpn:
-  - h3
-  xhttp-opts:
-    path: /
-    host: ovd5.global.ssl.fastly.net
-    mode: auto
-- name: 094_Anycast-IP_BL_53f7c7e721
-  type: vless
-  server: 172.67.74.177
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp
-    headers:
-      Host: fs.qicai99.com
-- name: 095_vless_89.105.195.148_443_24917134ef
-  type: vless
-  server: 89.105.195.148
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: api.mediacorphub.org
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: gw.v2.PushService
-- name: 096_vless-1936406828_e5ff6da17c
+      Host: mbr.rkn-pediki.site
+- name: 060_vless-1936406828_e5ff6da17c
   type: vless
   server: edge.bookmai.com
   port: 443
@@ -1333,203 +835,109 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     spider-x: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
-- name: 097_DE_VLESS_t.me_rjsxrd_95437473c6
+- name: 061_1587ms_d9130bc6e2
   type: vless
-  server: de166.mech-pro.online
+  server: gemsubbgem.world
   port: 443
-  uuid: 976f82d9-0e6b-40ed-9c09-cafd06c4bc98
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   udp: true
   network: tcp
   tls: true
-  servername: de166.mech-pro.online
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
-    short-id: 16e0f049
-- name: 098_The_Netherlands_The_Netherlands_89.105.195.157_RaViraNet_t.m_75b764edd4
-  type: vless
-  server: edge.mediacorphub.org
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: edge.mediacorphub.org
-  grpc-opts:
-    grpc-service-name: hub.v1.ObjectService
-    multi-mode: true
-- name: 099_vless_edge.mediacorphub.org_443_66a077ee9c
-  type: vless
-  server: edge.mediacorphub.org
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: edge.mediacorphub.org
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: hub.v1.ObjectService
-- name: 100_vless_89.105.195.148_443_3122253652
-  type: vless
-  server: 89.105.195.148
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: stats.mediacorphub.org
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: gw.v2.PushService
-- name: 101_France_BL_1f38db9a92
-  type: vless
-  server: 151.101.36.2
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
+  servername: gemsubbgem.world
   client-fingerprint: chrome
-  xhttp-opts:
-    host: oh4.global.ssl.fastly.net
-    mode: auto
-- name: 102_329ms_75f43f9fbc
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: safari
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 103_vless_109.120.134.181_443_602ad62120
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
+- name: 062_The_Netherlands_CIDR_cc0498632b
   type: vless
-  server: 109.120.134.181
+  server: chat.gpt.prem-ai.shop
   port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
   udp: true
   network: ws
   tls: true
-  servername: fs.qicai99.com
-  client-fingerprint: firefox
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-- name: 104_HUN_t.me_rjsxrd_3ab50c39c8
-  type: vless
-  server: 38.180.225.247
-  port: 2053
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: fs.qicai99.com
-- name: 105_vless_151.101.36.2_443_4c3f2c6966
-  type: vless
-  server: 151.101.36.2
-  port: 443
-  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: chrome
-  xhttp-opts:
-    host: oh4.global.ssl.fastly.net
-    mode: auto
-- name: 106_2407ms_176acdbe32
-  type: vless
-  server: stats.mediacorphub.org
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: stats.mediacorphub.org
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: gw.v2.PushService
-- name: 107_The_Netherlands_CIDR_t.me_rjsxrd_76e28a735c
-  type: vless
-  server: msk10.gacvpn.site
-  port: 443
-  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
-  udp: true
-  network: tcp
-  tls: true
-  servername: nl3-edge.gacvpn.site
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Caj4X3VjnHfdRQzWLmjFCiG_CGw0scYYni6UxVfBs38
-    short-id: db6a4219fb
-- name: 108_France_BL_d282daec5b
-  type: vless
-  server: 151.101.36.61
-  port: 443
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  udp: true
-  network: xhttp
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: safari
+  servername: chat.gpt.prem-ai.shop
   alpn:
-  - h3
-  xhttp-opts:
-    path: /
-    host: ovd10.global.ssl.fastly.net
-    mode: auto
-- name: 109_hysteria2_94.183.164.119_24433_cfb322c521
-  type: hysteria2
-  server: 94.183.164.119
-  port: 24433
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  tls: true
-  udp: true
-  servername: lakes.blog-forme.ru
-- name: 110_United_States_North_Bergen_BL_363b59f5f8
+  - http%252F1.1
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+- name: 063_vless_38.244.155.67_443_85e0751886
   type: vless
-  server: 172.67.199.126
-  port: 2053
-  uuid: e3149c82-00f6-4227-b2c0-b78f1dd81279
+  server: 38.244.155.67
+  port: 443
+  uuid: d651c9ab-b844-4420-b3d0-20d201ef5f55
+  udp: true
+  network: tcp
+  tls: true
+  servername: node-eu-1.nztpro.com
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: NLXltMEkWIxv9bL2J4XkPGb4oVwGbCkITCTXF-jVxAE
+    short-id: 2976f793571fb671
+- name: 064_The_Netherlands_CIDR_4e2e8ed159
+  type: vless
+  server: chat.gpt.prem-ai.shop
+  port: 443
+  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
   udp: true
   network: ws
   tls: true
-  servername: fast.145779.xyz
-  client-fingerprint: safari
+  servername: chat.gpt.prem-ai.shop
   alpn:
   - http/1.1
   ws-opts:
-    path: /ws-tesla
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
     headers:
-      Host: fast.145779.xyz
-- name: 111_Netherlands_TG_HardVpn_robot_t.me_rjsxrd_eb4582e11a
+      Host: chat.gpt.prem-ai.shop
+- name: 065_350ms_b33281b015
   type: vless
-  server: 195.206.235.202
+  server: hollandlanzerotte.xyz
   port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   udp: true
   network: tcp
   tls: true
-  servername: 4935e4t.de25.h1clayd.click
-  client-fingerprint: edge
+  servername: hollandlanzerotte.xyz
+  client-fingerprint: qq
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-    short-id: 6976d670818644cc
-- name: 112_vless_94.183.164.119_443_0bc4b4187a
+    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
+- name: 066_hysteria2_212.34.137.105_443_0fc0ca303e
+  type: hysteria2
+  server: 212.34.137.105
+  port: 443
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  tls: true
+  udp: true
+  servername: shorts.blog-forme.ru
+- name: 067_t.me_freekesha21_1fdcb03a81
+  type: vless
+  server: 176.108.245.237
+  port: 443
+  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
+  udp: true
+  network: tcp
+  tls: true
+  servername: tfusq-ru-40sb.fade.mom
+  client-fingerprint: ios
+  alpn:
+  - h2
+  - http/1.1
+- name: 068_The_Netherlands_CIDR_bbb176f25f
+  type: vless
+  server: chat.gpt.prem-ai.shop
+  port: 443
+  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
+  udp: true
+  network: ws
+  tls: true
+  servername: chat.gpt.prem-ai.shop
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+- name: 069_vless_94.183.164.119_443_0bc4b4187a
   type: vless
   server: 94.183.164.119
   port: 443
@@ -1544,7 +952,722 @@ proxies:
     short-id: 29f834cf893710f9
   xhttp-opts:
     path: /v2/notes/86cf7ba6ede1
-- name: 113_t.me_freekesha21_1e0320813b
+- name: 070_AetrisVPN_bfe0ea54d1
+  type: vless
+  server: 188.130.209.212
+  port: 443
+  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
+  udp: true
+  network: tcp
+  tls: true
+  servername: thumbs.mycdn-io.ru
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
+    short-id: 11979c0c9b2da371
+    spider-x: /
+- name: 071_1003ms_024655bf62
+  type: vless
+  server: gemsubbgem.world
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: gemsubbgem.world
+  client-fingerprint: edge
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
+- name: 072_France_CIDR_t.me_rjsxrd_884057b28c
+  type: vless
+  server: 185.221.213.22
+  port: 443
+  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+  udp: true
+  network: ws
+  tls: true
+  servername: Frfast11.onlineai.pro
+  client-fingerprint: firefox
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /assets/sync-6d2f4a
+    headers:
+      Host: Frfast11.onlineai.pro
+- name: 073_LTE_5G_df090b31c1
+  type: vless
+  server: 176.108.245.237
+  port: 443
+  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
+  udp: true
+  network: tcp
+  tls: true
+  servername: tfusq-ru-40sb.fade.mom
+  client-fingerprint: firefox
+- name: 074_AetrisVPN_b6ac1bbcd1
+  type: vless
+  server: 78.159.250.71
+  port: 443
+  uuid: c4d096c8-ace2-4c9e-800f-3fbc4035f8fe
+  udp: true
+  network: tcp
+  tls: true
+  servername: ru23.importmsk.net
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0kj3nmEYy4vsCMU9ydxawSoP-MLeIxpuXUjzFlYcz1E
+- name: 075_Germany_BL_34bf6cead5
+  type: vless
+  server: 151.101.36.235
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd13.global.ssl.fastly.net
+    mode: auto
+- name: 076_677ms_d707e5b609
+  type: vless
+  server: gemsubbgem.world
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: gemsubbgem.world
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
+- name: 077_Poland_BL_971472805e
+  type: vless
+  server: 151.101.36.253
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: android
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd9.global.ssl.fastly.net
+    mode: auto
+- name: 078_HKG_d8b9976106
+  type: vmess
+  server: 47.242.81.94
+  port: 52080
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: http
+  servername: openai.com
+  h2-opts:
+    path: /QQqun-737805443
+    host:
+    - openai.com
+- name: 079_CYBERPORTAL_White_Keys_266_t.me_rjsxrd_cae4031a36
+  type: vless
+  server: edge.bookmai.com
+  port: 443
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+  udp: true
+  network: tcp
+  tls: true
+  servername: mother-earth.fyi
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- name: 080_AetrisVPN_28782c2d94
+  type: vmess
+  server: 94.184.18.131
+  port: 44580
+  uuid: 45dc5086-f30d-4b34-aac4-612c074243c8
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 081_t.me_freekesha21_ccb8a483fd
+  type: vless
+  server: 176.108.245.237
+  port: 443
+  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
+  udp: true
+  network: tcp
+  tls: true
+  servername: tfusq-ru-40sb.fade.mom
+  client-fingerprint: edge
+  alpn:
+  - h2
+  - http/1.1
+- name: 082_dafei.de_05_t.me_rjsxrd_af7bbeb76f
+  type: vless
+  server: edge.bookmai.com
+  port: 443
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+  udp: true
+  network: tcp
+  tls: true
+  servername: mother-earth.fyi
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- name: 083_France_BL_b17a15f6f2
+  type: vless
+  server: 151.101.36.88
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: firefox
+  xhttp-opts:
+    host: ovd5.global.ssl.fastly.net
+    mode: auto
+- name: 084_421ms_6d50470486
+  type: vless
+  server: sundaylanzgem.site
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: sundaylanzgem.site
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: -BN9yCN0ECqxOPoJOan1-CIMEYc5e7wdJwaeDxsUM20
+- name: 085_Poland_BL_e72c17e86c
+  type: vless
+  server: 151.101.36.253
+  port: 443
+  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  xhttp-opts:
+    path: /
+    host: ovd9.global.ssl.fastly.net
+    mode: auto
+- name: 086_Germany_TG_HardVpn_robot_t.me_rjsxrd_479b9803a7
+  type: vless
+  server: 4935e4t.de25.h1clayd.click
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  udp: true
+  network: tcp
+  tls: true
+  servername: 4935e4t.de25.h1clayd.click
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: 6976d670818644cc
+- name: 087_t.me_freekesha21_ec427f244f
+  type: vless
+  server: 176.108.245.237
+  port: 443
+  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
+  udp: true
+  network: tcp
+  tls: true
+  servername: tfusq-ru-40sb.fade.mom
+  client-fingerprint: ios
+- name: 088_www.v2nodes.com_vless-FI_9af1b7ced8
+  type: vless
+  server: 109.120.134.181
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: 089_France_BL_9192b6736d
+  type: vless
+  server: 151.101.36.88
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: ios
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd5.global.ssl.fastly.net
+    mode: auto
+- name: 090_The_Netherlands_CIDR_3c02293227
+  type: vless
+  server: ru1.cdn-space.org
+  port: 443
+  uuid: f219ffe2-bc36-495f-a83d-8f9ac4af05fd
+  udp: true
+  network: xhttp
+  tls: true
+  servername: ru1.cdn-space.org
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  xhttp-opts:
+    path: /assets/api/v3/connect/
+    host: ru1.cdn-space.org
+    mode: auto
+- name: 091_DEU_t.me_rjsxrd_1f15fef598
+  type: vless
+  server: 109.120.134.181
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: fs.qicai99.com
+- name: 092_AetrisVPN_cea8adc465
+  type: vless
+  server: 185.32.6.222
+  port: 443
+  uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a
+  udp: true
+  network: tcp
+  tls: true
+  servername: lk.vkimages.io
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
+    short-id: 2f49bccf11150ef2
+- name: 093_vless_13.53.91.116_25278_bed024d508
+  type: vless
+  server: 13.53.91.116
+  port: 25278
+  uuid: 6e4e3601-41d5-4359-bcc4-00519c9005bf
+  udp: true
+  network: xhttp
+  tls: true
+  servername: gateway-sr-china.icloud.com
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 81ChLiGoNl-VyTW2VpTo5uSpe6MLnaozq7SJFEMnPVU
+    short-id: 1faa2db876
+    spider-x: /ac3a88f4364d5c3
+  xhttp-opts:
+    path: /t.me-SubGift
+    host: subgift.r7vx4-shadow-matrix.space
+    mode: auto
+- name: 094_www.v2nodes.com_vless-FI-1..._12_29e92f2473
+  type: vless
+  server: 138.124.124.157
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: 095_326ms_5420fd098e
+  type: vless
+  server: swedenafteraventura.space
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: swedenafteraventura.space
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY
+- name: 096_CYBERPORTAL_White_Keys_302_t.me_rjsxrd_0c66a1bbbb
+  type: vless
+  server: edge.bookmai.com
+  port: 443
+  uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+  udp: true
+  network: tcp
+  tls: true
+  servername: mother-earth.fyi
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- name: 097_vless_fduknew.titun.su_443_de5b6fc788
+  type: vless
+  server: fduknew.titun.su
+  port: 443
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  udp: true
+  network: tcp
+  tls: true
+  servername: bizorg.su
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+- name: 098_AetrisVPN_713b34d4cf
+  type: vless
+  server: dwedfs.whitenw.net
+  port: 8445
+  uuid: 84a56b88-2f89-4a57-b925-74abd5b7fd87
+  udp: true
+  network: tcp
+  tls: true
+  servername: passport.yandex.ru
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4
+- name: 099_Poland_BL_257008bb77
+  type: vless
+  server: 151.101.36.128
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: android
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd7.global.ssl.fastly.net
+    mode: auto
+- name: 100_AetrisVPN_ddfd6a466c
+  type: vless
+  server: dwedfs.whitenw.net
+  port: 8445
+  uuid: 84a56b88-2f89-4a57-b925-74abd5b7fd87
+  udp: true
+  network: tcp
+  tls: true
+  servername: passport.yandex.ru
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4
+- name: 101_Germany_BL_0572ac222f
+  type: vless
+  server: 151.101.36.235
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: edge
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd13.global.ssl.fastly.net
+    mode: auto
+- name: 102_t.me_freekesha21_6b8b13d791
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 103_vless_46.8.114.205_443_b77c80d941
+  type: vless
+  server: 46.8.114.205
+  port: 443
+  uuid: 3f25b15b-1777-4c08-9ade-60336ac92a82
+  udp: true
+  network: tcp
+  tls: true
+  servername: plov.plus-hit.ru
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: QsUgVxHyjCKdtYBnBGoEM74F3k9uc2kimLPbf_qAAAM
+    short-id: bf8b003cb32c968b
+- name: 104_The_Netherlands_CIDR_885a572192
+  type: vless
+  server: 185.173.179.218
+  port: 443
+  uuid: f219ffe2-bc36-495f-a83d-8f9ac4af05fd
+  udp: true
+  network: xhttp
+  tls: true
+  servername: ru1.cdn-space.org
+  client-fingerprint: firefox
+  xhttp-opts:
+    path: /assets/api/v3/connect/
+    host: ru1.cdn-space.org
+- name: 105_France_BL_343af0a59e
+  type: vless
+  server: 151.101.36.111
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  xhttp-opts:
+    host: ovd11.global.ssl.fastly.net
+    mode: auto
+- name: 106_AetrisVPN_4feb6cb3dd
+  type: vless
+  server: swedenafteraventura.space
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: swedenafteraventura.space
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY
+- name: 107_t.me_freekesha21_ff744ace73
+  type: vless
+  server: 176.108.245.237
+  port: 443
+  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
+  udp: true
+  network: tcp
+  tls: true
+  servername: tfusq-ru-40sb.fade.mom
+  alpn:
+  - h2
+  - http/1.1
+- name: 108_France_BL_9deaf92de6
+  type: vless
+  server: 151.101.36.201
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: firefox
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: oh6.global.ssl.fastly.net
+    mode: auto
+- name: 109_t.me_freekesha21_9b77552ea6
+  type: vless
+  server: 168.110.21.56
+  port: 18453
+  uuid: 1751bebc-1bf1-420c-8b9d-97157aad179b
+  udp: true
+  network: tcp
+- name: 110_France_BL_db4bdb4a21
+  type: vless
+  server: 151.101.36.88
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  xhttp-opts:
+    host: ovd5.global.ssl.fastly.net
+    mode: auto
+- name: 111_AetrisVPN_c15fe756cc
+  type: vless
+  server: dwedfs.whitenw.net
+  port: 8445
+  uuid: 84a56b88-2f89-4a57-b925-74abd5b7fd87
+  udp: true
+  network: tcp
+  tls: true
+  servername: passport.yandex.ru
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4
+- name: 112_China_Shenzhen_BL_7369075ea4
+  type: vmess
+  server: 39.108.113.127
+  port: 10086
+  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 113_France_BL_2ac196efcb
+  type: vless
+  server: 151.101.36.61
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: edge
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd10.global.ssl.fastly.net
+    mode: auto
+- name: 114_France_BL_3fd4dc0898
+  type: vless
+  server: 151.101.36.88
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd5.global.ssl.fastly.net
+    mode: auto
+- name: 115_China_Shenzhen_BL_e607213593
+  type: vmess
+  server: 39.108.113.127
+  port: 10086
+  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts: {}
+- name: 116_vless_151.101.36.128_443_81b00211fe
+  type: vless
+  server: 151.101.36.128
+  port: 443
+  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  xhttp-opts:
+    host: ovd7.global.ssl.fastly.net
+    mode: auto
+- name: 117_342ms_95ec579479
+  type: vless
+  server: qq.utiltools.site
+  port: 443
+  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  udp: true
+  network: tcp
+  tls: true
+  servername: qq.utiltools.site
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: 118_United_States_Piscataway_BL_6bd70a0788
+  type: vmess
+  server: 162.159.128.17
+  port: 443
+  uuid: c8b455ad-fff1-43e9-9af9-d97585c4534a
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  servername: ny-v2ray.ryin.vip
+  ws-opts:
+    path: /ryinsocksv2board
+    headers:
+      Host: ny-v2ray.ryin.vip
+- name: 119_AetrisVPN_67ec654842
+  type: vless
+  server: 78.159.245.40
+  port: 8445
+  uuid: 84a56b88-2f89-4a57-b925-74abd5b7fd87
+  udp: true
+  network: tcp
+  tls: true
+  servername: passport.yandex.ru
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4
+- name: 120_hysteria2_201.8.64.7_443_8ff80e729a
+  type: hysteria2
+  server: 201.8.64.7
+  port: 443
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  tls: true
+  udp: true
+  servername: nlll.obxodvpn.us
+- name: 121_t.me_freekesha21_954f27ed8d
+  type: vless
+  server: chatgpt.com
+  port: 443
+  uuid: c0dd2b42-41b1-4e9e-9876-e708b4204a6f
+  udp: true
+  network: ws
+  tls: true
+  servername: sk.subgift.cyou
+  client-fingerprint: unsafe
+  flow: xtls-rprx-vision
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /t.me-SubGift
+    headers:
+      Host: sk.subgift.cyou
+- name: 122_Poland_BL_103fb4b2e7
+  type: vless
+  server: 151.101.36.128
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd7.global.ssl.fastly.net
+    mode: auto
+- name: 123_t.me_freekesha21_1e0320813b
   type: vless
   server: 78.40.193.180
   port: 443
@@ -1561,261 +1684,22 @@ proxies:
     path: /assets/28ca4df9
     host: 78.40.193.180
     mode: auto
-- name: 114_t.me_freekesha21_1fdcb03a81
+- name: 124_327ms_4d15404c6c
   type: vless
-  server: 176.108.245.237
+  server: get.jarbook.net
   port: 443
-  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
+  uuid: dd5bed0b-ee77-481b-9f2c-250a632ddd9f
   udp: true
   network: tcp
   tls: true
-  servername: tfusq-ru-40sb.fade.mom
-  client-fingerprint: ios
-  alpn:
-  - h2
-  - http/1.1
-- name: 115_326ms_03df1b4af9
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
+  servername: get.jarbook.net
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 116_HKG_d8b9976106
-  type: vmess
-  server: 47.242.81.94
-  port: 52080
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: http
-  servername: openai.com
-  h2-opts:
-    path: /QQqun-737805443
-    host:
-    - openai.com
-- name: 117_LTE_5G_df090b31c1
-  type: vless
-  server: 176.108.245.237
-  port: 443
-  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
-  udp: true
-  network: tcp
-  tls: true
-  servername: tfusq-ru-40sb.fade.mom
-  client-fingerprint: firefox
-- name: 118_vless_nl4.gacvpn.site_443_00dbb87b29
-  type: vless
-  server: nl4.gacvpn.site
-  port: 443
-  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
-  udp: true
-  network: ws
-  tls: true
-  servername: nl4.gacvpn.site
-  ws-opts:
-    path: /static/js/vendor.cc1645b6.js?ed=2048
-- name: 119_vless_144.31.225.74_443_9988ad0eb2
-  type: vless
-  server: 144.31.225.74
-  port: 443
-  uuid: 8ac4cf4e-c31c-4fb3-b56d-cf914970fa1b
-  udp: true
-  network: xhttp
-  tls: true
-  servername: static-nl.song69.fun
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: ua6CK4GeIj_7Ae90bUHORFUFH2RRt9BksP9CmN-2VlU
-  xhttp-opts:
-    path: /static/v2/media
-    host: static-nl.song69.fun
-- name: 120_CYBERPORTAL_White_Keys_125_t.me_rjsxrd_ed36943333
-  type: vless
-  server: qq.utiltools.site
-  port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
-  udp: true
-  network: tcp
-  tls: true
-  servername: qq.utiltools.site
-  client-fingerprint: random
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 121_vless_46.8.114.205_443_b77c80d941
-  type: vless
-  server: 46.8.114.205
-  port: 443
-  uuid: 3f25b15b-1777-4c08-9ade-60336ac92a82
-  udp: true
-  network: tcp
-  tls: true
-  servername: plov.plus-hit.ru
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: QsUgVxHyjCKdtYBnBGoEM74F3k9uc2kimLPbf_qAAAM
-    short-id: bf8b003cb32c968b
-- name: 122_t.me_freekesha21_bfe0ea54d1
-  type: vless
-  server: 188.130.209.212
-  port: 443
-  uuid: c8c2ddff-825a-46c3-bbdd-4a101de468a7
-  udp: true
-  network: tcp
-  tls: true
-  servername: thumbs.mycdn-io.ru
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc
-    short-id: 11979c0c9b2da371
+    public-key: BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs
+    short-id: c6f97313
     spider-x: /
-- name: 123_United_States_North_Bergen_BL_003f6ea0c9
-  type: vless
-  server: fast.145779.xyz
-  port: 2053
-  uuid: e3149c82-00f6-4227-b2c0-b78f1dd81279
-  udp: true
-  network: ws
-  tls: true
-  servername: fast.145779.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /ws-tesla
-    headers:
-      Host: fast.145779.xyz
-- name: 124_Germany_Nuremberg_BL_0e43e7fc12
-  type: vless
-  server: 190.93.244.47
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  udp: true
-  network: ws
-  tls: true
-  servername: moz.ar-marz.fun
-  client-fingerprint: chrome
-  ws-opts:
-    path: /man
-    headers:
-      Host: moz.ar-marz.fun
-- name: 125_The_Netherlands_CIDR_VK_t.me_rjsxrd_bffdeac116
-  type: vless
-  server: 95.163.209.247
-  port: 443
-  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
-  udp: true
-  network: ws
-  tls: true
-  servername: fst.krevetkabs111.net
-  client-fingerprint: firefox
-  ws-opts:
-    path: /api/generate
-    headers:
-      Host: fst.krevetkabs111.net
-- name: 126_vless_38.244.155.67_443_85e0751886
-  type: vless
-  server: 38.244.155.67
-  port: 443
-  uuid: d651c9ab-b844-4420-b3d0-20d201ef5f55
-  udp: true
-  network: tcp
-  tls: true
-  servername: node-eu-1.nztpro.com
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: NLXltMEkWIxv9bL2J4XkPGb4oVwGbCkITCTXF-jVxAE
-    short-id: 2976f793571fb671
-- name: 127_Anycast-IP_BL_9e6e6914f1
-  type: vmess
-  server: 116.88.224.217
-  port: 8080
-  uuid: 6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: tcp
-- name: 128_vless_50.7.178.197_8443_eac0d3c51a
-  type: vless
-  server: 50.7.178.197
-  port: 8443
-  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
-  udp: true
-  network: grpc
-  tls: true
-  servername: fr2.gacvpn.site
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: connect-fr
-- name: 129_Netherlands_TG_HardVpn_robot_t.me_rjsxrd_464e53cae3
-  type: vless
-  server: 89.105.195.148
-  port: 443
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  network: grpc
-  tls: true
-  servername: api.mediacorphub.org
-  grpc-opts:
-    grpc-service-name: gw.v2.PushService
-- name: 130_11_t.me_rjsxrd_bc64d31b08
-  type: vless
-  server: gembeforeshoping.space
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: gembeforeshoping.space
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: lY9sPrXzj3Dlsj6JTP5UolK1RmIAlstuAy3dBJ97ag0
-- name: 131_Anycast-IP_BL_6446aaca73
-  type: vmess
-  server: 116.88.224.217
-  port: 8080
-  uuid: 6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: tcp
-- name: 132_336ms_b65833ee8a
-  type: vless
-  server: hollandlanzerotte.xyz
-  port: 443
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  udp: true
-  network: tcp
-  tls: true
-  servername: hollandlanzerotte.xyz
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
-- name: 133_www.v2nodes.com_vless-FI-1..._12_29e92f2473
-  type: vless
-  server: 138.124.124.157
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- name: 134_France_BL_b4c6881c39
+- name: 125_France_BL_b4c6881c39
   type: vless
   server: 151.101.36.61
   port: 443
@@ -1831,48 +1715,75 @@ proxies:
     path: /
     host: ovd10.global.ssl.fastly.net
     mode: auto
-- name: 135_Germany_TG_HardVpn_robot_t.me_rjsxrd_c2972b90cf
+- name: 126_vless_185.189.45.195_443_2cbd4c8de5
   type: vless
-  server: 4935e4t.de25.h1clayd.click
+  server: 185.189.45.195
   port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  uuid: dd5bed0b-ee77-481b-9f2c-250a632ddd9f
   udp: true
   network: tcp
   tls: true
-  servername: 4935e4t.de25.h1clayd.click
-  client-fingerprint: edge
+  servername: get.jarbook.net
+  client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-    short-id: 6976d670818644cc
-- name: 136_France_Saint-Apollinaire_BL_d79d5ef941
+    public-key: BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs
+    short-id: c6f97313
+- name: 127_327ms_1c198e49f2
   type: vless
-  server: ccb.cf.090227.xyz
+  server: get.jarbook.net
   port: 443
-  uuid: fb23213d-1353-41a9-a32a-b1b06ab1c354
+  uuid: dd5bed0b-ee77-481b-9f2c-250a632ddd9f
   udp: true
-  network: ws
+  network: tcp
   tls: true
-  servername: attach-three-rat-finances.trycloudflare.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /ws-5f6123d8d0a7
-    headers:
-      Host: attach-three-rat-finances.trycloudflare.com
-- name: 137_vless_194.226.169.66_443_8986b7edf6
+  servername: get.jarbook.net
+  client-fingerprint: safari
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs
+    short-id: c6f97313
+    spider-x: /
+- name: 128_AetrisVPN_a8ca3345fe
   type: vless
-  server: 194.226.169.66
-  port: 443
-  uuid: 72a64605-32a1-4774-8d8f-18495e1cc425
+  server: 78.157.61.220
+  port: 2053
+  uuid: f37fa10d-1e24-43a1-8da0-25155632e8c5
   udp: true
-  network: xhttp
+  network: tcp
   tls: true
-  servername: n1.kalitka.store
+  servername: www.amzn.com
   client-fingerprint: firefox
-  xhttp-opts:
-    path: /api/v1/sync
-    host: n1.kalitka.store
-- name: 138_The_Netherlands_The_Netherlands_89.105.195.157_RaViraNet_t.m_989a38d9b5
+  reality-opts:
+    public-key: ZiIizosCKGTTeP9eipq17Q7NnWZvMb44kvmdNqEmtFY
+    short-id: 5e79498bea
+- name: 129_vless_167.179.87.224_443_a9d6d3b69c
+  type: vless
+  server: 167.179.87.224
+  port: 443
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  udp: true
+  network: tcp
+  tls: true
+  servername: u695098u093da7d1s2502.xxti.top
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+- name: 130_vless_185.189.45.195_443_6281ff707a
+  type: vless
+  server: 185.189.45.195
+  port: 443
+  uuid: dd5bed0b-ee77-481b-9f2c-250a632ddd9f
+  udp: true
+  network: tcp
+  tls: true
+  servername: get.jarbook.net
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs
+    short-id: c6f97313
+    spider-x: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
+- name: 131_The_Netherlands_The_Netherlands_89.105.195.157_RaViraNet_t.m_989a38d9b5
   type: vless
   server: assets.mediacorphub.org
   port: 443
@@ -1886,18 +1797,107 @@ proxies:
   - h2
   grpc-opts:
     grpc-service-name: hub.v1.ObjectService
-- name: 139_t.me_freekesha21_4436bd09b6
+- name: 132_AetrisVPN_bd46b4c813
   type: vless
-  server: 87.120.126.43
-  port: 443
-  uuid: cbd6c099-5d4f-467e-86d2-92cb292892fb
+  server: 78.159.245.40
+  port: 8445
+  uuid: 84a56b88-2f89-4a57-b925-74abd5b7fd87
   udp: true
   network: tcp
   tls: true
-  servername: gr.connect-qik.uk
-  client-fingerprint: chrome
+  servername: passport.yandex.ru
+  client-fingerprint: safari
   flow: xtls-rprx-vision
-- name: 140_France_BL_1612bd6aa4
+  reality-opts:
+    public-key: I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4
+- name: 133_Poland_BL_37bd95955a
+  type: vless
+  server: 151.101.36.253
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  network: xhttp
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: firefox
+  alpn:
+  - h3
+  xhttp-opts:
+    path: /
+    host: ovd9.global.ssl.fastly.net
+    mode: auto
+- name: 134_RUS_5435c722eb
+  type: vless
+  server: 185.178.208.167
+  port: 443
+  uuid: 4662bf2b-af58-0001-ae5f-ef3d7d3a624f
+  udp: true
+  network: ws
+  tls: true
+  servername: mbr.rkn-pediki.site
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /session
+    headers:
+      Host: mbr.rkn-pediki.site
+- name: 135_vless_213.21.232.4_443_63f0d57a5f
+  type: vless
+  server: 213.21.232.4
+  port: 443
+  uuid: 4d30ffc2-c917-407b-b71f-6a7ca09e939f
+  udp: true
+  network: tcp
+  tls: true
+  servername: mytubeproxy10.duckdns.org
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: N3MUCErqyQmpQEwMzDPwz2mZERG0Q2dopPNX-3PpE2M
+    short-id: 455152c2797fea2b
+- name: 136_433ms_a843c02d54
+  type: vless
+  server: hollandlanzerotte.xyz
+  port: 443
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: hollandlanzerotte.xyz
+  client-fingerprint: edge
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
+- name: 137_vless_get.jarbook.net_443_5de5c3b457
+  type: vless
+  server: get.jarbook.net
+  port: 443
+  uuid: dd5bed0b-ee77-481b-9f2c-250a632ddd9f
+  udp: true
+  network: tcp
+  tls: true
+  servername: get.jarbook.net
+  client-fingerprint: ios
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs
+    short-id: c6f97313
+    spider-x: /
+- name: 138_AetrisVPN_82c1022a09
+  type: vless
+  server: 138.124.124.157
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  network: ws
+  tls: true
+  servername: fs.qicai99.com
+  client-fingerprint: chrome
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+- name: 139_France_BL_1612bd6aa4
   type: vless
   server: 151.101.36.88
   port: 443
@@ -1913,20 +1913,32 @@ proxies:
     path: /
     host: ovd5.global.ssl.fastly.net
     mode: auto
-- name: 141_vless_151.101.36.111_443_1268819e72
+- name: 140_540ms_fec9c41eb8
   type: vless
-  server: 151.101.36.111
+  server: usatimewebnew.space
   port: 443
-  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  udp: true
+  network: tcp
+  tls: true
+  servername: usatimewebnew.space
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: FFsBozg2vRN-wNNsv6Y97sbr4EF5aIHiYF7-xHa_9Fk
+- name: 141_vless_151.101.36.253_443_9a7f605c62
+  type: vless
+  server: 151.101.36.253
+  port: 443
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
   udp: true
   network: xhttp
   tls: true
   servername: accounts.fastly.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   xhttp-opts:
-    host: ovd11.global.ssl.fastly.net
-    mode: auto
-- name: 142_France_BL_9deaf92de6
+    host: ovd9.global.ssl.fastly.net
+- name: 142_France_BL_5279e626ce
   type: vless
   server: 151.101.36.201
   port: 443
@@ -1935,115 +1947,117 @@ proxies:
   network: xhttp
   tls: true
   servername: accounts.fastly.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   alpn:
   - h3
   xhttp-opts:
     path: /
     host: oh6.global.ssl.fastly.net
     mode: auto
-- name: 143_AetrisVPN_t.me_rjsxrd_87743ec623
+- name: 143_AetrisVPN_t.me_rjsxrd_f0db21eb9f
   type: vless
-  server: 78.159.250.107
+  server: 176.108.245.237
   port: 443
-  uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+  uuid: 87c35d3a-36f1-fade-90b7-af60506efbb8
   udp: true
   network: tcp
   tls: true
-  servername: qq.utiltools.site
+  servername: tfusq-ru-40sb.fade.mom
+  client-fingerprint: qq
+  alpn:
+  - h2
+  - http/1.1
+- name: 144_Netherlands_TG_HardVpn_robot_t.me_rjsxrd_de3825d891
+  type: vless
+  server: assets.mediacorphub.org
+  port: 443
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  network: grpc
+  tls: true
+  servername: assets.mediacorphub.org
+  client-fingerprint: safari
+  alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: hub.v1.ObjectService
+- name: 145_t.me_freekesha21_161cde9ffb
+  type: vless
+  server: 168.110.48.252
+  port: 10018
+  uuid: d8fc873b-860d-4490-b2f0-300d6ae3c2d3
+  udp: true
+  network: tcp
+  tls: true
+  servername: www.ebay.com
   client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-- name: 144_United_States_TG_HardVpn_robot_t.me_rjsxrd_5c6aa6f4b2
-  type: trojan
-  server: 169.197.140.208
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: blog.discoverfreshgraduatejobsstartyourprofessionaljourney.com
-- name: 145_AetrisVPN_c560f53756
+    public-key: YxoFVB0NhCx4BJCgq5Ey5jdteRU2H2toGa-ZKW5XV3c
+- name: 146_433ms_bd4fd32e26
   type: vless
-  server: 109.120.134.181
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: fs.qicai99.com
-- name: 146_United_States_Los_Angeles_Central-Alameda_BL_4769c14676
-  type: vless
-  server: 172.96.192.167
-  port: 8443
-  uuid: 8bb77b5e-1570-403f-b83c-829c4e455f77
-  udp: true
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: c00UqbEvKwmOxuFrUDwtDUc_pkaSWIJdnNB9oR4j_WU
-    short-id: c9de415d4fbfe49f
-- name: 147_427ms_56bf2fa4d9
-  type: vless
-  server: gemsubbgem.world
+  server: hollandlanzerotte.xyz
   port: 443
   uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
   udp: true
   network: tcp
   tls: true
-  servername: gemsubbgem.world
-  client-fingerprint: ios
+  servername: hollandlanzerotte.xyz
+  client-fingerprint: firefox
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: 6PJlXT9xrgJP8RXfhpWDMKPh4eqGt_IZmenc_a6v0gg
-- name: 148_AetrisVPN_t.me_rjsxrd_93136fb6be
+    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
+- name: 147_hysteria2_94.183.164.119_24403_5145945ee0
+  type: hysteria2
+  server: 94.183.164.119
+  port: 24403
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  tls: true
+  udp: true
+  servername: docs.blog-forme.ru
+- name: 148_376ms_3e1b044cba
   type: vless
-  server: 62.76.115.228
+  server: get.jarbook.net
+  port: 443
+  uuid: dd5bed0b-ee77-481b-9f2c-250a632ddd9f
+  udp: true
+  network: tcp
+  tls: true
+  servername: get.jarbook.net
+  client-fingerprint: edge
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs
+    short-id: c6f97313
+    spider-x: /
+- name: 149_AetrisVPN_ce380721c7
+  type: vless
+  server: 45.95.232.233
+  port: 8446
+  uuid: dac0e736-5c69-4b7c-8b1d-27cbbc3bd948
+  udp: true
+  network: grpc
+  tls: true
+  servername: 1c.hlclub.tech
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: XxWn04baea-nyjxLud3mjo15Xz1DNwlDOOken4qHNVA
+    short-id: 555ac69b22424282
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 150_AetrisVPN_t.me_rjsxrd_e5f1e9e3fd
+  type: vless
+  server: 62.76.115.227
   port: 8443
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
+  uuid: b229d38c-35ec-4a0b-9c86-8fceba243d6c
   udp: true
   network: xhttp
   tls: true
-  servername: sorrel-gate.cdn.cachefleet.com
+  servername: linden-crest.cdn.cachefleet.com
   client-fingerprint: firefox
   alpn:
   - h2
   xhttp-opts:
     path: /ccxf5snr06b8xxb6
-    host: is-tw-relay.cdn.cachefleet.com
+    host: fafeqdhlett2p5la6d.cdn.cachefleet.com
     mode: auto
-- name: 149_United_States_North_Bergen_BL_685baaffd6
-  type: vless
-  server: 172.67.199.126
-  port: 2053
-  uuid: e3149c82-00f6-4227-b2c0-b78f1dd81279
-  udp: true
-  network: ws
-  tls: true
-  servername: fast.145779.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /ws-tesla
-    headers:
-      Host: fast.145779.xyz
-- name: 150_Anycast-IP_BL_46905229f6
-  type: vless
-  server: cucc.cloudflare.seeck.cn
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  network: ws
-  tls: true
-  servername: fs.qicai99.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: fs.qicai99.com
